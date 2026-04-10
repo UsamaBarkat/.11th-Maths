@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:dcar.gos.pk)",
+      "WebFetch(domain:sabaq.pk)",
+      "WebFetch(domain:adamjeecoaching.blogspot.com)",
+      "WebFetch(domain:talhaphysicsacademy.blogspot.com)",
+      "WebFetch(domain:drive.google.com)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
