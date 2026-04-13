@@ -2,15 +2,51 @@
 
 ---
 
-## Current Status (Last Updated: April 9, 2026)
+## Current Status (Last Updated: April 13, 2026)
 
-**Current Chapter:** Not started yet
+**Current Chapter:** Chapter 1 - Complex Numbers (In Progress)
 **Overall Progress:** 0/12 chapters completed
-**Study Mode:** Setting up and organizing
+**Study Mode:** Active learning - Exercise 1.1 completed
 
 ---
 
 ## Session Log
+
+### Session 2 - April 13, 2026
+**Topics Covered:**
+- Started Chapter 1: Complex Numbers
+- Completed Exercise 1.1 (All 11 questions with solutions)
+
+**Questions Solved:**
+1. Powers of i and evaluations
+2. Values of i^n and proof of sum property
+3. Operations on complex numbers (addition, subtraction, multiplication, division)
+4. Simplifying complex expressions
+5. Verification of equation solutions
+6. Finding conjugates and absolute values
+7. Finding real and imaginary parts
+8. Solving for complex number given conditions
+9. Solving complex equations
+10. Representing complex numbers on complex plane
+11. Finding vector lengths (modulus)
+
+**Files Created:**
+- `ex1.1.md` - Complete solutions to Exercise 1.1 with detailed working
+
+**Key Concepts Mastered:**
+- Powers of i follow pattern: i, -1, -i, 1
+- Complex number operations (addition, multiplication, division)
+- Conjugate: changes sign of imaginary part
+- Absolute value: |a + bi| = √(a² + b²)
+- Rationalizing complex fractions using conjugates
+- Solving complex equations by equating real and imaginary parts
+
+**Next Steps:**
+- Practice Exercise 1.2 (if needed)
+- Move to next topic in Chapter 1
+- Continue with remaining exercises
+
+---
 
 ### Session 1 - April 9, 2026
 **Topics Covered:**
@@ -59,11 +95,17 @@
 ## Learning Progress by Chapter
 
 ### Chapter 1: Complex Numbers
-- **Status:** Not Started
-- **Exercises Completed:** None
-- **Key Concepts Mastered:** None yet
-- **Topics Needing Review:** N/A
-- **Notes:** _To be updated when chapter begins_
+- **Status:** In Progress ✓
+- **Exercises Completed:** Exercise 1.1 (11 questions)
+- **Key Concepts Mastered:**
+  - Powers of i and cyclic pattern
+  - Basic operations (addition, subtraction, multiplication, division)
+  - Conjugates and absolute values
+  - Real and imaginary parts
+  - Solving complex equations
+  - Complex plane representation
+- **Topics Needing Review:** Will identify as we progress
+- **Notes:** Strong start with Exercise 1.1 completed. All fundamental concepts covered.
 
 ### Chapter 2: Matrices and Determinants
 - **Status:** Not Started
