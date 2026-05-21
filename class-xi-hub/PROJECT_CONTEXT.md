@@ -10,7 +10,8 @@
 A personal multi-subject learning hub for Usama, a Class XI (HSSC Part-I) student at Sindh Textbook Board, Pakistan. Usama learns each subject lesson-by-lesson from Claude (claude.ai chat) and saves every lesson on this website so he can revise for Sindh Board exams anytime, anywhere.
 
 **Deployment:** Vercel (auto-deploys on every push to main branch)
-**Live URL:** `https://class-xi-hub.vercel.app` *(set after first deploy)*
+**Live URL:** `https://learnwithusama.vercel.app`
+**Note:** Root `index.html` at repo root auto-redirects to `class-xi-hub/index.html`
 
 ---
 
