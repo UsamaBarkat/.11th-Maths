@@ -13,8 +13,9 @@ document.addEventListener('DOMContentLoaded', function () {
   */
 
   // Apply saved theme before showing any content (prevents flash)
+  // Default is dark — only go light if user explicitly chose light before
   const saved = localStorage.getItem('theme');
-  if (saved === 'dark') {
+  if (saved !== 'light') {
     document.documentElement.setAttribute('data-theme', 'dark');
   }
 
