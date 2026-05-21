@@ -1,0 +1,433 @@
+/* ============================================================
+   lessons.css — Styles for individual lesson pages only
+
+   Covers:
+   - Progress breadcrumb at top
+   - Lesson title area
+   - 6-section lesson layout (hook → concept → examples →
+     confusions → practice → summary)
+   - Definition boxes (textbook + easy version)
+   - Confusion/warning boxes
+   - Tables + ASCII diagrams
+   - Interactive MCQs
+   - Short questions (show/hide answer)
+   - Lesson navigation (prev / next)
+   ============================================================ */
+
+/* ── 1. PROGRESS BREADCRUMB ────────────────────────────────── */
+.lesson-breadcrumb {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 0;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.lesson-breadcrumb .container-narrow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.lesson-breadcrumb a         { color: var(--accent); font-weight: 600; }
+.lesson-breadcrumb .sep      { color: var(--border); }
+.lesson-breadcrumb .current  { color: var(--text); font-weight: 600; }
+
+/* ── 2. LESSON TITLE AREA ──────────────────────────────────── */
+.lesson-page {
+  padding: 40px 0 80px;
+}
+
+.lesson-header {
+  padding-bottom: 24px;
+  margin-bottom: 36px;
+  border-bottom: 2px solid var(--border);
+}
+
+.lesson-header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.lesson-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 0.83rem;
+  color: var(--text-muted);
+}
+
+.lesson-meta .meta-badge {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--accent);
+  border-radius: 20px;
+  padding: 3px 12px;
+  font-weight: 600;
+  font-size: 0.78rem;
+}
+
+/* ── 3. LESSON SECTIONS ────────────────────────────────────── */
+.lesson-section {
+  margin-bottom: 44px;
+}
+
+/* Section heading with colored accent */
+.lesson-section > h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.lesson-section > h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 24px 0 12px;
+}
+
+.lesson-section p {
+  margin-bottom: 14px;
+}
+
+.lesson-section ul,
+.lesson-section ol {
+  margin-bottom: 14px;
+}
+
+/* ── 4. HOOK TEXT (Step 1) ─────────────────────────────────── */
+.hook-text {
+  font-size: 1.07rem;
+  line-height: 1.8;
+  background: var(--accent-light);
+  border-left: 5px solid var(--accent);
+  padding: 20px 22px;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+/* ── 5. DEFINITION BOXES (Step 2) ──────────────────────────── */
+.def-box {
+  border-left: 4px solid var(--blue);
+  background: var(--blue-light);
+  padding: 16px 18px;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin-bottom: 14px;
+}
+
+.def-box .def-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--blue);
+  margin-bottom: 6px;
+}
+
+.def-box p { margin: 0; }
+
+/* Easy version — subject-colored border */
+.def-box.easy {
+  border-left-color: var(--accent);
+  background: var(--accent-light);
+}
+
+.def-box.easy .def-label { color: var(--accent); }
+
+/* ── 6. CONFUSION / WARNING BOXES (Step 4) ─────────────────── */
+.confusion-box {
+  border-left: 4px solid var(--orange);
+  background: var(--orange-light);
+  padding: 16px 18px;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin-bottom: 14px;
+}
+
+.confusion-box .conf-title {
+  font-weight: 700;
+  color: var(--orange);
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.confusion-box p { margin: 0; }
+
+/* ── 7. SUMMARY BOX (Step 6) ───────────────────────────────── */
+.summary-box {
+  background: var(--accent-light);
+  border: 2px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 24px 26px;
+}
+
+.summary-box h3 {
+  color: var(--accent) !important;
+  font-size: 0.85rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 16px !important;
+}
+
+.summary-box ol {
+  padding-left: 20px;
+}
+
+.summary-box li {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+/* ── 8. TABLES ─────────────────────────────────────────────── */
+.table-wrap {
+  overflow-x: auto;
+  margin-bottom: 20px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+thead th {
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+tbody tr:nth-child(even) { background: var(--bg-secondary); }
+
+tbody td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+tbody tr:last-child td { border-bottom: none; }
+
+/* ── 9. ASCII DIAGRAM BLOCKS ───────────────────────────────── */
+.diagram {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  overflow-x: auto;
+  margin-bottom: 18px;
+}
+
+.diagram pre {
+  font-family: var(--mono);
+  font-size: 0.88rem;
+  line-height: 1.65;
+  white-space: pre;   /* preserve all spaces and newlines exactly */
+  margin: 0;
+  color: var(--text);
+}
+
+/* ── 10. MCQ SECTION (Step 5) ──────────────────────────────── */
+.mcq-set h3 {
+  font-size: 1.05rem;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.mcq-set > p { margin-bottom: 20px; }
+
+.mcq-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin-bottom: 16px;
+}
+
+.mcq-card .q-text {
+  font-weight: 600;
+  font-size: 0.97rem;
+  margin-bottom: 14px;
+}
+
+.mcq-options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each option is a <button> so it's keyboard accessible */
+.mcq-opt {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-size: 0.92rem;
+  font-family: var(--font);
+  color: var(--text);
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.mcq-opt:last-of-type { margin-bottom: 0; }
+
+.mcq-opt:hover:not([disabled]) {
+  background: var(--accent-light);
+  border-color: var(--accent);
+}
+
+/* Feedback states after answering */
+.mcq-opt.correct {
+  background: var(--correct-bg);
+  border-color: var(--correct);
+  color: var(--correct);
+  font-weight: 600;
+}
+
+.mcq-opt.wrong {
+  background: var(--red-light);
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.mcq-opt[disabled] { cursor: default; }
+
+.mcq-feedback {
+  margin-top: 10px;
+  font-size: 0.87rem;
+  font-weight: 600;
+  display: none;
+}
+
+.mcq-feedback.show    { display: block; }
+.mcq-feedback.correct { color: var(--correct); }
+.mcq-feedback.wrong   { color: var(--red); }
+
+[data-theme="dark"] .mcq-opt.correct { color: #4ade80; }
+[data-theme="dark"] .mcq-opt.wrong   { color: #f87171; }
+[data-theme="dark"] .mcq-feedback.correct { color: #4ade80; }
+[data-theme="dark"] .mcq-feedback.wrong   { color: #f87171; }
+
+/* ── 11. SHORT QUESTIONS ───────────────────────────────────── */
+.short-q-set h3 {
+  font-size: 1.05rem;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.short-q-set > p { margin-bottom: 20px; }
+
+.short-q-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin-bottom: 14px;
+}
+
+.short-q-card .q-text {
+  font-weight: 600;
+  font-size: 0.97rem;
+  margin-bottom: 12px;
+}
+
+.reveal-btn {
+  background: none;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  padding: 7px 18px;
+  cursor: pointer;
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-family: var(--font);
+  font-weight: 600;
+  transition: background 0.15s;
+}
+
+.reveal-btn:hover { background: var(--accent-light); }
+
+.answer-box {
+  display: none;
+  margin-top: 12px;
+  padding: 14px 16px;
+  background: var(--accent-light);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.92rem;
+}
+
+.answer-box.visible { display: block; }
+
+/* ── 12. LESSON NAVIGATION ─────────────────────────────────── */
+.lesson-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-top: 28px;
+  margin-top: 16px;
+  border-top: 2px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: 11px 20px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.88rem;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.nav-btn:hover {
+  border-color: var(--accent);
+  background: var(--accent-light);
+  text-decoration: none;
+  color: var(--text);
+}
+
+.nav-btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.nav-btn.primary:hover {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+  color: #fff;
+}
+
+.nav-btn.disabled {
+  opacity: 0.38;
+  pointer-events: none;
+  cursor: default;
+}
+
+/* ── 13. RESPONSIVE (LESSON PAGES) ────────────────────────── */
+@media (max-width: 640px) {
+  .lesson-header h1 { font-size: 1.5rem; }
+  .lesson-nav       { flex-direction: column; }
+  .nav-btn          { width: 100%; justify-content: center; }
+  thead th          { font-size: 0.82rem; }
+  tbody td          { font-size: 0.85rem; }
+  .hook-text        { font-size: 1rem; }
+}

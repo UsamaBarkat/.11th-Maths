@@ -1,0 +1,450 @@
+/* ============================================================
+   subjects.css — Subject-specific theming + page layouts
+
+   Handles:
+   - Subject accent color overrides (via data-subject attribute)
+   - Homepage hero + subject card grid
+   - Subject index page (chapter/unit list)
+   - Chapter index page (lesson list)
+   - Coming soon sections
+   ============================================================ */
+
+/* ── 1. SUBJECT COLOR THEMES ───────────────────────────────────
+   Set data-subject="chemistry" (or mathematics/physics/english)
+   on the <html> tag. CSS picks up the right colors automatically.
+   Works in both light mode and dark mode.
+*/
+
+/* Chemistry — green */
+[data-subject="chemistry"] {
+  --accent:       #2d8659;
+  --accent-light: #e8f5ee;
+  --accent-dark:  #1f6b44;
+}
+[data-theme="dark"][data-subject="chemistry"] {
+  --accent:       #34d399;
+  --accent-light: #052e16;
+  --accent-dark:  #6ee7b7;
+}
+
+/* Mathematics — deep blue */
+[data-subject="mathematics"] {
+  --accent:       #1e40af;
+  --accent-light: #eff6ff;
+  --accent-dark:  #1e3a8a;
+}
+[data-theme="dark"][data-subject="mathematics"] {
+  --accent:       #60a5fa;
+  --accent-light: #0c1a3a;
+  --accent-dark:  #93c5fd;
+}
+
+/* Physics — purple */
+[data-subject="physics"] {
+  --accent:       #7c3aed;
+  --accent-light: #f5f3ff;
+  --accent-dark:  #6d28d9;
+}
+[data-theme="dark"][data-subject="physics"] {
+  --accent:       #a78bfa;
+  --accent-light: #1a0d3d;
+  --accent-dark:  #c4b5fd;
+}
+
+/* English — warm orange */
+[data-subject="english"] {
+  --accent:       #ea580c;
+  --accent-light: #fff7ed;
+  --accent-dark:  #c2410c;
+}
+[data-theme="dark"][data-subject="english"] {
+  --accent:       #fb923c;
+  --accent-light: #1c0a00;
+  --accent-dark:  #fdba74;
+}
+
+
+/* ── 2. HOMEPAGE HERO ──────────────────────────────────────────
+   The big welcome banner at the top of index.html
+*/
+.home-hero {
+  background: linear-gradient(135deg, #e8f5ee 0%, #eff6ff 50%, #f5f3ff 100%);
+  padding: 64px 0 48px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+[data-theme="dark"] .home-hero {
+  background: linear-gradient(135deg, #052e16 0%, #0c1a3a 50%, #1a0d3d 100%);
+}
+
+.home-hero h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.home-hero .welcome {
+  font-size: 1.3rem;
+  color: #2d8659; /* always green on homepage, not subject-specific */
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+[data-theme="dark"] .home-hero .welcome { color: #34d399; }
+
+.home-hero .subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+/* Stats row below hero */
+.home-stats {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 20px 0;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item .stat-number {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.stat-item .stat-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 2px;
+}
+
+/* Override stat accent colors to be subject-specific on homepage */
+.stat-chem  .stat-number { color: #2d8659; }
+.stat-math  .stat-number { color: #1e40af; }
+.stat-phys  .stat-number { color: #7c3aed; }
+.stat-eng   .stat-number { color: #ea580c; }
+
+[data-theme="dark"] .stat-chem  .stat-number { color: #34d399; }
+[data-theme="dark"] .stat-math  .stat-number { color: #60a5fa; }
+[data-theme="dark"] .stat-phys  .stat-number { color: #a78bfa; }
+[data-theme="dark"] .stat-eng   .stat-number { color: #fb923c; }
+
+
+/* ── 3. SUBJECT CARDS (4 big cards on homepage) ─────────────── */
+.subjects-section {
+  padding: 48px 0 64px;
+}
+
+.subjects-section h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+/* Responsive 2x2 grid */
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 680px) {
+  .subjects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Individual subject card */
+.subject-card {
+  display: block;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 24px;
+  text-decoration: none;
+  color: var(--text);
+  transition: box-shadow 0.2s, border-color 0.2s, transform 0.15s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Colored top accent bar */
+.subject-card::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--card-accent, #2d8659);
+}
+
+.subject-card:hover {
+  box-shadow: var(--shadow);
+  border-color: var(--card-accent, #2d8659);
+  transform: translateY(-3px);
+  text-decoration: none;
+  color: var(--text);
+}
+
+/* Per-card accent colors (set via inline style or class) */
+.card-chem  { --card-accent: #2d8659; }
+.card-math  { --card-accent: #1e40af; }
+.card-phys  { --card-accent: #7c3aed; }
+.card-eng   { --card-accent: #ea580c; }
+
+[data-theme="dark"] .card-chem  { --card-accent: #34d399; }
+[data-theme="dark"] .card-math  { --card-accent: #60a5fa; }
+[data-theme="dark"] .card-phys  { --card-accent: #a78bfa; }
+[data-theme="dark"] .card-eng   { --card-accent: #fb923c; }
+
+.subject-card .card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.subject-card .card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--card-accent, #2d8659);
+}
+
+.subject-card .card-meta {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.subject-card .card-stats {
+  display: flex;
+  gap: 16px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.subject-card .card-stats strong {
+  color: var(--text);
+}
+
+
+/* ── 4. SUBJECT INDEX PAGE ─────────────────────────────────────
+   The page showing all chapters/units for one subject
+*/
+.subject-hero {
+  background: var(--accent-light);
+  border-bottom: 3px solid var(--accent);
+  padding: 40px 0 28px;
+}
+
+.subject-hero h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.subject-hero .subject-desc {
+  color: var(--text-muted);
+  font-size: 0.97rem;
+  max-width: 560px;
+}
+
+/* Chapter/unit table on subject pages */
+.chapter-list {
+  padding: 40px 0 60px;
+}
+
+.chapter-list h2 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.chapter-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.chapter-row:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: var(--text);
+}
+
+.chapter-row.coming-soon {
+  opacity: 0.55;
+  cursor: default;
+  pointer-events: none;
+}
+
+.chapter-row .ch-num {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.chapter-row.coming-soon .ch-num {
+  background: var(--border);
+  color: var(--text-muted);
+}
+
+.chapter-row .ch-info {
+  flex: 1;
+}
+
+.chapter-row .ch-info h3 {
+  font-size: 0.97rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.chapter-row .ch-info p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.chapter-row .ch-status {
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+
+/* ── 5. CHAPTER/UNIT INDEX PAGE ────────────────────────────────
+   The page listing lessons inside one chapter
+*/
+.chapter-hero {
+  background: var(--accent-light);
+  border-bottom: 3px solid var(--accent);
+  padding: 36px 0 24px;
+}
+
+.chapter-hero h1 {
+  font-size: 1.7rem;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.chapter-hero .ch-overview {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  max-width: 600px;
+  margin: 0;
+}
+
+.lessons-list {
+  padding: 36px 0 60px;
+}
+
+.lessons-list h2 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.lesson-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.lesson-row:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: var(--text);
+}
+
+.lesson-row.locked {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+
+.lesson-row .ls-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.lesson-row.locked .ls-num {
+  background: var(--border);
+  color: var(--text-muted);
+}
+
+.lesson-row .ls-info h3 {
+  font-size: 0.97rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.lesson-row .ls-info p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+
+/* ── 6. COMING SOON PAGE ───────────────────────────────────── */
+.coming-soon-page {
+  text-align: center;
+  padding: 80px 24px;
+}
+
+.coming-soon-page .cs-icon { font-size: 4rem; margin-bottom: 16px; }
+.coming-soon-page h2 { font-size: 1.6rem; margin-bottom: 10px; }
+.coming-soon-page p  { color: var(--text-muted); max-width: 380px; margin: 0 auto 28px; }

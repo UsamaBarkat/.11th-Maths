@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<!--
+  lesson-2.html — "Exercise 1.1 — Powers of i, Operations and Applications"
+  Subject: Mathematics | Unit 1 | Lesson 2 of 3
+  All 11 questions from Exercise 1.1 with show/hide solutions.
+-->
+<html lang="en" data-subject="mathematics">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercise 1.1 — Unit 1 Lesson 2 | Mathematics</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" />
+  <link rel="stylesheet" href="../../../css/subjects.css" />
+  <link rel="stylesheet" href="../../../css/lessons.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+
+  <style>
+    .katex-display { margin: 12px 0; overflow-x: auto; }
+
+    /* Exercise question card */
+    .ex-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      margin-bottom: 12px;
+    }
+    .ex-card .ex-q {
+      font-weight: 600;
+      font-size: 0.97rem;
+      margin-bottom: 12px;
+    }
+    .ex-card .answer-box {
+      font-size: 0.92rem;
+      line-height: 1.75;
+    }
+    .ex-card .answer-box .step {
+      margin-bottom: 4px;
+    }
+
+    /* Question group heading */
+    .q-group {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 28px 0 12px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* Formula reference */
+    .formula-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      margin-bottom: 12px;
+    }
+    .formula-card .fc-title {
+      font-size: 0.76rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.07em; color: var(--accent); margin-bottom: 8px;
+    }
+    .formula-card p { margin: 3px 0; font-size: 0.93rem; }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../../../index.html" class="site-logo">📚 Class XI Hub <span>— Sindh Board</span></a>
+      <button id="dark-mode-btn">🌙 Dark Mode</button>
+    </div>
+  </header>
+
+  <nav class="lesson-breadcrumb" aria-label="breadcrumb">
+    <div class="container-narrow">
+      <a href="../../../index.html">Home</a>
+      <span class="sep">›</span>
+      <a href="../../mathematics/index.html">🔢 Mathematics</a>
+      <span class="sep">›</span>
+      <a href="index.html">Unit 1</a>
+      <span class="sep">›</span>
+      <span class="current">Lesson 2 of 3</span>
+    </div>
+  </nav>
+
+  <main class="lesson-page">
+    <div class="container-narrow">
+
+      <div class="lesson-header">
+        <h1>Exercise 1.1 — Complex Number Operations</h1>
+        <div class="lesson-meta">
+          <span class="meta-badge">Unit 1 · Lesson 2 of 3</span>
+          <span>🔢 Mathematics</span>
+          <span>⏱ 20–25 min</span>
+        </div>
+      </div>
+
+
+      <!-- STEP 1: INTRO -->
+      <section class="lesson-section">
+        <h2>🎯 What This Exercise Covers</h2>
+        <div class="hook-text">
+          Exercise 1.1 tests everything from Lesson 1: powers of i, all 4 operations
+          (addition, subtraction, multiplication, division), conjugates, absolute values
+          (modulus), solving complex equations, and the Argand plane.<br><br>
+          Try each question on paper first — then reveal the solution to check your work.
+          The goal is to catch your own mistakes, not just read the answers.
+        </div>
+      </section>
+
+
+      <!-- STEP 2: FORMULA REFERENCE -->
+      <section class="lesson-section">
+        <h2>📖 Quick Formula Reference</h2>
+
+        <div class="formula-card">
+          <div class="fc-title">Powers of i</div>
+          <p>i¹ = i &nbsp;|&nbsp; i² = −1 &nbsp;|&nbsp; i³ = −i &nbsp;|&nbsp; i⁴ = 1 (then repeats)</p>
+          <p>For iⁿ: divide n by 4 → remainder 0→1, 1→i, 2→−1, 3→−i</p>
+        </div>
+
+        <div class="formula-card">
+          <div class="fc-title">Conjugate and Modulus</div>
+          <p>Conjugate of (a + bi) = (a − bi) &nbsp;→ flip the sign of b only</p>
+          <p>Modulus |z| = |a + bi| = \(\sqrt{a^2 + b^2}\) (distance from origin)</p>
+        </div>
+
+        <div class="formula-card">
+          <div class="fc-title">Ordered Pair Notation</div>
+          <p>(a, b) means a + bi &nbsp;→ first number is real part, second is imaginary part</p>
+        </div>
+
+        <div class="formula-card">
+          <div class="fc-title">Multiplicative Inverse</div>
+          <p>\(z^{-1} = \dfrac{\bar{z}}{|z|^2} = \dfrac{a - bi}{a^2 + b^2}\)</p>
+        </div>
+      </section>
+
+
+      <!-- STEP 3: ALL QUESTIONS WITH SOLUTIONS -->
+      <section class="lesson-section">
+        <h2>✏️ All Questions — Try First, Then Reveal</h2>
+
+        <!-- Q1 -->
+        <p class="q-group">Question 1: Evaluate the following</p>
+
+        <div class="ex-card">
+          <p class="ex-q">(i) &nbsp; i¹⁰ · (−i¹²)</p>
+          <button class="reveal-btn">Show Solution</button>
+          <div class="answer-box">
+            <p class="step">i¹⁰: &nbsp;10 ÷ 4 = remainder 2 &nbsp;→&nbsp; i¹⁰ = −1</p>
+            <p class="step">−i¹²: &nbsp;12 ÷ 4 = remainder 0 &nbsp;→&nbsp; i¹² = 1 &nbsp;→&nbsp; −i¹² = −1</p>
+            <p class="step">Therefore: i¹⁰ · (−i¹²) = (−1)(−1) = <strong>1</strong></p>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <p class="ex-q">(ii) &nbsp; (−i)¹⁶ · (−i)⁶</p>
+          <button class="reveal-btn">Show Solution</button>
+          <div class="answer-box">
+            <p class="step">(−i)¹⁶ = (−1)¹⁶ · i¹⁶ = 1 · (i⁴)⁴ = 1 · 1 = 1</p>
+            <p class="step">(−i)⁶ = (−1)⁶ · i⁶ = 1 · i⁴ · i² = 1 · 1 · (−1) = −1</p>
+            <p class="step">Therefore: 1 · (−1) = <strong>−1</strong></p>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <p class="ex-q">(iii) &nbsp; (i)¹¹ · (−i)¹⁴</p>
+          <button class="reveal-btn">Show Solution</button>
+          <div class="answer-box">
+            <p class="step">i¹¹: 11 ÷ 4 = remainder 3 → i¹¹ = −i</p>
+            <p class="step">(−i)¹⁴ = (−1)¹⁴ · i¹⁴ = 1 · i¹² · i² = 1 · 1 · (−1) = −1</p>
+            <p class="step">Therefore: (−i)(−1) = <strong>i</strong></p>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <p class="q-group">Question 2</p>
+
+        <div class="ex-card">
+          <p class="ex-q">(i) &nbsp; For what value of n is iⁿ equal to 1, i, −1, or −i (where 1 ≤ n ≤ 4)?</p>
+          <button class="reveal-btn">Show Solution</button>
+          <div class="answer-box">
+            <p class="step">n = 1: i¹ = <strong>i</strong></p>
+            <p class="step">n = 2: i² = <strong>−1</strong></p>
+            <p class="step">n = 3: i³ = <strong>−i</strong></p>
+            <p class="step">n = 4: i⁴ = <strong>1</strong></p>
+            <p class="step">Answer: iⁿ = 1 when n = 4 · iⁿ = i when n = 1 · iⁿ = −1 when n = 2 · iⁿ = −i when n = 3</p>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <p class="ex-q">(ii) &nbsp; Show that iⁿ + i^(n+1) + i^(n+2) + i^(n+3) = 0 for all n ∈ Z</p>
+          <button class="reveal-btn">Show Solution</button>
+          <div class="answer-box">
+            <p class="step">iⁿ + i^(n+1) + i^(n+2) + i^(n+3)</p>
+            <p class="step">= iⁿ(1 + i + i² + i³)</p>
+            <p class="step">= iⁿ(1 + i + (−1) + (−i))</p>
+            <p class="step">= iⁿ(0) = <strong>0</strong> &nbsp; ✓ &nbsp; Hence proved.</p>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <p class="q-group">Question 3: Simplify the following</p>
+
+        <div class="ex-card">
+          <p class="ex-q">(i) &nbsp; (−6, 3) · (4, −2)</p>
+          <button class="reveal-btn">Show Solution</button>
+          <div class="answer-box">
+            <p class="step">(−6 + 3i)(4 − 2i) = −24 + 12i + 12i − 6i² = −24 + 24i + 6 = <strong>−18 + 24i</strong></p>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <p class="ex-q">(ii) &nbsp; (8, −4) ÷ (−2, 2)</p>
+          <button class="reveal-btn">Show Solution</button>
+          <div class="answer-box">
+            <p class="step">\(\dfrac{8 - 4i}{-2 + 2i}\) × \(\dfrac{-2 - 2i}{-2 - 2i}\)</p>
+            <p class="step">Numerator: (8 − 4i)(−2 − 2i) = −16 − 16i + 8i + 8i² = −16 − 8i − 8 = −24 − 8i</p>
+            <p class="step">Denominator: (−2)² + 2² = 4 + 4 = 8</p>
+            <p class="step">Answer: \(\dfrac{-24 - 8i}{8}\) = <strong>−3 − i</strong></p>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <p class="ex-q">(iii) &nbsp; (2, 3) + (4, 5) &nbsp;|&nbsp; (iv) (6 + 5i) − (4 + 3i) &nbsp;|&nbsp; (v) (5 − 6i) + (3 + 4i) − (5i − 7)</p>
+          <button class="reveal-btn">Show Solution</button>
+          <div class="answer-box">
+            <p class="step">(iii): (2+4, 3+5) = <strong>(6, 8) = 6 + 8i</strong></p>
+            <p class="step">(iv): (6−4) + (5−3)i = <strong>2 + 2i</strong></p>
+            <p class="step">(v): 5 − 6i + 3 + 4i − 5i + 7 = (5+3+7) + (−6+4−5)i = <strong>15 − 7i</strong></p>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <p class="ex-q">(vi) &nbsp; (4 + 5i)(6 + 7i) &nbsp;|&nbsp; (vii) (7 + 4i) + (8 + 5i) &nbsp;|&nbsp; (viii) (5,−6) + (4,8) − (3,−2)</p>
+          <button class="reveal-btn">Show Solution</button>
+          <div class="answer-box">
+            <p class="step">(vi): 24 + 28i + 30i + 35i² = 24 + 58i − 35 = <strong>−11 + 58i</strong></p>
+            <p class="step">(vii): (7+8) + (4+5)i = <strong>15 + 9i</strong></p>
+            <p class="step">(viii): (5+4−3, −6+8+2) = <strong>(6, 4) = 6 + 4i</strong></p>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <p class="q-group">Question 4: Simplify</p>
+
+        <div class="ex-card">
+          <p class="ex-q">(i) &nbsp; (2 − i)⁴</p>
+          <button class="reveal-btn">Show Solution</button>
+          <div class="answer-box">
+            <p class="step">(2 − i)² = 4 − 4i + i² = 4 − 4i − 1 = 3 − 4i</p>
+            <p class="step">[(2 − i)²]² = (3 − 4i)² = 9 − 24i + 16i² = 9 − 24i − 16 = <strong>−7 − 24i</strong></p>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <p class="ex-q">(ii) (−1 − i√3)² &nbsp;|&nbsp; (iii) (−1 + i√3)²</p>
+          <button class="reveal-btn">Show Solution</button>
+          <div class="answer-box">
+            <p class="step">(ii): 1 + 2i√3 + i²(3) = 1 + 2i√3 − 3 = <strong>−2 + 2i√3</strong></p>
+            <p class="step">(iii): 1 − 2i√3 + i²(3) = 1 − 2i√3 − 3 = <strong>−2 − 2i√3</strong></p>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <p class="ex-q">(iv) (1 + i)³ &nbsp;|&nbsp; (v) (√2 + i)/(√2 − i) &nbsp;|&nbsp; (vi) (1+i)/(1−i) · (2−i)/(2−i)</p>
+          <button class="reveal-btn">Show Solution</button>
+          <div class="answer-box">
+            <p class="step">(iv): (1+i)² = 2i → 2i(1+i) = 2i + 2i² = −2 + 2i = <strong>−2 + 2i</strong></p>
+            <p class="step">(v): \(\dfrac{(√2+i)^2}{2+1} = \dfrac{2 + 2i√2 − 1}{3} = \dfrac{1 + 2i√2}{3}\) = <strong>1/3 + (2√2/3)i</strong></p>
+            <p class="step">(vi): (1+i)/(1−i) = (1+i)²/2 = 2i/2 = i → i · 1 = <strong>i</strong></p>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <p class="ex-q">(vii) (2 + i)²/(3 − 4i) &nbsp;|&nbsp; (viii) 1/(2 − i)²</p>
+          <button class="reveal-btn">Show Solution</button>
+          <div class="answer-box">
+            <p class="step">(vii): (2+i)² = 3 + 4i → (3+4i)/(3−4i) = (3+4i)²/25 = (9+24i−16)/25 = <strong>−7/25 + 24i/25</strong></p>
+            <p class="step">(viii): (2−i)² = 3 − 4i → 1/(3−4i) = (3+4i)/25 = <strong>3/25 + 4i/25</strong></p>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <p class="q-group">Question 5: Show z = 1 ± i satisfies z² − 2z + 2 = 0</p>
+        <div class="ex-card">
+          <p class="ex-q">Show that both z = 1 + i and z = 1 − i are solutions.</p>
+          <button class="reveal-btn">Show Solution</button>
+          <div class="answer-box">
+            <p class="step"><strong>For z = 1 + i:</strong></p>
+            <p class="step">z² = (1+i)² = 1 + 2i + i² = 1 + 2i − 1 = 2i</p>
+            <p class="step">z² − 2z + 2 = 2i − 2(1+i) + 2 = 2i − 2 − 2i + 2 = <strong>0 ✓</strong></p>
+            <p class="step"><strong>For z = 1 − i:</strong></p>
+            <p class="step">z² = (1−i)² = 1 − 2i + i² = −2i</p>
+            <p class="step">z² − 2z + 2 = −2i − 2(1−i) + 2 = −2i − 2 + 2i + 2 = <strong>0 ✓</strong></p>
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <p class="q-group">Question 6: Find conjugate and absolute value of each</p>
+        <div class="ex-card">
+          <p class="ex-q">(i) 4 + 5i &nbsp;|&nbsp; (ii) −1 + 7i &nbsp;|&nbsp; (iii) √3 i &nbsp;|&nbsp; (iv) √7 − 3i &nbsp;|&nbsp; (v) −3 − 4i</p>
+          <button class="reveal-btn">Show Solution</button>
+          <div class="answer-box">
+            <p class="step">(i) Conj: 4 − 5i &nbsp;|&nbsp; |z| = √(16+25) = <strong>√41</strong></p>
+            <p class="step">(ii) Conj: −1 − 7i &nbsp;|&nbsp; |z| = √(1+49) = √50 = <strong>5√2</strong></p>
+            <p class="step">(iii) z = 0 + √3i &nbsp;→ Conj: −√3i &nbsp;|&nbsp; |z| = <strong>√3</strong></p>
+            <p class="step">(iv) Conj: √7 + 3i &nbsp;|&nbsp; |z| = √(7+9) = √16 = <strong>4</strong></p>
+            <p class="step">(v) Conj: −3 + 4i &nbsp;|&nbsp; |z| = √(9+16) = √25 = <strong>5</strong></p>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <p class="ex-q">(vi) (5 − 4i)² &nbsp;|&nbsp; (vii) 2/3 − √(−9/16) &nbsp;|&nbsp; (viii) (1+i)(1+2i)/(3+i)</p>
+          <button class="reveal-btn">Show Solution</button>
+          <div class="answer-box">
+            <p class="step">(vi) (5−4i)² = 25 − 40i − 16 = 9 − 40i &nbsp;→ Conj: 9+40i &nbsp;|&nbsp; |z| = √(81+1600) = <strong>41</strong></p>
+            <p class="step">(vii) √(−9/16) = (3/4)i → z = 2/3 − (3/4)i &nbsp;→ Conj: 2/3 + (3/4)i &nbsp;|&nbsp; |z| = √(4/9 + 9/16) = <strong>√145/12</strong></p>
+            <p class="step">(viii) Numerator: (1+i)(1+2i) = 1+2i+i+2i² = −1+3i &nbsp;→ (−1+3i)/(3+i) = (−1+3i)(3−i)/10 = (−3+i+9i−3i²)/10 = 10i/10 = i &nbsp;→ Conj: <strong>−i</strong> &nbsp;|&nbsp; |z| = <strong>1</strong></p>
+          </div>
+        </div>
+
+        <!-- Q7 -->
+        <p class="q-group">Question 7: Find real and imaginary parts</p>
+        <div class="ex-card">
+          <p class="ex-q">(i) 2i(3 − 5i) &nbsp;|&nbsp; (ii) (√5 + i)/(√5 − i)</p>
+          <button class="reveal-btn">Show Solution</button>
+          <div class="answer-box">
+            <p class="step">(i): 6i − 10i² = 10 + 6i &nbsp;→ Re = <strong>10</strong>, Im = <strong>6</strong></p>
+            <p class="step">(ii): Multiply by conjugate → (√5+i)²/6 = (5+2i√5−1)/6 = (4+2i√5)/6 &nbsp;→ Re = <strong>2/3</strong>, Im = <strong>√5/3</strong></p>
+          </div>
+        </div>
+
+        <!-- Q8 -->
+        <p class="q-group">Question 8: If z = x + iy, Re(z) = 0 and |z| = 2, find z</p>
+        <div class="ex-card">
+          <p class="ex-q">Find all values of z.</p>
+          <button class="reveal-btn">Show Solution</button>
+          <div class="answer-box">
+            <p class="step">Re(z) = 0 → x = 0, so z = iy</p>
+            <p class="step">|z| = |y| = 2 → y = ±2</p>
+            <p class="step">Answer: <strong>z = 2i or z = −2i</strong></p>
+          </div>
+        </div>
+
+        <!-- Q9 -->
+        <p class="q-group">Question 9: Solve the complex equations</p>
+        <div class="ex-card">
+          <p class="ex-q">(i) &nbsp; (x, y)(2, 3) = (−4, 7)</p>
+          <button class="reveal-btn">Show Solution</button>
+          <div class="answer-box">
+            <p class="step">(x + yi)(2 + 3i) = −4 + 7i</p>
+            <p class="step">Expand: (2x − 3y) + (3x + 2y)i = −4 + 7i</p>
+            <p class="step">Equations: 2x − 3y = −4 &nbsp;...(1) &nbsp;|&nbsp; 3x + 2y = 7 &nbsp;...(2)</p>
+            <p class="step">Solve: From (1): x = (−4+3y)/2. Substitute in (2): 13y = 26 → y = 2, x = 1</p>
+            <p class="step">Answer: <strong>x = 1, y = 2</strong></p>
+          </div>
+        </div>
+
+        <div class="ex-card">
+          <p class="ex-q">(ii) (x + 3i)² = 2yi &nbsp;|&nbsp; (iii) (x + 2yi)² = xi</p>
+          <button class="reveal-btn">Show Solution</button>
+          <div class="answer-box">
+            <p class="step"><strong>(ii):</strong> x² + 6xi − 9 = 2yi → Real: x²−9=0 → x=±3 &nbsp;|&nbsp; Imag: 6x=2y</p>
+            <p class="step">If x=3: y=9 &nbsp;|&nbsp; If x=−3: y=−9 → <strong>(3,9) or (−3,−9)</strong></p>
+            <p class="step"><strong>(iii):</strong> (x²−4y²) + 4xyi = 0 + xi → Real: x²=4y² &nbsp;|&nbsp; Imag: 4xy=x → x=0 or y=1/4</p>
+            <p class="step">If x=0: y=0 &nbsp;|&nbsp; If y=1/4: x=±1/2 → <strong>(0,0), (1/2, 1/4), (−1/2, 1/4)</strong></p>
+          </div>
+        </div>
+
+        <!-- Q10 -->
+        <p class="q-group">Question 10: Plot on Argand plane (describe positions)</p>
+        <div class="ex-card">
+          <p class="ex-q">(i) (2,−3) &nbsp;(ii) (3,4) &nbsp;(iii) (−5,7) &nbsp;(iv) (−6,−2) &nbsp;(v) (0,6) &nbsp;(vi) (−5,0)</p>
+          <button class="reveal-btn">Show Solution</button>
+          <div class="answer-box">
+            <p class="step">(i) 2−3i → right 2, down 3</p>
+            <p class="step">(ii) 3+4i → right 3, up 4</p>
+            <p class="step">(iii) −5+7i → left 5, up 7</p>
+            <p class="step">(iv) −6−2i → left 6, down 2</p>
+            <p class="step">(v) 6i → on imaginary axis, up 6 (purely imaginary)</p>
+            <p class="step">(vi) −5 → on real axis, left 5 (purely real)</p>
+          </div>
+        </div>
+
+        <!-- Q11 -->
+        <p class="q-group">Question 11: Find the modulus (length of vector)</p>
+        <div class="ex-card">
+          <p class="ex-q">(i) −5 + 2i &nbsp;|&nbsp; (ii) 7/3 + 8i/3 &nbsp;|&nbsp; (iii) (1+i)/√2 &nbsp;|&nbsp; (iv) (1 + √3 i)/2</p>
+          <button class="reveal-btn">Show Solution</button>
+          <div class="answer-box">
+            <p class="step">(i): √(25 + 4) = <strong>√29</strong></p>
+            <p class="step">(ii): √(49/9 + 64/9) = √(113/9) = <strong>√113/3</strong></p>
+            <p class="step">(iii): |1+i|/√2 = √2/√2 = <strong>1</strong></p>
+            <p class="step">(iv): √(1/4 + 3/4) = √1 = <strong>1</strong></p>
+          </div>
+        </div>
+
+      </section><!-- end questions -->
+
+
+      <!-- STEP 4: COMMON MISTAKES -->
+      <section class="lesson-section">
+        <h2>⚠️ Mistakes to Avoid in This Exercise</h2>
+
+        <div class="confusion-box">
+          <div class="conf-title">⚠️ Forgetting that i² = −1 (not +1)</div>
+          <p>In almost every multiplication question, you will get an i² term. Always replace it with −1, never skip this step.</p>
+        </div>
+
+        <div class="confusion-box">
+          <div class="conf-title">⚠️ Sign errors in conjugate division</div>
+          <p>When multiplying by conjugate (a − bi), be careful: the denominator becomes a² + b² (always positive). Don't write a² − b².</p>
+        </div>
+
+        <div class="confusion-box">
+          <div class="conf-title">⚠️ Imaginary part = coefficient of i, not "the i part"</div>
+          <p>Im(3 − 4i) = −4 (a real number). Not "−4i". This matters in Q7 and similar questions.</p>
+        </div>
+      </section>
+
+
+      <!-- STEP 5: SUMMARY -->
+      <section class="lesson-section">
+        <h2>📝 Summary</h2>
+        <div class="summary-box">
+          <h3>What You Practised in Exercise 1.1</h3>
+          <ol>
+            <li>Powers of i follow a cycle of 4 (i, −1, −i, 1). Divide exponent by 4, use the remainder.</li>
+            <li>For conjugate: flip sign of imaginary part. For modulus: |a+bi| = √(a²+b²).</li>
+            <li>Solving complex equations: expand, separate real and imaginary parts, solve the system of equations.</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- NAVIGATION -->
+      <nav class="lesson-nav" aria-label="Lesson navigation">
+        <a href="lesson-1.html" class="nav-btn">← Theory Notes</a>
+        <a href="index.html" class="nav-btn">📋 Unit 1 Overview</a>
+        <a href="lesson-3.html" class="nav-btn primary">Exercise 1.2 →</a>
+      </nav>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>Built with patience and curiosity · Usama · Class XI FSc · 2026</p></div>
+  </footer>
+
+  <script src="../../../js/main.js"></script>
+  <script src="../../../js/lessons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      renderMathInElement(document.body, {
+        delimiters: [
+          { left: '$$', right: '$$', display: true },
+          { left: '\\(', right: '\\)', display: false },
+          { left: '\\[', right: '\\]', display: true }
+        ],
+        throwOnError: false
+      });
+    });
+  </script>
+</body>
+</html>

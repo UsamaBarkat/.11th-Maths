@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<!--
+  ╔══════════════════════════════════════════════════════════════╗
+  ║  LESSON TEMPLATE — Copy this file to create new lessons     ║
+  ║                                                             ║
+  ║  Steps to use:                                              ║
+  ║  1. Copy this file to the right folder:                     ║
+  ║     subjects/SUBJECT/chapter-N/lesson-N.html                ║
+  ║  2. Find every [REPLACE] marker and fill it in              ║
+  ║  3. Update the chapter's index.html to link this lesson     ║
+  ║  4. Update PROGRESS.md with the lesson date                 ║
+  ╚══════════════════════════════════════════════════════════════╝
+
+  [REPLACE] markers to fill in:
+  - SUBJECT_NAME     → chemistry / mathematics / physics / english
+  - LESSON_TITLE     → "What is Photosynthesis?" etc.
+  - CH_NUM           → 1, 2, 3...
+  - LESSON_NUM       → 1, 2, 3...
+  - TOTAL_LESSONS    → how many lessons total in this chapter
+  - SUBJECT_LABEL    → "🧪 Chemistry" / "🔢 Mathematics" / etc.
+  - SUBJECT_PATH     → ../../index.html (adjust depth as needed)
+  - HOME_PATH        → ../../../index.html
+  - CH_PATH          → index.html (same folder)
+  - PREV_LESSON_HREF → lesson-X.html or DISABLED if first lesson
+  - NEXT_LESSON_HREF → lesson-X.html or DISABLED if last lesson
+  - READ_TIME        → "8–12 min" estimate
+-->
+<html lang="en" data-subject="[REPLACE: SUBJECT_NAME]">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[REPLACE: LESSON_TITLE] — Ch.[REPLACE: CH_NUM] Lesson [REPLACE: LESSON_NUM] | [REPLACE: SUBJECT_LABEL]</title>
+
+  <!-- 3 CSS files: style.css = base, subjects.css = color theme, lessons.css = lesson layout -->
+  <link rel="stylesheet" href="../../../css/style.css" />
+  <link rel="stylesheet" href="../../../css/subjects.css" />
+  <link rel="stylesheet" href="../../../css/lessons.css" />
+</head>
+
+<body>
+
+  <!-- SITE HEADER — same on every page -->
+  <header class="site-header">
+    <div class="container">
+      <a href="[REPLACE: HOME_PATH]" class="site-logo">📚 Class XI Hub <span>— Sindh Board</span></a>
+      <button id="dark-mode-btn">🌙 Dark Mode</button>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB — shows path: Home → Subject → Chapter → Lesson -->
+  <nav class="lesson-breadcrumb" aria-label="breadcrumb">
+    <div class="container-narrow">
+      <a href="[REPLACE: HOME_PATH]">Home</a>
+      <span class="sep">›</span>
+      <a href="[REPLACE: SUBJECT_PATH]">[REPLACE: SUBJECT_LABEL]</a>
+      <span class="sep">›</span>
+      <a href="[REPLACE: CH_PATH]">Chapter [REPLACE: CH_NUM]</a>
+      <span class="sep">›</span>
+      <span class="current">Lesson [REPLACE: LESSON_NUM] of [REPLACE: TOTAL_LESSONS]</span>
+    </div>
+  </nav>
+
+  <!-- LESSON MAIN CONTENT -->
+  <main class="lesson-page">
+    <div class="container-narrow">
+
+      <!-- Lesson title and meta badges -->
+      <div class="lesson-header">
+        <h1>[REPLACE: LESSON_TITLE]</h1>
+        <div class="lesson-meta">
+          <span class="meta-badge">Chapter [REPLACE: CH_NUM] · Lesson [REPLACE: LESSON_NUM] of [REPLACE: TOTAL_LESSONS]</span>
+          <span>[REPLACE: SUBJECT_LABEL]</span>
+          <span>⏱ [REPLACE: READ_TIME] read</span>
+        </div>
+      </div>
+
+
+      <!-- ══════ STEP 1: HOOK ══════
+           A short engaging intro. Real-life example, relatable situation,
+           or a surprising fact. Goal: make Usama curious to read more.
+      -->
+      <section class="lesson-section">
+        <h2>🎯 Why Should You Care?</h2>
+
+        <div class="hook-text">
+          [REPLACE: Write 2-3 sentences as an engaging hook here.
+          Use real-life examples — something Usama sees in daily life.
+          End with a connection to the topic of this lesson.]
+        </div>
+      </section>
+
+
+      <!-- ══════ STEP 2: CORE CONCEPT ══════
+           Textbook definition first (blue box), then easy version (green box).
+           Follow with any needed tables, diagrams, or breakdown lists.
+      -->
+      <section class="lesson-section">
+        <h2>📖 Core Concept: [REPLACE: Short title]</h2>
+
+        <!-- Blue box = textbook / formal definition -->
+        <div class="def-box">
+          <div class="def-label">📚 Textbook Definition</div>
+          <p>[REPLACE: Copy the exact textbook definition here.]</p>
+        </div>
+
+        <!-- Green box = easy / plain English version -->
+        <div class="def-box easy">
+          <div class="def-label">✅ Easy Version</div>
+          <p>[REPLACE: Rewrite the definition in simple words that a beginner understands.]</p>
+        </div>
+
+        <!-- Optional: breakdown table -->
+        <!--
+        <h3>[REPLACE: Table heading]</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Column 1</th><th>Column 2</th><th>Column 3</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Row 1</td><td>...</td><td>...</td></tr>
+            </tbody>
+          </table>
+        </div>
+        -->
+
+        <!-- Optional: ASCII diagram -->
+        <!--
+        <div class="diagram">
+          <pre>
+[REPLACE: Draw ASCII diagram here — preserve spacing carefully]
+          </pre>
+        </div>
+        -->
+
+      </section>
+
+
+      <!-- ══════ STEP 3: REAL-LIFE EXAMPLES ══════
+           Numbered list, 4-6 examples. Start each with an emoji and bold key word.
+      -->
+      <section class="lesson-section">
+        <h2>💡 Real-Life Examples</h2>
+
+        <ol>
+          <li><strong>[REPLACE: keyword] [REPLACE: emoji]</strong> — [REPLACE: one-sentence explanation]</li>
+          <li><strong>[REPLACE: keyword] [REPLACE: emoji]</strong> — [REPLACE: one-sentence explanation]</li>
+          <li><strong>[REPLACE: keyword] [REPLACE: emoji]</strong> — [REPLACE: one-sentence explanation]</li>
+          <li><strong>[REPLACE: keyword] [REPLACE: emoji]</strong> — [REPLACE: one-sentence explanation]</li>
+        </ol>
+      </section>
+
+
+      <!-- ══════ STEP 4: COMMON CONFUSIONS ══════
+           Use orange warning boxes. Each confusion box has a title (the misconception)
+           and a body (the correction, starting with ✅ or ❌).
+      -->
+      <section class="lesson-section">
+        <h2>⚠️ Common Confusions</h2>
+
+        <div class="confusion-box">
+          <div class="conf-title">⚠️ Confusion #1: "[REPLACE: The wrong belief]"</div>
+          <p>[REPLACE: ✅/❌ Explain why it's wrong or right, with a quick proof or example.]</p>
+        </div>
+
+        <div class="confusion-box">
+          <div class="conf-title">⚠️ Confusion #2: "[REPLACE: Another common mistake]"</div>
+          <p>[REPLACE: Correct the misconception clearly.]</p>
+        </div>
+
+        <!-- Add more confusion boxes if needed -->
+
+      </section>
+
+
+      <!-- ══════ STEP 5: PRACTICE ══════
+           Part A: MCQs — 3 questions minimum
+           Part B: Short Questions — 2-3 questions with hidden answers
+      -->
+      <section class="lesson-section">
+        <h2>✏️ Practice Time</h2>
+
+        <!-- PART A: MCQs -->
+        <div class="mcq-set">
+          <h3>Multiple Choice Questions</h3>
+          <p class="text-muted">Click an option to check your answer. One chance only!</p>
+
+          <!-- MCQ #1 -->
+          <div class="mcq-card">
+            <p class="q-text">Q1. [REPLACE: Question text here?]</p>
+            <ul class="mcq-options">
+              <!-- Set data-correct="true" on the correct option, "false" on all others -->
+              <li><button class="mcq-opt" data-correct="false">(a) [REPLACE: Option A]</button></li>
+              <li><button class="mcq-opt" data-correct="true">(b) [REPLACE: Correct option]</button></li>
+              <li><button class="mcq-opt" data-correct="false">(c) [REPLACE: Option C]</button></li>
+              <li><button class="mcq-opt" data-correct="false">(d) [REPLACE: Option D]</button></li>
+            </ul>
+            <div class="mcq-feedback"></div>
+            <!-- lessons.js fills in the feedback text automatically -->
+          </div>
+
+          <!-- MCQ #2 -->
+          <div class="mcq-card">
+            <p class="q-text">Q2. [REPLACE: Question text here?]</p>
+            <ul class="mcq-options">
+              <li><button class="mcq-opt" data-correct="false">(a) [REPLACE]</button></li>
+              <li><button class="mcq-opt" data-correct="false">(b) [REPLACE]</button></li>
+              <li><button class="mcq-opt" data-correct="true">(c) [REPLACE: Correct]</button></li>
+              <li><button class="mcq-opt" data-correct="false">(d) [REPLACE]</button></li>
+            </ul>
+            <div class="mcq-feedback"></div>
+          </div>
+
+          <!-- MCQ #3 -->
+          <div class="mcq-card">
+            <p class="q-text">Q3. [REPLACE: Question text here?]</p>
+            <ul class="mcq-options">
+              <li><button class="mcq-opt" data-correct="false">(a) [REPLACE]</button></li>
+              <li><button class="mcq-opt" data-correct="false">(b) [REPLACE]</button></li>
+              <li><button class="mcq-opt" data-correct="false">(c) [REPLACE]</button></li>
+              <li><button class="mcq-opt" data-correct="true">(d) [REPLACE: Correct]</button></li>
+            </ul>
+            <div class="mcq-feedback"></div>
+          </div>
+
+        </div><!-- end mcq-set -->
+
+        <!-- PART B: Short Questions -->
+        <div class="short-q-set mt-4">
+          <h3>Short Questions</h3>
+          <p class="text-muted">Try answering yourself first, then click "Show Answer".</p>
+
+          <!-- Short Q #1 -->
+          <div class="short-q-card">
+            <p class="q-text">Q4. [REPLACE: Short question here?]</p>
+            <!-- Button text toggles between Show/Hide — handled by lessons.js -->
+            <button class="reveal-btn">Show Answer</button>
+            <div class="answer-box">
+              <!-- Hidden until button is clicked -->
+              <strong>Answer:</strong> [REPLACE: Model answer here]
+            </div>
+          </div>
+
+          <!-- Short Q #2 -->
+          <div class="short-q-card">
+            <p class="q-text">Q5. [REPLACE: Another short question?]</p>
+            <button class="reveal-btn">Show Answer</button>
+            <div class="answer-box">
+              <strong>Answer:</strong> [REPLACE: Model answer here]
+            </div>
+          </div>
+
+        </div><!-- end short-q-set -->
+
+      </section><!-- end practice -->
+
+
+      <!-- ══════ STEP 6: SUMMARY ══════
+           Green tinted box with exactly 3 bullet points.
+           These are the 3 most important things from this lesson.
+      -->
+      <section class="lesson-section">
+        <h2>📝 Summary</h2>
+
+        <div class="summary-box">
+          <h3>3 Key Points from This Lesson</h3>
+          <ol>
+            <li>[REPLACE: First key point — the most important idea]</li>
+            <li>[REPLACE: Second key point — a definition or distinction]</li>
+            <li>[REPLACE: Third key point — something to remember for exams]</li>
+          </ol>
+        </div>
+      </section>
+
+
+      <!-- LESSON NAVIGATION — Previous / Chapter / Next -->
+      <nav class="lesson-nav" aria-label="Lesson navigation">
+
+        <!-- PREVIOUS: If this is lesson 1, use <span class="nav-btn disabled">← Previous</span>
+             Otherwise: <a href="lesson-X.html" class="nav-btn">← Previous Lesson</a> -->
+        <span class="nav-btn disabled">← Previous</span>
+
+        <!-- ALWAYS PRESENT: link to chapter index -->
+        <a href="[REPLACE: CH_PATH]" class="nav-btn">📋 Chapter Overview</a>
+
+        <!-- NEXT: If last lesson, use <span class="nav-btn disabled">Next Lesson →</span>
+             Otherwise: <a href="lesson-X.html" class="nav-btn primary">Next Lesson →</a> -->
+        <span class="nav-btn disabled">Next Lesson →</span>
+
+      </nav>
+
+    </div><!-- end container-narrow -->
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Built with patience and curiosity · Usama · Class XI FSc · 2026</p>
+    </div>
+  </footer>
+
+  <!-- JS: main.js for dark mode, lessons.js for MCQs and show-answer -->
+  <script src="../../../js/main.js"></script>
+  <script src="../../../js/lessons.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  index.html — Homepage of Usama's Class XI Learning Hub
+  This is the "front door" — shows 4 subject cards.
+  Open this file in a browser to start navigating the site.
+-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Class XI Learning Hub — Sindh Textbook Board</title>
+
+  <!-- 3 CSS files: base styles, subject themes, lesson styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/subjects.css" />
+</head>
+
+<body>
+
+  <!-- ══════ SITE HEADER ══════ -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="site-logo">
+        📚 Class XI Hub <span>— Sindh Textbook Board</span>
+      </a>
+      <button id="dark-mode-btn" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+    </div>
+  </header>
+
+  <!-- ══════ HERO BANNER ══════ -->
+  <section class="home-hero">
+    <div class="container">
+      <p class="welcome">Welcome back, Usama 👋</p>
+      <h1>My Class XI Learning Hub</h1>
+      <p class="subtitle">Sindh Textbook Board — Personal Notes &amp; Revision</p>
+    </div>
+  </section>
+
+  <!-- ══════ QUICK STATS ROW ══════ -->
+  <div class="home-stats">
+    <div class="stat-item stat-chem">
+      <div class="stat-number">1</div>
+      <div class="stat-label">Chemistry Lessons</div>
+    </div>
+    <div class="stat-item stat-math">
+      <div class="stat-number">3</div>
+      <div class="stat-label">Math Lessons</div>
+    </div>
+    <div class="stat-item stat-phys">
+      <div class="stat-number">0</div>
+      <div class="stat-label">Physics Lessons</div>
+    </div>
+    <div class="stat-item stat-eng">
+      <div class="stat-number">0</div>
+      <div class="stat-label">English Lessons</div>
+    </div>
+  </div>
+
+  <!-- ══════ MAIN CONTENT: 4 SUBJECT CARDS ══════ -->
+  <main>
+    <section class="subjects-section">
+      <div class="container">
+        <h2>Choose a Subject</h2>
+
+        <!-- 2×2 responsive grid -->
+        <div class="subjects-grid">
+
+          <!-- Chemistry Card (STARTED) -->
+          <a href="subjects/chemistry/index.html" class="subject-card card-chem">
+            <div class="card-icon">🧪</div>
+            <div class="card-title">Chemistry</div>
+            <div class="card-meta">8 chapters · Sindh Board Class XI</div>
+            <div class="card-stats">
+              <span><strong>1</strong> lesson done</span>
+              <span><strong>8</strong> chapters</span>
+            </div>
+            <div class="mt-4">
+              <span class="badge badge-progress">🟡 In Progress</span>
+            </div>
+          </a>
+
+          <!-- Mathematics Card (NOT STARTED) -->
+          <a href="subjects/mathematics/index.html" class="subject-card card-math">
+            <div class="card-icon">🔢</div>
+            <div class="card-title">Mathematics</div>
+            <div class="card-meta">12 units · Sindh Board Class XI</div>
+            <div class="card-stats">
+              <span><strong>0</strong> lessons done</span>
+              <span><strong>12</strong> units</span>
+            </div>
+            <div class="mt-4">
+              <span class="badge badge-soon">⏳ Not Started</span>
+            </div>
+          </a>
+
+          <!-- Physics Card (NOT STARTED) -->
+          <a href="subjects/physics/index.html" class="subject-card card-phys">
+            <div class="card-icon">⚛️</div>
+            <div class="card-title">Physics</div>
+            <div class="card-meta">10 chapters · Sindh Board Class XI</div>
+            <div class="card-stats">
+              <span><strong>0</strong> lessons done</span>
+              <span><strong>10</strong> chapters</span>
+            </div>
+            <div class="mt-4">
+              <span class="badge badge-soon">⏳ Not Started</span>
+            </div>
+          </a>
+
+          <!-- English Card (NOT STARTED) -->
+          <a href="subjects/english/index.html" class="subject-card card-eng">
+            <div class="card-icon">📖</div>
+            <div class="card-title">English</div>
+            <div class="card-meta">4 sections · Sindh Board Class XI</div>
+            <div class="card-stats">
+              <span><strong>0</strong> lessons done</span>
+              <span><strong>4</strong> sections</span>
+            </div>
+            <div class="mt-4">
+              <span class="badge badge-soon">⏳ Not Started</span>
+            </div>
+          </a>
+
+        </div><!-- end subjects-grid -->
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════ FOOTER ══════ -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>Built with patience and curiosity · Usama · Class XI FSc · Sindh Board · 2026</p>
+    </div>
+  </footer>
+
+  <!-- JS loaded at end so HTML is ready first -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

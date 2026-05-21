@@ -1,0 +1,28 @@
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Windows folder config
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# macOS junk files (if collaborating with Mac users)
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# VS Code settings (keep your own, don't force on others)
+.vscode/
+
+# Editor backup files
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Node (in case anyone accidentally runs npm here)
+node_modules/

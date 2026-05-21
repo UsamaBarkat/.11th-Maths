@@ -1,0 +1,22 @@
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+
+# VS Code
+.vscode/
+
+# Editor backups
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Node (in case someone accidentally runs npm)
+node_modules/

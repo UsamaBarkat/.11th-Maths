@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  index.html — Homepage of Usama's Chemistry Notebook
+  This is the "book cover" — shows all 8 chapters as cards.
+  Open this file in a browser to see the full site.
+-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Class XI Chemistry — Sindh Board</title>
+
+  <!-- Main stylesheet — controls ALL styling across the site -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ===== SITE HEADER (top navigation bar, sticks to top while scrolling) ===== -->
+  <header class="site-header">
+    <div class="container">
+      <!-- Clicking the title always brings you back to homepage -->
+      <a href="index.html" class="site-title">
+        ⚗️ Chemistry Notes <span>— Class XI Sindh Board</span>
+      </a>
+
+      <!-- Dark mode toggle button — JS in script.js handles this -->
+      <button id="dark-mode-btn" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION (big welcome banner) ===== -->
+  <section class="hero">
+    <div class="container">
+      <h1>My Class XI Chemistry</h1>
+      <p class="subtitle">Sindh Textbook Board — Complete Lesson Notes</p>
+      <div class="personal-note">
+        "A self-built notebook for revising chemistry lessons taught by Claude"
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAIN CONTENT: 8 CHAPTER CARDS ===== -->
+  <main>
+    <section class="chapters-section">
+      <div class="container">
+        <h2>All Chapters</h2>
+
+        <!-- Responsive grid — auto adjusts columns based on screen width -->
+        <div class="chapters-grid">
+
+          <!-- ── Chapter 1 ── (STARTED — has real content) -->
+          <a href="chapters/chapter-1/index.html" class="chapter-card started">
+            <div class="ch-number">Chapter 1</div>
+            <h3>Introduction to Fundamental Concepts of Chemistry</h3>
+            <div class="status">✅ Started — 1 lesson available</div>
+          </a>
+
+          <!-- ── Chapters 2–8 ── (COMING SOON — placeholder pages) -->
+          <a href="chapters/chapter-2/index.html" class="chapter-card coming-soon">
+            <div class="ch-number">Chapter 2</div>
+            <h3>The Three States of Matter</h3>
+            <div class="status">⏳ Coming soon</div>
+          </a>
+
+          <a href="chapters/chapter-3/index.html" class="chapter-card coming-soon">
+            <div class="ch-number">Chapter 3</div>
+            <h3>Atomic Structure</h3>
+            <div class="status">⏳ Coming soon</div>
+          </a>
+
+          <a href="chapters/chapter-4/index.html" class="chapter-card coming-soon">
+            <div class="ch-number">Chapter 4</div>
+            <h3>Chemical Bonding</h3>
+            <div class="status">⏳ Coming soon</div>
+          </a>
+
+          <a href="chapters/chapter-5/index.html" class="chapter-card coming-soon">
+            <div class="ch-number">Chapter 5</div>
+            <h3>Energetics of Chemical Reactions</h3>
+            <div class="status">⏳ Coming soon</div>
+          </a>
+
+          <a href="chapters/chapter-6/index.html" class="chapter-card coming-soon">
+            <div class="ch-number">Chapter 6</div>
+            <h3>Chemical Equilibrium</h3>
+            <div class="status">⏳ Coming soon</div>
+          </a>
+
+          <a href="chapters/chapter-7/index.html" class="chapter-card coming-soon">
+            <div class="ch-number">Chapter 7</div>
+            <h3>Solutions and Electrolytes</h3>
+            <div class="status">⏳ Coming soon</div>
+          </a>
+
+          <a href="chapters/chapter-8/index.html" class="chapter-card coming-soon">
+            <div class="ch-number">Chapter 8</div>
+            <h3>Chemical Kinetics</h3>
+            <div class="status">⏳ Coming soon</div>
+          </a>
+
+        </div><!-- end .chapters-grid -->
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>Built by Usama · Class XI FSc · Sindh Board · 2026</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript — loaded at the end so the HTML is ready before JS runs -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<!--
+  lesson-1.html — "Introduction to Complex Numbers" (Theory)
+  Subject: Mathematics | Unit 1 | Lesson 1 of 3
+  Uses KaTeX (CDN) for rendering math notation like z = a + bi
+-->
+<html lang="en" data-subject="mathematics">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction to Complex Numbers — Unit 1 Lesson 1 | Mathematics</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" />
+  <link rel="stylesheet" href="../../../css/subjects.css" />
+  <link rel="stylesheet" href="../../../css/lessons.css" />
+
+  <!-- KaTeX: renders math notation. Requires internet connection. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+
+  <!-- Small extra styles for math-specific elements -->
+  <style>
+    /* Make KaTeX display-math centered */
+    .katex-display { margin: 16px 0; overflow-x: auto; }
+
+    /* Formula reference card */
+    .formula-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      margin-bottom: 14px;
+    }
+    .formula-card .fc-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .formula-card p { margin: 4px 0; font-size: 0.95rem; }
+
+    /* Powers of i table highlight */
+    .powers-table td:first-child { font-weight: 700; color: var(--accent); }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <a href="../../../index.html" class="site-logo">📚 Class XI Hub <span>— Sindh Board</span></a>
+      <button id="dark-mode-btn">🌙 Dark Mode</button>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <nav class="lesson-breadcrumb" aria-label="breadcrumb">
+    <div class="container-narrow">
+      <a href="../../../index.html">Home</a>
+      <span class="sep">›</span>
+      <a href="../../mathematics/index.html">🔢 Mathematics</a>
+      <span class="sep">›</span>
+      <a href="index.html">Unit 1</a>
+      <span class="sep">›</span>
+      <span class="current">Lesson 1 of 3</span>
+    </div>
+  </nav>
+
+  <!-- LESSON CONTENT -->
+  <main class="lesson-page">
+    <div class="container-narrow">
+
+      <div class="lesson-header">
+        <h1>Introduction to Complex Numbers</h1>
+        <div class="lesson-meta">
+          <span class="meta-badge">Unit 1 · Lesson 1 of 3</span>
+          <span>🔢 Mathematics</span>
+          <span>⏱ 15–20 min read</span>
+        </div>
+      </div>
+
+
+      <!-- ════ STEP 1: HOOK ════ -->
+      <section class="lesson-section">
+        <h2>🎯 The Problem That Started It All</h2>
+
+        <div class="hook-text">
+          Try to solve this equation: <strong>x² = −1</strong><br><br>
+          In Class 9 and 10, you would say "no solution" — because squaring any real number
+          (positive or negative) always gives a positive result. You can never square something
+          and get −1.<br><br>
+          But mathematicians refused to give up. They asked: <em>"What if we just invent a new
+          number that solves it?"</em> That's exactly what they did — and the result changed
+          mathematics forever.
+        </div>
+      </section>
+
+
+      <!-- ════ STEP 2: CORE CONCEPT ════ -->
+      <section class="lesson-section">
+        <h2>📖 Core Concept: The Imaginary Unit and Complex Numbers</h2>
+
+        <!-- i defined -->
+        <div class="def-box">
+          <div class="def-label">📚 The Imaginary Unit</div>
+          <p>Mathematicians defined a new number called <strong>i</strong> (imaginary unit) where:</p>
+          <p>\[ i = \sqrt{-1} \quad \Longrightarrow \quad i^2 = -1 \]</p>
+        </div>
+
+        <div class="def-box easy">
+          <div class="def-label">✅ Simple Version</div>
+          <p><strong>i</strong> is a number invented to solve x² = −1. It doesn't exist on the real number line — it's in a completely new dimension.</p>
+        </div>
+
+        <!-- Complex number definition -->
+        <h3>What is a Complex Number?</h3>
+
+        <div class="def-box">
+          <div class="def-label">📚 Definition</div>
+          <p>A <strong>complex number</strong> is any number of the form:</p>
+          <p>\[ z = a + bi \]</p>
+          <p>where <strong>a</strong> is the <em>real part</em>, <strong>b</strong> is the <em>imaginary part</em>, and <strong>i = √(−1)</strong>.</p>
+        </div>
+
+        <div class="def-box easy">
+          <div class="def-label">✅ Quick Test</div>
+          <p>Re(z) = a (real part) &nbsp;|&nbsp; Im(z) = b (imaginary part — the number in front of i, not i itself)</p>
+        </div>
+
+        <h3>Examples: Real and Imaginary Parts</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Complex Number z</th><th>Real Part a</th><th>Imaginary Part b</th><th>Type</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>3 + 4i</td><td>3</td><td>4</td><td>Complex</td></tr>
+              <tr><td>5 − 2i</td><td>5</td><td>−2</td><td>Complex</td></tr>
+              <tr><td>7</td><td>7</td><td>0</td><td>Purely Real</td></tr>
+              <tr><td>−3i</td><td>0</td><td>−3</td><td>Purely Imaginary</td></tr>
+              <tr><td>0</td><td>0</td><td>0</td><td>Zero (special case)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Powers of i -->
+        <h3>Powers of i — The Cycle of 4</h3>
+        <p>The powers of i repeat in a cycle of 4. Memorise this:</p>
+        <div class="table-wrap">
+          <table class="powers-table">
+            <thead>
+              <tr><th>Power</th><th>Value</th><th>How?</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>i¹</td><td>i</td><td>Just i</td></tr>
+              <tr><td>i²</td><td>−1</td><td>By definition</td></tr>
+              <tr><td>i³</td><td>−i</td><td>i² × i = (−1)(i) = −i</td></tr>
+              <tr><td>i⁴</td><td>1</td><td>i² × i² = (−1)(−1) = 1</td></tr>
+              <tr><td>i⁵</td><td>i</td><td>Back to start! (cycle repeats)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="def-box easy">
+          <div class="def-label">✅ Shortcut for High Powers</div>
+          <p>For any power iⁿ: divide n by 4, look at the remainder.</p>
+          <p>Remainder 0 → 1 &nbsp;|&nbsp; Remainder 1 → i &nbsp;|&nbsp; Remainder 2 → −1 &nbsp;|&nbsp; Remainder 3 → −i</p>
+          <p>Example: i¹⁰ → 10 ÷ 4 = 2 remainder 2 → <strong>i¹⁰ = −1</strong></p>
+        </div>
+
+        <!-- Argand Plane -->
+        <h3>The Argand Plane (Complex Plane)</h3>
+        <p>Complex numbers can be plotted on a graph called the <strong>Argand plane</strong>:</p>
+        <ul>
+          <li>Horizontal axis = Real axis (for part a)</li>
+          <li>Vertical axis = Imaginary axis (for part b)</li>
+          <li>Complex number z = a + bi → plot point (a, b)</li>
+        </ul>
+
+        <div class="diagram">
+          <pre>
+    Imaginary axis (b)
+          ↑
+    7i    |        • (−5 + 7i)
+          |
+    4i    |              • (3 + 4i)
+          |
+─────────┼──────────────────→ Real axis (a)
+   −5 −4 │ 0   1   2   3   4
+          |
+   −3i   |              • (4 − 3i)
+          |</pre>
+        </div>
+
+        <p>Every complex number is a unique point on this plane. The distance from the origin (0,0) to the point (a, b) is called the <strong>modulus</strong> of z.</p>
+
+      </section><!-- end core concept -->
+
+
+      <!-- ════ STEP 3: OPERATIONS ════ -->
+      <section class="lesson-section">
+        <h2>💡 The 4 Operations on Complex Numbers</h2>
+
+        <!-- Addition -->
+        <div class="formula-card">
+          <div class="fc-title">➕ Addition</div>
+          <p><strong>Rule:</strong> Add real parts together, add imaginary parts together.</p>
+          <p>\[ (a + bi) + (c + di) = (a+c) + (b+d)i \]</p>
+          <p><strong>Example:</strong> (3 + 4i) + (2 + 5i) = (3+2) + (4+5)i = <strong>5 + 9i</strong></p>
+        </div>
+
+        <!-- Subtraction -->
+        <div class="formula-card">
+          <div class="fc-title">➖ Subtraction</div>
+          <p><strong>Rule:</strong> Subtract real parts, subtract imaginary parts.</p>
+          <p>\[ (a + bi) - (c + di) = (a-c) + (b-d)i \]</p>
+          <p><strong>Example:</strong> (5 + 7i) − (2 + 3i) = (5−2) + (7−3)i = <strong>3 + 4i</strong></p>
+        </div>
+
+        <!-- Multiplication -->
+        <div class="formula-card">
+          <div class="fc-title">✖️ Multiplication (FOIL method)</div>
+          <p><strong>Rule:</strong> Use FOIL (like expanding brackets), then replace i² with −1.</p>
+          <p><strong>Example:</strong> (2 + 3i)(4 + 5i)</p>
+          <p>= 8 + 10i + 12i + 15i² = 8 + 22i + 15(−1) = (8−15) + 22i = <strong>−7 + 22i</strong></p>
+        </div>
+
+        <!-- Division -->
+        <div class="formula-card">
+          <div class="fc-title">➗ Division (Conjugate method)</div>
+          <p><strong>What is a conjugate?</strong> The conjugate of (a + bi) is (a − bi). Just flip the sign of b.</p>
+          <p><strong>Rule:</strong> Multiply top and bottom by the conjugate of the denominator. This makes the denominator a real number.</p>
+          <p><strong>Why it works:</strong> \((a + bi)(a - bi) = a^2 + b^2\) (always real!)</p>
+          <p><strong>Example:</strong> (4 + 3i) ÷ (1 + 2i)</p>
+          <p>= \(\dfrac{(4+3i)(1-2i)}{(1+2i)(1-2i)} = \dfrac{4-8i+3i-6i^2}{1+4} = \dfrac{4-5i+6}{5} = \dfrac{10-5i}{5} =\) <strong>2 − i</strong></p>
+        </div>
+
+      </section>
+
+
+      <!-- ════ STEP 4: CONFUSIONS ════ -->
+      <section class="lesson-section">
+        <h2>⚠️ Common Confusions</h2>
+
+        <div class="confusion-box">
+          <div class="conf-title">⚠️ Confusion #1: "The imaginary part of 3 − 4i is 4i, not −4"</div>
+          <p>❌ Wrong. The <strong>imaginary part</strong> is just the coefficient of i — which is <strong>−4</strong>, not 4i.
+          Im(3 − 4i) = −4. This is a real number.</p>
+        </div>
+
+        <div class="confusion-box">
+          <div class="conf-title">⚠️ Confusion #2: "i² = √(−1) × √(−1) = √(−1 × −1) = √1 = 1"</div>
+          <p>❌ Wrong! The rule √a × √b = √(ab) only works when a and b are positive.
+          The correct answer is <strong>i² = −1</strong> by definition. Don't apply real-number square root rules to imaginary numbers.</p>
+        </div>
+
+        <div class="confusion-box">
+          <div class="conf-title">⚠️ Confusion #3: "Imaginary means fake or made up"</div>
+          <p>✅ The name is confusing, but imaginary numbers are as real as negative numbers (which were also once considered "fake"). They're used in electrical engineering, quantum physics, and signal processing every day.</p>
+        </div>
+
+        <div class="confusion-box">
+          <div class="conf-title">⚠️ Confusion #4: Forgetting to replace i² with −1 during multiplication</div>
+          <p>❌ The most common mistake! When you get a term with i², always replace it with −1 immediately.
+          15i² = 15(−1) = −15, not 15.</p>
+        </div>
+      </section>
+
+
+      <!-- ════ STEP 5: PRACTICE ════ -->
+      <section class="lesson-section">
+        <h2>✏️ Practice Time</h2>
+
+        <div class="mcq-set">
+          <h3>Multiple Choice Questions</h3>
+          <p class="text-muted">Click an option to check. One chance only!</p>
+
+          <div class="mcq-card">
+            <p class="q-text">Q1. What is the value of i²?</p>
+            <ul class="mcq-options">
+              <li><button class="mcq-opt" data-correct="false">(a) 1</button></li>
+              <li><button class="mcq-opt" data-correct="true">(b) −1</button></li>
+              <li><button class="mcq-opt" data-correct="false">(c) i</button></li>
+              <li><button class="mcq-opt" data-correct="false">(d) −i</button></li>
+            </ul>
+            <div class="mcq-feedback"></div>
+          </div>
+
+          <div class="mcq-card">
+            <p class="q-text">Q2. If z = 3 − 4i, the imaginary part Im(z) is:</p>
+            <ul class="mcq-options">
+              <li><button class="mcq-opt" data-correct="false">(a) 3</button></li>
+              <li><button class="mcq-opt" data-correct="false">(b) 4</button></li>
+              <li><button class="mcq-opt" data-correct="true">(c) −4</button></li>
+              <li><button class="mcq-opt" data-correct="false">(d) 4i</button></li>
+            </ul>
+            <div class="mcq-feedback"></div>
+          </div>
+
+          <div class="mcq-card">
+            <p class="q-text">Q3. The conjugate of (5 − 3i) is:</p>
+            <ul class="mcq-options">
+              <li><button class="mcq-opt" data-correct="false">(a) −5 + 3i</button></li>
+              <li><button class="mcq-opt" data-correct="false">(b) 5 − 3i</button></li>
+              <li><button class="mcq-opt" data-correct="true">(c) 5 + 3i</button></li>
+              <li><button class="mcq-opt" data-correct="false">(d) −5 − 3i</button></li>
+            </ul>
+            <div class="mcq-feedback"></div>
+          </div>
+
+          <div class="mcq-card">
+            <p class="q-text">Q4. On the Argand plane, z = −2 + 3i is plotted at:</p>
+            <ul class="mcq-options">
+              <li><button class="mcq-opt" data-correct="false">(a) (2, 3)</button></li>
+              <li><button class="mcq-opt" data-correct="true">(b) (−2, 3)</button></li>
+              <li><button class="mcq-opt" data-correct="false">(c) (−2, −3)</button></li>
+              <li><button class="mcq-opt" data-correct="false">(d) (3, −2)</button></li>
+            </ul>
+            <div class="mcq-feedback"></div>
+          </div>
+
+        </div><!-- end mcq-set -->
+
+        <div class="short-q-set mt-4">
+          <h3>Short Questions</h3>
+          <p class="text-muted">Try first, then reveal the answer.</p>
+
+          <div class="short-q-card">
+            <p class="q-text">Q5. Evaluate i¹⁵. (Hint: divide 15 by 4 and check the remainder)</p>
+            <button class="reveal-btn">Show Answer</button>
+            <div class="answer-box">
+              15 ÷ 4 = 3 remainder 3 &nbsp;→&nbsp; remainder is 3 &nbsp;→&nbsp; <strong>i¹⁵ = −i</strong>
+            </div>
+          </div>
+
+          <div class="short-q-card">
+            <p class="q-text">Q6. Calculate (3 + 2i) × (1 − 4i). Show each step.</p>
+            <button class="reveal-btn">Show Answer</button>
+            <div class="answer-box">
+              Using FOIL:<br>
+              = 3(1) + 3(−4i) + 2i(1) + 2i(−4i)<br>
+              = 3 − 12i + 2i − 8i²<br>
+              = 3 − 10i − 8(−1)<br>
+              = 3 − 10i + 8<br>
+              = <strong>11 − 10i</strong>
+            </div>
+          </div>
+
+          <div class="short-q-card">
+            <p class="q-text">Q7. Why do we multiply by the conjugate when dividing complex numbers?</p>
+            <button class="reveal-btn">Show Answer</button>
+            <div class="answer-box">
+              When we multiply a complex number (a + bi) by its conjugate (a − bi), we get:<br>
+              (a + bi)(a − bi) = a² + b² — a <strong>pure real number</strong> (no i).<br>
+              This turns the denominator into a real number, which makes division straightforward.
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- ════ STEP 6: SUMMARY ════ -->
+      <section class="lesson-section">
+        <h2>📝 Summary</h2>
+        <div class="summary-box">
+          <h3>3 Key Points from This Lesson</h3>
+          <ol>
+            <li><strong>i = √(−1)</strong>, so i² = −1, i³ = −i, i⁴ = 1 — the cycle repeats every 4 powers.</li>
+            <li>A complex number z = a + bi has a <strong>real part a</strong> and <strong>imaginary part b</strong>. It can be plotted as point (a, b) on the Argand plane.</li>
+            <li>For division, multiply top and bottom by the <strong>conjugate</strong> of the denominator to eliminate i from the bottom.</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- NAVIGATION -->
+      <nav class="lesson-nav" aria-label="Lesson navigation">
+        <span class="nav-btn disabled">← Previous</span>
+        <a href="index.html" class="nav-btn">📋 Unit 1 Overview</a>
+        <a href="lesson-2.html" class="nav-btn primary">Exercise 1.1 →</a>
+      </nav>
+
+    </div><!-- end container-narrow -->
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>Built with patience and curiosity · Usama · Class XI FSc · 2026</p></div>
+  </footer>
+
+  <script src="../../../js/main.js"></script>
+  <script src="../../../js/lessons.js"></script>
+  <!-- KaTeX auto-render: processes all \(...\) and \[...\] in the page -->
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      renderMathInElement(document.body, {
+        delimiters: [
+          { left: '$$', right: '$$', display: true },
+          { left: '\\(', right: '\\)', display: false },
+          { left: '\\[', right: '\\]', display: true }
+        ],
+        throwOnError: false
+      });
+    });
+  </script>
+
+</body>
+</html>
