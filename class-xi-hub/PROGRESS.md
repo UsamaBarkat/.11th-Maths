@@ -8,11 +8,11 @@ Last updated: 2026-05-21
 
 | Subject | Lessons Done | Total Planned |
 |---------|-------------|---------------|
-| Chemistry | 1 | ~30+ |
+| Chemistry | 2 | ~30+ |
 | Mathematics | 3 | ~50+ |
 | Physics | 0 | ~40+ |
 | English | 0 | ~30+ |
-| **TOTAL** | **4** | **~150+** |
+| **TOTAL** | **5** | **~150+** |
 
 ---
 
@@ -22,6 +22,7 @@ Last updated: 2026-05-21
 | Date | Chapter | Lesson # | Title |
 |------|---------|----------|-------|
 | 2026-05-21 | Chapter 1 | Lesson 1 | What is Chemistry? |
+| 2026-05-22 | Chapter 1 | Lesson 2 | Physical and Chemical Properties of Matter |
 
 ### Mathematics
 | Date | Unit | Lesson # | Title |
