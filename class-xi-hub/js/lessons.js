@@ -7,6 +7,25 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
+  /* ── PART 0: READING PROGRESS BAR ─────────────────────────────
+     Thin bar at the very top that fills as you scroll the lesson.
+     Created in JS so no markup is needed on each lesson page.
+  */
+  (function () {
+    const bar = document.createElement('div');
+    bar.className = 'reading-progress';
+    document.body.appendChild(bar);
+    function update() {
+      const h = document.documentElement;
+      const scrollable = h.scrollHeight - h.clientHeight;
+      const pct = scrollable > 0 ? (h.scrollTop || document.body.scrollTop) / scrollable * 100 : 0;
+      bar.style.width = pct + '%';
+    }
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  })();
+
   /* ── PART 1: MCQs ─────────────────────────────────────────────
      HTML structure expected:
        <div class="mcq-card">

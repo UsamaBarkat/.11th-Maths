@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" data-subject="chemistry">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rounding off Data — Ch.1 Lesson 4 | Chemistry</title>
+  <link rel="stylesheet" href="../../../css/style.css" />
+  <link rel="stylesheet" href="../../../css/subjects.css" />
+  <link rel="stylesheet" href="../../../css/lessons.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../../../index.html" class="site-logo">📚 Class XI Hub <span>— Sindh Board</span></a>
+      <button id="dark-mode-btn">🌙 Dark Mode</button>
+    </div>
+  </header>
+
+  <nav class="lesson-breadcrumb" aria-label="breadcrumb">
+    <div class="container-narrow">
+      <a href="../../../index.html">Home</a>
+      <span class="sep">›</span>
+      <a href="../index.html">🧪 Chemistry</a>
+      <span class="sep">›</span>
+      <a href="index.html">Stoichiometry</a>
+      <span class="sep">›</span>
+      <span class="current">Lesson 4 of 7</span>
+    </div>
+  </nav>
+
+  <main class="lesson-page">
+    <div class="container-narrow">
+
+      <div class="lesson-header">
+        <h1>Rounding off Data</h1>
+        <div class="lesson-meta">
+          <span class="meta-badge">Chapter 1 · Lesson 4 of 7</span>
+          <span>🧪 Chemistry</span>
+          <span>⏱ 9–11 min read</span>
+        </div>
+      </div>
+
+      <!-- HOOK -->
+      <section class="lesson-section">
+        <h2>🎯 Why Should You Care?</h2>
+        <div class="hook-text">
+          <p>Your calculator might show a mass as <strong>14.36842 g</strong> — but your balance can only
+          read to two decimal places. Reporting all those extra digits is fake precision; it pretends you
+          measured more accurately than you really did.</p>
+          <p><strong>Rounding off</strong> trims a number down to the digits you can actually trust, while
+          keeping it as accurate as possible. Every scientist must do it correctly.</p>
+        </div>
+      </section>
+
+      <!-- CORE -->
+      <section class="lesson-section">
+        <h2>📖 Core Concept: Significant Figures</h2>
+
+        <div class="def-box">
+          <div class="def-label">📚 Definition</div>
+          <p><strong>Rounding off data</strong> is a method of reducing the figures from a given numerical
+          value. It means to reduce a number to the desired significant figures and adjust the last
+          reported digit.</p>
+        </div>
+
+        <p>First, you need to know which digits are <strong>significant</strong> (the meaningful, trusted
+        ones). Here are the rules:</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Rule</th><th>Example</th><th>Significant figures</th></tr></thead>
+            <tbody>
+              <tr><td>All non-zero digits are significant</td><td>4582</td><td>4</td></tr>
+              <tr><td>Zeros between non-zero digits are significant</td><td>1002</td><td>4</td></tr>
+              <tr><td>Zeros to the <em>left</em> of the first non-zero digit are <strong>not</strong> significant</td><td>0.0025</td><td>2</td></tr>
+              <tr><td>Final zeros to the <em>right</em> of a decimal point are significant</td><td>2.500</td><td>4</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>The Rules for Rounding Off</h3>
+        <p>Once you know how many figures to keep, look at the <strong>first digit you are dropping</strong>:</p>
+
+        <ol class="steps">
+          <li><strong>If the digit to be dropped is greater than 5</strong> → add 1 to the digit you keep.<br>
+            <span class="fx">5.768 → 5.77</span> (keeping 3 figures; drop 8, so 6 becomes 7)</li>
+          <li><strong>If the digit to be dropped is less than 5</strong> → keep the previous digit unchanged.<br>
+            <span class="fx">5.734 → 5.73</span> (keeping 3 figures; drop 4, leave 3)</li>
+          <li><strong>If the digit to be dropped is exactly 5</strong> → look at the digit being kept:
+            <ul>
+              <li>If it is <strong>even</strong>, leave it as it is → <span class="fx">7.865 → 7.86</span> (6 is even)</li>
+              <li>If it is <strong>odd</strong>, add 1 to it → <span class="fx">23.35 → 23.4</span> (3 is odd → 4)</li>
+            </ul>
+          </li>
+        </ol>
+
+        <div class="callout note">
+          <div class="callout-icon">🔢</div>
+          <div class="callout-body">
+            <div class="callout-title">The "exactly 5" rule</div>
+            <p>When the dropped digit is exactly 5, we round so the kept digit becomes <strong>even</strong>.
+            This "round-to-even" trick stops errors from piling up in one direction over many calculations.</p>
+          </div>
+        </div>
+
+        <p>You can also round to the nearest <strong>ten, hundred, thousand</strong>, and so on, using the
+        same idea of looking at the next digit.</p>
+      </section>
+
+      <!-- EXAMPLES -->
+      <section class="lesson-section">
+        <h2>💡 Quick Examples</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Number</th><th>Round to 3 sig. figs.</th><th>Why</th></tr></thead>
+            <tbody>
+              <tr><td>5.768</td><td>5.77</td><td>Dropped digit 8 &gt; 5, so 6 → 7</td></tr>
+              <tr><td>5.734</td><td>5.73</td><td>Dropped digit 4 &lt; 5, leave 3</td></tr>
+              <tr><td>7.865</td><td>7.86</td><td>Dropped digit = 5, kept digit 6 is even → leave</td></tr>
+              <tr><td>23.35</td><td>23.4</td><td>Dropped digit = 5, kept digit 3 is odd → 4</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- CONFUSIONS -->
+      <section class="lesson-section">
+        <h2>⚠️ Common Confusions</h2>
+
+        <div class="confusion-box">
+          <div class="conf-title">⚠️ "Round each step, then round again at the end."</div>
+          <p>❌ Rounding too early introduces error. Keep extra digits during the calculation and only
+          round the <strong>final answer</strong> to the required significant figures.</p>
+        </div>
+
+        <div class="confusion-box">
+          <div class="conf-title">⚠️ "Leading zeros count as significant."</div>
+          <p>❌ In 0.0025 the leading zeros only show the position of the decimal point — they are
+          <strong>not</strong> significant. This number has just <strong>2</strong> significant figures.</p>
+        </div>
+
+        <div class="confusion-box">
+          <div class="conf-title">⚠️ "When the dropped digit is 5, always round up."</div>
+          <p>✅ Not in this book's rule. When it is exactly 5, round so the kept digit becomes
+          <strong>even</strong> (7.865 → 7.86, not 7.87).</p>
+        </div>
+      </section>
+
+      <!-- PRACTICE -->
+      <section class="lesson-section">
+        <h2>✏️ Practice Time</h2>
+
+        <div class="mcq-set">
+          <h3>Multiple Choice Questions</h3>
+          <p>Click an option to check your answer. One chance only!</p>
+
+          <div class="mcq-card">
+            <p class="q-text">Q1. Rounded to three significant figures, 5.768 becomes:</p>
+            <ul class="mcq-options">
+              <li><button class="mcq-opt" data-correct="false">(a) 5.76</button></li>
+              <li><button class="mcq-opt" data-correct="true">(b) 5.77</button></li>
+              <li><button class="mcq-opt" data-correct="false">(c) 5.8</button></li>
+              <li><button class="mcq-opt" data-correct="false">(d) 5.78</button></li>
+            </ul>
+            <div class="mcq-feedback"></div>
+          </div>
+
+          <div class="mcq-card">
+            <p class="q-text">Q2. How many significant figures does 0.000072 have?</p>
+            <ul class="mcq-options">
+              <li><button class="mcq-opt" data-correct="false">(a) 6</button></li>
+              <li><button class="mcq-opt" data-correct="false">(b) 4</button></li>
+              <li><button class="mcq-opt" data-correct="true">(c) 2</button></li>
+              <li><button class="mcq-opt" data-correct="false">(d) 5</button></li>
+            </ul>
+            <div class="mcq-feedback"></div>
+          </div>
+
+          <div class="mcq-card">
+            <p class="q-text">Q3. Rounded to three significant figures, 7.865 becomes:</p>
+            <ul class="mcq-options">
+              <li><button class="mcq-opt" data-correct="false">(a) 7.87</button></li>
+              <li><button class="mcq-opt" data-correct="true">(b) 7.86</button></li>
+              <li><button class="mcq-opt" data-correct="false">(c) 7.9</button></li>
+              <li><button class="mcq-opt" data-correct="false">(d) 7.80</button></li>
+            </ul>
+            <div class="mcq-feedback"></div>
+          </div>
+        </div>
+
+        <div class="short-q-set mt-4">
+          <h3>Short Questions</h3>
+          <p>Decide first, then reveal.</p>
+
+          <div class="short-q-card">
+            <p class="q-text">Q4. Round 0.0231 to two significant figures.</p>
+            <button class="reveal-btn">Show Answer</button>
+            <div class="answer-box">
+              <strong>Answer:</strong> The significant digits are 2, 3, 1. Keeping two and dropping the 1
+              (which is &lt; 5) gives <strong>0.023</strong>.
+            </div>
+          </div>
+
+          <div class="short-q-card">
+            <p class="q-text">Q5. Why must we round off experimental data?</p>
+            <button class="reveal-btn">Show Answer</button>
+            <div class="answer-box">
+              <strong>Answer:</strong> To remove uncertain (untrustworthy) digits and report a result only
+              as precisely as it was actually measured, ensuring maximum accuracy without false precision.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SUMMARY -->
+      <section class="lesson-section">
+        <h2>📝 Summary</h2>
+        <div class="summary-box">
+          <h3>3 Key Points from This Lesson</h3>
+          <ol>
+            <li><strong>Rounding off</strong> reduces a number to the significant figures you can trust and adjusts the last digit.</li>
+            <li>Dropped digit &gt; 5 → round up; &lt; 5 → leave; exactly 5 → make the kept digit <strong>even</strong>.</li>
+            <li>Leading zeros are <strong>not</strong> significant; round only the <strong>final</strong> answer, never mid-calculation.</li>
+          </ol>
+        </div>
+      </section>
+
+      <nav class="lesson-nav" aria-label="Lesson navigation">
+        <a href="lesson-3.html" class="nav-btn">← Previous</a>
+        <a href="index.html" class="nav-btn">📋 Chapter Overview</a>
+        <a href="lesson-5.html" class="nav-btn primary">Next: Exponential Notation →</a>
+      </nav>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>Built with patience and curiosity · <strong>Usama</strong> · Class XI · Sindh Board · 2026</p></div>
+  </footer>
+
+  <script src="../../../js/main.js"></script>
+  <script src="../../../js/lessons.js"></script>
+</body>
+</html>

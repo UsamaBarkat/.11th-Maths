@@ -1,134 +1,136 @@
 /* ============================================================
    style.css — Base styles for Class XI Learning Hub
    Shared by ALL pages: homepage, subject pages, lesson pages.
-   Contains: variables, reset, typography, header, footer, utilities.
+   2026 redesign: modern, soft, education-focused.
+   Contains: design tokens, reset, typography, header, footer,
+   buttons, badges, utilities.
    ============================================================ */
 
-/* ── 1. CSS VARIABLES ──────────────────────────────────────────
-   We use variables so changing one value updates the whole site.
-   Default accent is chemistry green; subjects.css overrides per-subject.
+/* ── 1. DESIGN TOKENS ──────────────────────────────────────────
+   One source of truth. Change a value here → whole site updates.
+   Default accent = chemistry green; subjects.css overrides per subject.
 */
 :root {
-  /* --- Light mode colors --- */
-  --bg:           #ffffff;
-  --bg-secondary: #f6f7f6;
-  --text:         #1a1a1a;
-  --text-muted:   #666666;
-  --border:       #e5e5e5;
+  /* --- Light mode surfaces --- */
+  --bg:            #f7f8fa;   /* page background (soft, not pure white) */
+  --surface:       #ffffff;   /* cards / raised panels */
+  --surface-2:     #f1f3f6;   /* subtle insets, table stripes */
+  --text:          #16181d;
+  --text-muted:    #5b6472;
+  --text-faint:    #8a93a3;
+  --border:        #e6e9ee;
+  --border-strong: #d4d9e0;
 
-  /* Default accent (overridden by subjects.css per subject) */
-  --accent:       #2d8659;
-  --accent-light: #e8f5ee;
-  --accent-dark:  #1f6b44;
+  /* --- Default accent (overridden per subject) --- */
+  --accent:        #2d8659;
+  --accent-soft:   #e8f5ee;
+  --accent-strong: #1f6b44;
+  --accent-contrast: #ffffff;
 
-  /* Fixed semantic colors (don't change with subject) */
-  --blue:         #1e40af;
-  --blue-light:   #eff6ff;
-  --orange:       #ea580c;
-  --orange-light: #fff7ed;
-  --red:          #dc2626;
-  --red-light:    #fef2f2;
-  --correct:      #166534;
-  --correct-bg:   #dcfce7;
+  /* --- Fixed semantic colors --- */
+  --blue:        #2563eb;  --blue-soft:   #eaf1ff;
+  --amber:       #d97706;  --amber-soft:  #fff4e2;
+  --red:         #dc2626;  --red-soft:    #fdecec;
+  --green:       #16a34a;  --green-soft:  #e7f7ec;
+  --violet:      #7c3aed;  --violet-soft: #f3eeff;
 
   /* --- Typography --- */
-  --font: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --mono: "Courier New", Courier, monospace;
+  --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --mono: "JetBrains Mono", "SF Mono", "Cascadia Code", "Courier New", monospace;
+
+  /* --- Shape & depth --- */
+  --r-sm: 8px;
+  --r:    14px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+  --shadow-sm: 0 1px 2px rgba(18,24,40,.06), 0 1px 3px rgba(18,24,40,.05);
+  --shadow:    0 4px 14px rgba(18,24,40,.08), 0 1px 3px rgba(18,24,40,.05);
+  --shadow-lg: 0 18px 40px rgba(18,24,40,.14), 0 4px 12px rgba(18,24,40,.08);
+  --ring:      0 0 0 4px var(--accent-soft);
 
   /* --- Layout --- */
-  --radius:        8px;
-  --shadow:        0 2px 10px rgba(0,0,0,0.07);
-  --max-w-content: 800px;   /* lesson pages */
-  --max-w-wide:    1200px;  /* homepage / subject pages */
+  --max-content: 820px;   /* lesson reading width */
+  --max-wide:    1180px;  /* homepage / subject pages */
+
+  --ease: cubic-bezier(.22,.61,.36,1);
 }
 
-/* --- Dark Mode --- */
+/* --- Dark mode (DEFAULT for this site) --- */
 [data-theme="dark"] {
-  --bg:           #0f0f0f;
-  --bg-secondary: #1a1a1a;
-  --text:         #e5e5e5;
-  --text-muted:   #9ca3af;
-  --border:       #2a2a2a;
-  --shadow:       0 2px 10px rgba(0,0,0,0.4);
+  --bg:            #0b0d11;
+  --surface:       #14171d;
+  --surface-2:     #1b1f27;
+  --text:          #e8eaf0;
+  --text-muted:    #a3abba;
+  --text-faint:    #6f7889;
+  --border:        #262b34;
+  --border-strong: #333a45;
 
-  /* Accent colors brighten in dark mode for readability */
-  --blue-light:   #0c1a3a;
-  --orange-light: #1c0a00;
-  --red-light:    #2d0a0a;
-  --correct-bg:   #052e16;
+  --blue-soft:   #11203f;
+  --amber-soft:  #2a1c06;
+  --red-soft:    #2c1111;
+  --green-soft:  #0a2a18;
+  --violet-soft: #1d1140;
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.4);
+  --shadow:    0 6px 20px rgba(0,0,0,.45);
+  --shadow-lg: 0 24px 50px rgba(0,0,0,.55);
 }
 
 /* ── 2. RESET & BASE ───────────────────────────────────────── */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   font-family: var(--font);
-  background-color: var(--bg);
+  background: var(--bg);
   color: var(--text);
   line-height: 1.7;
-  transition: background-color 0.3s, color 0.3s;
+  letter-spacing: -0.011em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: background-color .35s var(--ease), color .35s var(--ease);
 }
 
-a {
-  color: var(--accent);
-  text-decoration: none;
-}
+a { color: var(--accent); text-decoration: none; transition: color .15s; }
+a:hover { color: var(--accent-strong); }
 
-a:hover {
-  color: var(--accent-dark);
-  text-decoration: underline;
-}
+img { max-width: 100%; display: block; }
 
-img {
-  max-width: 100%;
-  display: block;
-}
+ul, ol { padding-left: 22px; }
+li { margin-bottom: 6px; }
+p  { margin-bottom: 14px; }
 
-ul, ol {
-  padding-left: 22px;
-}
+h1, h2, h3, h4 { line-height: 1.25; letter-spacing: -0.02em; }
 
-li {
-  margin-bottom: 5px;
-}
+::selection { background: var(--accent); color: #fff; }
 
-p {
-  margin-bottom: 14px;
+/* Accessible focus ring */
+a:focus-visible, button:focus-visible {
+  outline: none;
+  box-shadow: var(--ring);
+  border-radius: var(--r-sm);
 }
 
 /* ── 3. LAYOUT CONTAINERS ──────────────────────────────────── */
-.container {
-  max-width: var(--max-w-wide);
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-/* Narrower container for reading-width content (lesson pages) */
-.container-narrow {
-  max-width: var(--max-w-content);
-  margin: 0 auto;
-  padding: 0 24px;
-}
+.container        { max-width: var(--max-wide);   margin: 0 auto; padding: 0 24px; }
+.container-narrow { max-width: var(--max-content); margin: 0 auto; padding: 0 24px; }
 
 /* ── 4. SITE HEADER ────────────────────────────────────────── */
 .site-header {
-  background: var(--bg);
-  border-bottom: 3px solid var(--accent);
-  padding: 14px 0;
   position: sticky;
   top: 0;
   z-index: 200;
-  box-shadow: var(--shadow);
-  /* The border color updates automatically because --accent changes per subject */
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 0;
 }
 
 .site-header .container {
@@ -139,63 +141,59 @@ p {
 }
 
 .site-logo {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--accent);
-  text-decoration: none;
+  font-size: 1.02rem;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   white-space: nowrap;
 }
+.site-logo:hover { color: var(--accent); }
+.site-logo span { color: var(--text-faint); font-weight: 500; font-size: 0.82rem; }
 
-.site-logo span {
-  color: var(--text-muted);
-  font-weight: 400;
-  font-size: 0.85rem;
-}
-
-.site-logo:hover { text-decoration: none; color: var(--accent-dark); }
-
-/* Dark mode button */
+/* Dark-mode toggle */
 #dark-mode-btn {
-  background: none;
-  border: 2px solid var(--border);
-  border-radius: 20px;
-  padding: 7px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 7px 15px;
   cursor: pointer;
-  font-size: 0.83rem;
+  font-size: 0.82rem;
+  font-weight: 600;
   font-family: var(--font);
   color: var(--text);
   white-space: nowrap;
   flex-shrink: 0;
-  transition: border-color 0.2s, background 0.2s;
+  transition: border-color .2s, background .2s, transform .1s;
 }
+#dark-mode-btn:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
+#dark-mode-btn:active { transform: translateY(0); }
 
-#dark-mode-btn:hover {
-  border-color: var(--accent);
-  background: var(--accent-light);
-}
-
-/* ── 5. BREADCRUMB / BACK LINK ─────────────────────────────── */
+/* ── 5. BACK / BREADCRUMB LINK ─────────────────────────────── */
 .back-link {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   font-size: 0.85rem;
+  font-weight: 600;
   color: var(--text-muted);
-  text-decoration: none;
   margin-bottom: 16px;
 }
-
-.back-link:hover { color: var(--accent); text-decoration: none; }
+.back-link:hover { color: var(--accent); gap: 9px; }
 
 /* ── 6. FOOTER ─────────────────────────────────────────────── */
 .site-footer {
-  background: var(--bg-secondary);
+  background: var(--surface);
   border-top: 1px solid var(--border);
-  padding: 28px 0;
+  padding: 32px 0;
   text-align: center;
   font-size: 0.82rem;
   color: var(--text-muted);
+  margin-top: 40px;
 }
+.site-footer strong { color: var(--accent); }
 
 /* ── 7. BUTTONS ────────────────────────────────────────────── */
 .btn {
@@ -203,64 +201,64 @@ p {
   align-items: center;
   gap: 8px;
   background: var(--accent);
-  color: #fff;
+  color: var(--accent-contrast);
   border: none;
-  border-radius: var(--radius);
-  padding: 10px 22px;
+  border-radius: 999px;
+  padding: 11px 24px;
   font-size: 0.9rem;
   font-family: var(--font);
   font-weight: 600;
   cursor: pointer;
-  text-decoration: none;
-  transition: background 0.2s, transform 0.1s;
+  box-shadow: var(--shadow-sm);
+  transition: transform .12s var(--ease), box-shadow .2s, background .2s;
 }
-
-.btn:hover {
-  background: var(--accent-dark);
-  color: #fff;
-  text-decoration: none;
-  transform: translateY(-1px);
-}
+.btn:hover { color: var(--accent-contrast); background: var(--accent-strong); transform: translateY(-2px); box-shadow: var(--shadow); }
+.btn:active { transform: translateY(0); }
 
 .btn-outline {
-  background: none;
-  border: 2px solid var(--accent);
-  color: var(--accent);
+  background: transparent;
+  border: 1.5px solid var(--border-strong);
+  color: var(--text);
+  box-shadow: none;
 }
+.btn-outline:hover { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-strong); }
 
-.btn-outline:hover {
-  background: var(--accent-light);
-  color: var(--accent-dark);
-}
-
-/* ── 8. UTILITY CLASSES ────────────────────────────────────── */
-.text-muted    { color: var(--text-muted); }
-.text-accent   { color: var(--accent); }
-.text-center   { text-align: center; }
-.mt-2          { margin-top: 8px; }
-.mt-4          { margin-top: 16px; }
-.mb-2          { margin-bottom: 8px; }
-.mb-4          { margin-bottom: 16px; }
-.mb-8          { margin-bottom: 32px; }
-
-/* ── 9. STATUS BADGES ──────────────────────────────────────── */
+/* ── 8. STATUS BADGES ──────────────────────────────────────── */
 .badge {
-  display: inline-block;
-  padding: 3px 10px;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 11px;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: .01em;
+  white-space: nowrap;
 }
+.badge-done     { background: var(--green-soft);  color: var(--green); }
+.badge-progress { background: var(--amber-soft);  color: var(--amber); }
+.badge-soon     { background: var(--surface-2);   color: var(--text-muted); border: 1px solid var(--border); }
 
-.badge-done     { background: #dcfce7; color: #166534; }
-.badge-progress { background: #fef9c3; color: #854d0e; }
-.badge-soon     { background: var(--bg-secondary); color: var(--text-muted); border: 1px solid var(--border); }
+/* ── 9. UTILITY CLASSES ────────────────────────────────────── */
+.text-muted  { color: var(--text-muted); }
+.text-accent { color: var(--accent); }
+.text-center { text-align: center; }
+.mt-2 { margin-top: 8px; }  .mt-4 { margin-top: 16px; }
+.mb-2 { margin-bottom: 8px; } .mb-4 { margin-bottom: 16px; } .mb-8 { margin-bottom: 32px; }
 
-[data-theme="dark"] .badge-done     { background: #052e16; color: #4ade80; }
-[data-theme="dark"] .badge-progress { background: #1c1200; color: #facc15; }
+/* Reveal-on-load micro animation (respects reduced motion) */
+@keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+.rise { animation: rise .5s var(--ease) both; }
+.rise-2 { animation-delay: .06s; }
+.rise-3 { animation-delay: .12s; }
+.rise-4 { animation-delay: .18s; }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; scroll-behavior: auto !important; transition: none !important; }
+}
 
 /* ── 10. RESPONSIVE BASE ───────────────────────────────────── */
 @media (max-width: 640px) {
   .container, .container-narrow { padding: 0 16px; }
-  .site-logo span { display: none; } /* hide subtitle on small screens */
+  .site-logo span { display: none; }
 }

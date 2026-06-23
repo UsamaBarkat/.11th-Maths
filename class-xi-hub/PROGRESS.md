@@ -1,6 +1,10 @@
 # Lesson Progress Tracker
 
-Last updated: 2026-05-21
+Last updated: 2026-06-23
+
+> Site fully redesigned (2026-06-23). Chemistry now follows the real Sindh Textbook
+> Board book: **Chapter 1 = Stoichiometry** (the old "Fundamental Concepts" lessons were
+> replaced). Chemistry chapter list expanded to the textbook's actual 12 chapters.
 
 ---
 
@@ -8,21 +12,27 @@ Last updated: 2026-05-21
 
 | Subject | Lessons Done | Total Planned |
 |---------|-------------|---------------|
-| Chemistry | 2 | ~30+ |
+| Chemistry | 8 | ~60+ |
 | Mathematics | 3 | ~50+ |
 | Physics | 0 | ~40+ |
 | English | 0 | ~30+ |
-| **TOTAL** | **5** | **~150+** |
+| **TOTAL** | **11** | **~180+** |
 
 ---
 
 ## ✅ COMPLETED LESSONS
 
-### Chemistry
+### Chemistry — Chapter 1: Stoichiometry
 | Date | Chapter | Lesson # | Title |
 |------|---------|----------|-------|
-| 2026-05-21 | Chapter 1 | Lesson 1 | What is Chemistry? |
-| 2026-05-22 | Chapter 1 | Lesson 2 | Physical and Chemical Properties of Matter |
+| 2026-06-23 | Chapter 1 | Lesson 1 | The Mole & Avogadro's Number |
+| 2026-06-23 | Chapter 1 | Lesson 2 | Mole Conversions |
+| 2026-06-23 | Chapter 1 | Lesson 3 | Stoichiometric Calculations |
+| 2026-06-23 | Chapter 1 | Lesson 4 | Rounding off Data |
+| 2026-06-23 | Chapter 1 | Lesson 5 | Exponential (Scientific) Notation |
+| 2026-06-23 | Chapter 1 | Lesson 6 | Limiting Reactant |
+| 2026-06-23 | Chapter 1 | Lesson 7 | Theoretical, Practical & Percent Yield |
+| 2026-06-23 | Chapter 1 | Exercise | Solved Exercise (MCQs, short, descriptive, numericals) |
 
 ### Mathematics
 | Date | Unit | Lesson # | Title |
@@ -33,29 +43,34 @@ Last updated: 2026-05-21
 
 ---
 
-## 🟡 IN PROGRESS
+## 🟢 RECENTLY COMPLETED
 
-### Chemistry — Chapter 1: Introduction to Fundamental Concepts
-- [x] Lesson 1: What is Chemistry?
-- [ ] Lesson 2: Physical and Chemical Properties of Matter
-- [ ] Lesson 3: Elements, Compounds, and Mixtures
-- [ ] Lesson 4: Atomic Mass, Molecular Mass, and Mole Concept
-- [ ] Lesson 5: Chemical Formula and Chemical Equations
-- [ ] Lesson 6: Stoichiometry
-- [ ] Lesson 7: Limiting Reagent and Percentage Yield
+### Chemistry — Chapter 1: Stoichiometry  ✅ (all 7 lessons + exercise done)
+- [x] Lesson 1: The Mole & Avogadro's Number
+- [x] Lesson 2: Mole Conversions
+- [x] Lesson 3: Stoichiometric Calculations
+- [x] Lesson 4: Rounding off Data
+- [x] Lesson 5: Exponential (Scientific) Notation
+- [x] Lesson 6: Limiting Reactant
+- [x] Lesson 7: Theoretical, Practical & Percent Yield
+- [x] Exercise: Fully solved (MCQs, short, descriptive, numerical)
 
 ---
 
 ## ⏳ NOT STARTED YET
 
-### Chemistry
-- Chapter 2: The Three States of Matter
-- Chapter 3: Atomic Structure
-- Chapter 4: Chemical Bonding
-- Chapter 5: Energetics of Chemical Reactions
-- Chapter 6: Chemical Equilibrium
-- Chapter 7: Solutions and Electrolytes
-- Chapter 8: Chemical Kinetics
+### Chemistry (real Sindh Board 12-chapter book)
+- Chapter 2: Atomic Structure
+- Chapter 3: Theories of Covalent Bond and Shapes of Molecules
+- Chapter 4: States of Matter: Gases
+- Chapter 5: States of Matter: Liquids
+- Chapter 6: States of Matter: Solids
+- Chapter 7: Chemical Equilibrium
+- Chapter 8: Acids, Bases and Salts
+- Chapter 9: Chemical Kinetics
+- Chapter 10: Solution and Colloids
+- Chapter 11: Thermochemistry
+- Chapter 12: Electrochemistry
 
 ### Mathematics
 - ~~Unit 1: Complex Numbers~~ (3 lessons done ✅)
@@ -94,5 +109,5 @@ Last updated: 2026-05-21
 ## 📋 NEXT UP
 
 Options for next lesson:
-- **Chemistry → Chapter 1 → Lesson 2: Physical and Chemical Properties of Matter**
+- **Chemistry → Chapter 2: Atomic Structure**
 - **Mathematics → Unit 2: Matrices and Determinants**

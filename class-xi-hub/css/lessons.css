@@ -1,433 +1,313 @@
 /* ============================================================
-   lessons.css — Styles for individual lesson pages only
+   lessons.css — Lesson page styles (2026 redesign)
 
-   Covers:
-   - Progress breadcrumb at top
-   - Lesson title area
-   - 6-section lesson layout (hook → concept → examples →
-     confusions → practice → summary)
-   - Definition boxes (textbook + easy version)
-   - Confusion/warning boxes
-   - Tables + ASCII diagrams
-   - Interactive MCQs
-   - Short questions (show/hide answer)
-   - Lesson navigation (prev / next)
+   Sections:
+    1. Reading progress bar
+    2. Breadcrumb
+    3. Lesson header / meta
+    4. Lesson sections + headings
+    5. Hook box
+    6. Definition boxes (textbook + easy)
+    7. Callouts (note / tip / warning / "do you know")
+    8. Confusion boxes
+    9. Summary box
+   10. Tables
+   11. ASCII / particle diagrams
+   12. MATH: equations, fractions, chemical reactions   ← NEW
+   13. Worked-example cards                              ← NEW
+   14. Step lists & key-term chips                       ← NEW
+   15. MCQs
+   16. Short questions (show/hide)
+   17. Lesson navigation
+   18. Responsive
    ============================================================ */
 
-/* ── 1. PROGRESS BREADCRUMB ────────────────────────────────── */
+/* ── 1. READING PROGRESS BAR ───────────────────────────────── */
+.reading-progress {
+  position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-strong));
+  z-index: 300; transition: width .1s linear;
+}
+
+/* ── 2. BREADCRUMB ─────────────────────────────────────────── */
 .lesson-breadcrumb {
-  background: var(--bg-secondary);
+  background: var(--surface);
   border-bottom: 1px solid var(--border);
-  padding: 10px 0;
-  font-size: 0.82rem;
+  padding: 11px 0;
+  font-size: 0.8rem;
   color: var(--text-muted);
 }
+.lesson-breadcrumb .container-narrow { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
+.lesson-breadcrumb a        { color: var(--text-muted); font-weight: 600; }
+.lesson-breadcrumb a:hover  { color: var(--accent); }
+.lesson-breadcrumb .sep     { color: var(--border-strong); }
+.lesson-breadcrumb .current { color: var(--accent); font-weight: 700; }
 
-.lesson-breadcrumb .container-narrow {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  flex-wrap: wrap;
-}
+/* ── 3. LESSON HEADER / META ───────────────────────────────── */
+.lesson-page { padding: 40px 0 80px; }
 
-.lesson-breadcrumb a         { color: var(--accent); font-weight: 600; }
-.lesson-breadcrumb .sep      { color: var(--border); }
-.lesson-breadcrumb .current  { color: var(--text); font-weight: 600; }
+.lesson-header { padding-bottom: 26px; margin-bottom: 38px; border-bottom: 1px solid var(--border); }
+.lesson-header h1 { font-size: clamp(1.7rem, 4vw, 2.3rem); font-weight: 850; line-height: 1.15; margin-bottom: 14px; }
 
-/* ── 2. LESSON TITLE AREA ──────────────────────────────────── */
-.lesson-page {
-  padding: 40px 0 80px;
-}
-
-.lesson-header {
-  padding-bottom: 24px;
-  margin-bottom: 36px;
-  border-bottom: 2px solid var(--border);
-}
-
-.lesson-header h1 {
-  font-size: 2rem;
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 10px;
-}
-
-.lesson-meta {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-  font-size: 0.83rem;
-  color: var(--text-muted);
-}
-
+.lesson-meta { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 0.82rem; color: var(--text-muted); }
 .lesson-meta .meta-badge {
-  display: inline-block;
-  background: var(--accent-light);
-  color: var(--accent);
-  border-radius: 20px;
-  padding: 3px 12px;
-  font-weight: 600;
-  font-size: 0.78rem;
+  display: inline-block; background: var(--accent-soft); color: var(--accent);
+  border-radius: 999px; padding: 4px 13px; font-weight: 700; font-size: 0.76rem;
 }
 
-/* ── 3. LESSON SECTIONS ────────────────────────────────────── */
-.lesson-section {
-  margin-bottom: 44px;
-}
-
-/* Section heading with colored accent */
+/* ── 4. LESSON SECTIONS ────────────────────────────────────── */
+.lesson-section { margin-bottom: 48px; scroll-margin-top: 80px; }
 .lesson-section > h2 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--accent);
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid var(--border);
+  font-size: 1.35rem; font-weight: 800; margin-bottom: 20px;
+  display: flex; align-items: center; gap: 10px;
 }
+.lesson-section > h2::after { content:''; flex:1; height:1px; background: var(--border); }
+.lesson-section > h3 { font-size: 1.08rem; font-weight: 700; color: var(--text); margin: 26px 0 12px; }
+.lesson-section p, .lesson-section ul, .lesson-section ol { margin-bottom: 14px; }
+.lesson-section strong { font-weight: 700; }
 
-.lesson-section > h3 {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--text);
-  margin: 24px 0 12px;
-}
-
-.lesson-section p {
-  margin-bottom: 14px;
-}
-
-.lesson-section ul,
-.lesson-section ol {
-  margin-bottom: 14px;
-}
-
-/* ── 4. HOOK TEXT (Step 1) ─────────────────────────────────── */
+/* ── 5. HOOK ───────────────────────────────────────────────── */
 .hook-text {
-  font-size: 1.07rem;
-  line-height: 1.8;
-  background: var(--accent-light);
-  border-left: 5px solid var(--accent);
-  padding: 20px 22px;
-  border-radius: 0 var(--radius) var(--radius) 0;
+  font-size: 1.08rem; line-height: 1.8;
+  background: linear-gradient(135deg, var(--accent-soft), transparent 90%);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  padding: 22px 24px;
+  border-radius: var(--r);
 }
+.hook-text p:last-child { margin-bottom: 0; }
 
-/* ── 5. DEFINITION BOXES (Step 2) ──────────────────────────── */
+/* ── 6. DEFINITION BOXES ───────────────────────────────────── */
 .def-box {
+  border: 1px solid var(--border);
   border-left: 4px solid var(--blue);
-  background: var(--blue-light);
-  padding: 16px 18px;
-  border-radius: 0 var(--radius) var(--radius) 0;
+  background: var(--blue-soft);
+  padding: 16px 20px; border-radius: var(--r-sm);
   margin-bottom: 14px;
 }
-
 .def-box .def-label {
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.09em;
-  color: var(--blue);
-  margin-bottom: 6px;
+  font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: .09em;
+  color: var(--blue); margin-bottom: 6px;
 }
-
 .def-box p { margin: 0; }
-
-/* Easy version — subject-colored border */
-.def-box.easy {
-  border-left-color: var(--accent);
-  background: var(--accent-light);
-}
-
+.def-box.easy { border-left-color: var(--accent); background: var(--accent-soft); }
 .def-box.easy .def-label { color: var(--accent); }
 
-/* ── 6. CONFUSION / WARNING BOXES (Step 4) ─────────────────── */
+/* ── 7. CALLOUTS ───────────────────────────────────────────── */
+.callout {
+  display: flex; gap: 13px;
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 16px 18px; margin: 18px 0;
+  background: var(--surface);
+}
+.callout .callout-icon { font-size: 1.2rem; line-height: 1.5; flex-shrink: 0; }
+.callout .callout-body { flex: 1; }
+.callout .callout-body p:last-child { margin-bottom: 0; }
+.callout .callout-title { font-weight: 800; font-size: 0.86rem; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 5px; }
+
+.callout.note { border-left: 4px solid var(--blue);   background: var(--blue-soft); }
+.callout.note .callout-title { color: var(--blue); }
+.callout.tip  { border-left: 4px solid var(--green);  background: var(--green-soft); }
+.callout.tip  .callout-title { color: var(--green); }
+.callout.know { border-left: 4px solid var(--violet); background: var(--violet-soft); }
+.callout.know .callout-title { color: var(--violet); }
+
+/* ── 8. CONFUSION / WARNING ────────────────────────────────── */
 .confusion-box {
-  border-left: 4px solid var(--orange);
-  background: var(--orange-light);
-  padding: 16px 18px;
-  border-radius: 0 var(--radius) var(--radius) 0;
-  margin-bottom: 14px;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--amber);
+  background: var(--amber-soft);
+  padding: 16px 20px; border-radius: var(--r-sm); margin-bottom: 14px;
 }
-
-.confusion-box .conf-title {
-  font-weight: 700;
-  color: var(--orange);
-  margin-bottom: 8px;
-  font-size: 0.95rem;
-}
-
+.confusion-box .conf-title { font-weight: 800; color: var(--amber); margin-bottom: 7px; font-size: 0.95rem; }
 .confusion-box p { margin: 0; }
 
-/* ── 7. SUMMARY BOX (Step 6) ───────────────────────────────── */
+/* ── 9. SUMMARY ────────────────────────────────────────────── */
 .summary-box {
-  background: var(--accent-light);
-  border: 2px solid var(--accent);
-  border-radius: var(--radius);
-  padding: 24px 26px;
+  background: linear-gradient(135deg, var(--accent-soft), transparent 95%);
+  border: 1.5px solid var(--accent);
+  border-radius: var(--r-lg);
+  padding: 26px 28px;
 }
-
 .summary-box h3 {
-  color: var(--accent) !important;
-  font-size: 0.85rem !important;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin: 0 0 16px !important;
+  color: var(--accent) !important; font-size: 0.82rem !important;
+  text-transform: uppercase; letter-spacing: .08em; margin: 0 0 16px !important; font-weight: 800;
 }
+.summary-box ol { padding-left: 20px; margin: 0; }
+.summary-box li { margin-bottom: 10px; font-weight: 500; }
+.summary-box li:last-child { margin-bottom: 0; }
 
-.summary-box ol {
-  padding-left: 20px;
-}
-
-.summary-box li {
-  margin-bottom: 8px;
-  font-weight: 500;
-}
-
-/* ── 8. TABLES ─────────────────────────────────────────────── */
-.table-wrap {
-  overflow-x: auto;
-  margin-bottom: 20px;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.92rem;
-}
-
-thead th {
-  background: var(--accent);
-  color: #fff;
-  padding: 10px 14px;
-  text-align: left;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-tbody tr:nth-child(even) { background: var(--bg-secondary); }
-
-tbody td {
-  padding: 10px 14px;
-  border-bottom: 1px solid var(--border);
-  vertical-align: top;
-}
-
+/* ── 10. TABLES ────────────────────────────────────────────── */
+.table-wrap { overflow-x: auto; margin-bottom: 20px; border-radius: var(--r); border: 1px solid var(--border); box-shadow: var(--shadow-sm); }
+table { width: 100%; border-collapse: collapse; font-size: 0.92rem; background: var(--surface); }
+thead th { background: var(--accent); color: #fff; padding: 12px 15px; text-align: left; font-weight: 700; white-space: nowrap; font-size: 0.85rem; }
+tbody tr:nth-child(even) { background: var(--surface-2); }
+tbody td { padding: 11px 15px; border-bottom: 1px solid var(--border); vertical-align: top; }
 tbody tr:last-child td { border-bottom: none; }
 
-/* ── 9. ASCII DIAGRAM BLOCKS ───────────────────────────────── */
+/* ── 11. ASCII / PARTICLE DIAGRAMS ─────────────────────────── */
 .diagram {
-  background: var(--bg-secondary);
+  background: var(--surface-2);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 20px 24px;
-  overflow-x: auto;
-  margin-bottom: 18px;
+  border-radius: var(--r);
+  padding: 20px 24px; overflow-x: auto; margin-bottom: 18px;
 }
+.diagram pre { font-family: var(--mono); font-size: 0.88rem; line-height: 1.65; white-space: pre; margin: 0; color: var(--text); }
+.diagram .cap { text-align: center; font-size: .8rem; color: var(--text-muted); margin-top: 10px; }
 
-.diagram pre {
-  font-family: var(--mono);
-  font-size: 0.88rem;
-  line-height: 1.65;
-  white-space: pre;   /* preserve all spaces and newlines exactly */
-  margin: 0;
-  color: var(--text);
-}
-
-/* ── 10. MCQ SECTION (Step 5) ──────────────────────────────── */
-.mcq-set h3 {
-  font-size: 1.05rem;
-  color: var(--accent);
-  margin-bottom: 8px;
-}
-
-.mcq-set > p { margin-bottom: 20px; }
-
-.mcq-card {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 18px 20px;
-  margin-bottom: 16px;
-}
-
-.mcq-card .q-text {
-  font-weight: 600;
-  font-size: 0.97rem;
-  margin-bottom: 14px;
-}
-
-.mcq-options {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* Each option is a <button> so it's keyboard accessible */
-.mcq-opt {
+/* ── 12. MATH: EQUATIONS, FRACTIONS, REACTIONS ─────────────── */
+/* Centered display equation */
+.eq {
   display: block;
-  width: 100%;
-  text-align: left;
-  background: var(--bg);
+  background: var(--surface-2);
   border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 10px 14px;
-  margin-bottom: 8px;
-  cursor: pointer;
-  font-size: 0.92rem;
-  font-family: var(--font);
-  color: var(--text);
-  transition: background 0.15s, border-color 0.15s;
+  border-radius: var(--r);
+  padding: 16px 20px; margin: 16px 0;
+  text-align: center;
+  font-size: 1.05rem;
+  overflow-x: auto;
+}
+.eq.lead { border-left: 4px solid var(--accent); }
+/* Inline highlighted formula / symbol */
+.fx { font-family: var(--mono); font-weight: 600; background: var(--surface-2); border: 1px solid var(--border); border-radius: 6px; padding: 1px 7px; font-size: .92em; white-space: nowrap; }
+
+/* Subscript / superscript helpers already native via <sub>/<sup>; tune size */
+.eq sub, .eq sup, .fx sub, .fx sup { font-size: .68em; }
+
+/* Inline stacked fraction */
+.frac { display: inline-flex; flex-direction: column; vertical-align: middle; text-align: center; margin: 0 4px; line-height: 1.15; }
+.frac > .num { border-bottom: 1.5px solid currentColor; padding: 0 8px; }
+.frac > .den { padding: 2px 8px 0; }
+
+/* Chemical reaction equation */
+.rxn {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 4px 8px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--r);
+  padding: 16px 18px; margin: 16px 0;
+  font-size: 1.05rem; font-weight: 600; text-align: center; overflow-x: auto;
+}
+.rxn .arrow { color: var(--accent); font-weight: 800; padding: 0 4px; position: relative; }
+.rxn .arrow small { display: block; font-size: .58em; font-weight: 600; color: var(--text-muted); line-height: 1; margin-bottom: -2px; }
+
+/* ── 13. WORKED-EXAMPLE CARDS ──────────────────────────────── */
+.example {
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  margin: 22px 0; overflow: hidden;
+}
+.example-head {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  background: var(--accent-soft);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 20px;
+  font-weight: 700; font-size: 0.98rem; color: var(--text);
+}
+.example-tag {
+  flex-shrink: 0;
+  background: var(--accent); color: #fff;
+  font-size: 0.72rem; font-weight: 800; letter-spacing: .03em;
+  padding: 4px 11px; border-radius: 999px; text-transform: uppercase;
+}
+.example-body { padding: 18px 20px; }
+.example-body .step-label {
+  font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: .07em;
+  color: var(--accent); margin: 14px 0 6px;
+}
+.example-body .step-label:first-child { margin-top: 0; }
+.example-body .ans {
+  margin-top: 14px; padding: 12px 16px;
+  background: var(--green-soft); border: 1px solid var(--border); border-left: 4px solid var(--green);
+  border-radius: var(--r-sm); font-weight: 700;
+}
+.example-body .ans .ans-label { color: var(--green); font-size: .72rem; text-transform: uppercase; letter-spacing: .07em; display: block; margin-bottom: 2px; }
+
+/* ── 14. STEP LISTS & KEY-TERM CHIPS ───────────────────────── */
+ol.steps { list-style: none; padding: 0; counter-reset: step; margin: 16px 0; }
+ol.steps > li {
+  position: relative; padding: 4px 0 4px 44px; margin-bottom: 12px; counter-increment: step;
+}
+ol.steps > li::before {
+  content: counter(step);
+  position: absolute; left: 0; top: 2px;
+  width: 30px; height: 30px; border-radius: 9px;
+  background: var(--accent-soft); color: var(--accent);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 0.85rem;
 }
 
+.chip { display: inline-block; background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: 0.8rem; padding: 3px 12px; border-radius: 999px; margin: 0 4px 6px 0; }
+
+/* ── 15. MCQs ──────────────────────────────────────────────── */
+.mcq-set h3, .short-q-set h3 { font-size: 1.08rem; color: var(--text); margin-bottom: 6px; font-weight: 800; }
+.mcq-set > p, .short-q-set > p { margin-bottom: 20px; color: var(--text-muted); font-size: .9rem; }
+
+.mcq-card, .short-q-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r); padding: 20px 22px; margin-bottom: 16px; box-shadow: var(--shadow-sm);
+}
+.mcq-card .q-text, .short-q-card .q-text { font-weight: 700; font-size: 0.98rem; margin-bottom: 14px; }
+
+.mcq-options { list-style: none; padding: 0; margin: 0; }
+.mcq-opt {
+  display: block; width: 100%; text-align: left;
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: var(--r-sm); padding: 11px 15px; margin-bottom: 9px;
+  cursor: pointer; font-size: 0.92rem; font-family: var(--font); color: var(--text);
+  transition: background .15s, border-color .15s, transform .1s;
+}
 .mcq-opt:last-of-type { margin-bottom: 0; }
-
-.mcq-opt:hover:not([disabled]) {
-  background: var(--accent-light);
-  border-color: var(--accent);
-}
-
-/* Feedback states after answering */
-.mcq-opt.correct {
-  background: var(--correct-bg);
-  border-color: var(--correct);
-  color: var(--correct);
-  font-weight: 600;
-}
-
-.mcq-opt.wrong {
-  background: var(--red-light);
-  border-color: var(--red);
-  color: var(--red);
-}
-
+.mcq-opt:hover:not([disabled]) { background: var(--accent-soft); border-color: var(--accent); transform: translateX(2px); }
+.mcq-opt.correct { background: var(--green-soft); border-color: var(--green); color: var(--green); font-weight: 700; }
+.mcq-opt.wrong   { background: var(--red-soft);   border-color: var(--red);   color: var(--red); }
 .mcq-opt[disabled] { cursor: default; }
 
-.mcq-feedback {
-  margin-top: 10px;
-  font-size: 0.87rem;
-  font-weight: 600;
-  display: none;
-}
-
-.mcq-feedback.show    { display: block; }
-.mcq-feedback.correct { color: var(--correct); }
+.mcq-feedback { margin-top: 12px; font-size: 0.87rem; font-weight: 700; display: none; }
+.mcq-feedback.show { display: block; }
+.mcq-feedback.correct { color: var(--green); }
 .mcq-feedback.wrong   { color: var(--red); }
 
-[data-theme="dark"] .mcq-opt.correct { color: #4ade80; }
-[data-theme="dark"] .mcq-opt.wrong   { color: #f87171; }
-[data-theme="dark"] .mcq-feedback.correct { color: #4ade80; }
-[data-theme="dark"] .mcq-feedback.wrong   { color: #f87171; }
-
-/* ── 11. SHORT QUESTIONS ───────────────────────────────────── */
-.short-q-set h3 {
-  font-size: 1.05rem;
-  color: var(--accent);
-  margin-bottom: 8px;
-}
-
-.short-q-set > p { margin-bottom: 20px; }
-
-.short-q-card {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 18px 20px;
-  margin-bottom: 14px;
-}
-
-.short-q-card .q-text {
-  font-weight: 600;
-  font-size: 0.97rem;
-  margin-bottom: 12px;
-}
-
+/* ── 16. SHORT QUESTIONS ───────────────────────────────────── */
 .reveal-btn {
-  background: none;
-  border: 1px solid var(--accent);
-  border-radius: 6px;
-  padding: 7px 18px;
-  cursor: pointer;
-  color: var(--accent);
-  font-size: 0.85rem;
-  font-family: var(--font);
-  font-weight: 600;
-  transition: background 0.15s;
+  background: transparent; border: 1.5px solid var(--accent); border-radius: 999px;
+  padding: 7px 18px; cursor: pointer; color: var(--accent); font-size: 0.83rem;
+  font-family: var(--font); font-weight: 700; transition: background .15s, color .15s;
 }
-
-.reveal-btn:hover { background: var(--accent-light); }
-
+.reveal-btn:hover { background: var(--accent); color: #fff; }
 .answer-box {
-  display: none;
-  margin-top: 12px;
-  padding: 14px 16px;
-  background: var(--accent-light);
-  border-left: 3px solid var(--accent);
-  border-radius: 0 6px 6px 0;
-  font-size: 0.92rem;
+  display: none; margin-top: 12px; padding: 14px 18px;
+  background: var(--accent-soft); border: 1px solid var(--border); border-left: 4px solid var(--accent);
+  border-radius: var(--r-sm); font-size: 0.92rem;
 }
-
 .answer-box.visible { display: block; }
 
-/* ── 12. LESSON NAVIGATION ─────────────────────────────────── */
+/* ── 17. LESSON NAVIGATION ─────────────────────────────────── */
 .lesson-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  padding-top: 28px;
-  margin-top: 16px;
-  border-top: 2px solid var(--border);
-  flex-wrap: wrap;
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  padding-top: 30px; margin-top: 20px; border-top: 1px solid var(--border); flex-wrap: wrap;
 }
-
 .nav-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--bg-secondary);
-  border: 2px solid var(--border);
-  border-radius: var(--radius);
-  padding: 11px 20px;
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 600;
-  font-size: 0.88rem;
-  transition: border-color 0.2s, background 0.2s;
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 999px;
+  padding: 11px 22px; color: var(--text); font-weight: 700; font-size: 0.87rem;
+  box-shadow: var(--shadow-sm);
+  transition: border-color .2s, background .2s, transform .12s, color .2s;
 }
+.nav-btn:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+.nav-btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.nav-btn.primary:hover { background: var(--accent-strong); border-color: var(--accent-strong); color: #fff; }
+.nav-btn.disabled { opacity: .4; pointer-events: none; }
 
-.nav-btn:hover {
-  border-color: var(--accent);
-  background: var(--accent-light);
-  text-decoration: none;
-  color: var(--text);
-}
-
-.nav-btn.primary {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #fff;
-}
-
-.nav-btn.primary:hover {
-  background: var(--accent-dark);
-  border-color: var(--accent-dark);
-  color: #fff;
-}
-
-.nav-btn.disabled {
-  opacity: 0.38;
-  pointer-events: none;
-  cursor: default;
-}
-
-/* ── 13. RESPONSIVE (LESSON PAGES) ────────────────────────── */
+/* ── 18. RESPONSIVE ────────────────────────────────────────── */
 @media (max-width: 640px) {
-  .lesson-header h1 { font-size: 1.5rem; }
-  .lesson-nav       { flex-direction: column; }
-  .nav-btn          { width: 100%; justify-content: center; }
-  thead th          { font-size: 0.82rem; }
-  tbody td          { font-size: 0.85rem; }
-  .hook-text        { font-size: 1rem; }
+  .lesson-section > h2 { font-size: 1.18rem; }
+  .lesson-nav { flex-direction: column; }
+  .nav-btn { width: 100%; justify-content: center; }
+  .eq, .rxn { font-size: 0.95rem; padding: 14px; }
+  .hook-text { font-size: 1rem; }
 }

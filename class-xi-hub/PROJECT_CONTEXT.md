@@ -1,7 +1,7 @@
 # Project Context — Class XI Learning Hub
 
-**Last Updated:** 2026-05-21
-**Version:** 1.0 (Initial Build)
+**Last Updated:** 2026-06-23
+**Version:** 2.0 (Visual redesign + Chemistry Ch.1 Stoichiometry rebuilt from the real textbook)
 
 ---
 
@@ -95,26 +95,35 @@ class-xi-hub/
 
 ## Full Syllabus
 
-### Chemistry (8 Chapters)
+### Chemistry (12 Chapters — real Sindh Textbook Board book)
 | # | Chapter | Status |
 |---|---------|--------|
-| 1 | Introduction to Fundamental Concepts of Chemistry | 🟡 In Progress (Lesson 1 done) |
-| 2 | The Three States of Matter | ⏳ Not Started |
-| 3 | Atomic Structure | ⏳ Not Started |
-| 4 | Chemical Bonding | ⏳ Not Started |
-| 5 | Energetics of Chemical Reactions | ⏳ Not Started |
-| 6 | Chemical Equilibrium | ⏳ Not Started |
-| 7 | Solutions and Electrolytes | ⏳ Not Started |
-| 8 | Chemical Kinetics | ⏳ Not Started |
+| 1 | Stoichiometry | ✅ Done (7 lessons + solved exercise) |
+| 2 | Atomic Structure | ⏳ Not Started |
+| 3 | Theories of Covalent Bond and Shapes of Molecules | ⏳ Not Started |
+| 4 | States of Matter: Gases | ⏳ Not Started |
+| 5 | States of Matter: Liquids | ⏳ Not Started |
+| 6 | States of Matter: Solids | ⏳ Not Started |
+| 7 | Chemical Equilibrium | ⏳ Not Started |
+| 8 | Acids, Bases and Salts | ⏳ Not Started |
+| 9 | Chemical Kinetics | ⏳ Not Started |
+| 10 | Solution and Colloids | ⏳ Not Started |
+| 11 | Thermochemistry | ⏳ Not Started |
+| 12 | Electrochemistry | ⏳ Not Started |
 
-Chapter 1 expected lessons (7 total):
-1. What is Chemistry? ✅
-2. Physical and Chemical Properties of Matter ⏳
-3. Elements, Compounds, and Mixtures ⏳
-4. Atomic Mass, Molecular Mass, and Mole Concept ⏳
-5. Chemical Formula and Chemical Equations ⏳
-6. Stoichiometry ⏳
-7. Limiting Reagent and Percentage Yield ⏳
+> **Note:** The earlier 8-chapter list ("Introduction to Fundamental Concepts" etc.)
+> did not match the real textbook and was replaced on 2026-06-23 using the actual
+> `chapter1.pdf` scan. Chapter titles above come straight from the book's contents page.
+
+Chapter 1 (Stoichiometry) lessons — all done:
+1. The Mole & Avogadro's Number ✅
+2. Mole Conversions (mole ↔ mass / particles / volume) ✅
+3. Stoichiometric Calculations (mass–mass, mass–volume, volume–volume) ✅
+4. Rounding off Data ✅
+5. Exponential (Scientific) Notation ✅
+6. Limiting Reactant ✅
+7. Theoretical, Practical & Percent Yield ✅
++ `exercise.html` — fully solved chapter exercise ✅
 
 ### Mathematics (12 Units)
 | # | Unit | Status |
@@ -156,39 +165,49 @@ Chapter 1 expected lessons (7 total):
 
 ---
 
-## Design Decisions (Already Made — Don't Change Without Reason)
+## Design Decisions (Redesigned 2026-06-23 — Don't Change Without Reason)
 
-### Color Scheme
-Light mode: BG `#ffffff`, text `#1a1a1a`, muted `#666666`, border `#e5e5e5`
-Dark mode: BG `#0f0f0f`, cards `#1a1a1a`, text `#e5e5e5`, border `#2a2a2a`
+> The whole site was visually redesigned on 2026-06-23 (softer surfaces, layered
+> shadows, gradient heroes, pill buttons/badges, sticky reading-progress bar, and new
+> math/chemistry components). All design lives in the 3 CSS files via **CSS variables**
+> in `style.css` (`:root` + `[data-theme="dark"]`). Class names were kept stable so every
+> existing page (Math, Physics, English) picked up the new look automatically.
 
-Subject accent colors (set via `data-subject="X"` on `<html>` tag):
-- Chemistry: `#2d8659` (green)
-- Mathematics: `#1e40af` (blue)
-- Physics: `#7c3aed` (purple)
-- English: `#ea580c` (orange)
+### Color Scheme (design tokens in `style.css`)
+Light: `--bg #f7f8fa`, `--surface #ffffff`, `--text #16181d`, `--text-muted #5b6472`, `--border #e6e9ee`
+Dark (DEFAULT): `--bg #0b0d11`, `--surface #14171d`, `--text #e8eaf0`, `--border #262b34`
+
+Subject accents (set via `data-subject="X"` on `<html>`; defined in `subjects.css`):
+- Chemistry: green · Mathematics: blue · Physics: purple · English: orange
+- Each has a dark-mode variant (brighter). Tokens used: `--accent`, `--accent-soft`, `--accent-strong`.
 
 ### Layout
-- Max content width: 800px for lesson pages, 1200px for homepage/subject pages
-- Font: system stack — `Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif`
-- Line height: 1.7 for body, 1.3 for headings
-- Mobile-first design
+- Max width: `--max-content` 820px (lessons), `--max-wide` 1180px (home/subject)
+- Font stack starts with Inter (falls back to system); mono for formulas
+- Radius/shadow scale + `--ease` are tokens; respects `prefers-reduced-motion`
 
 ### Lesson Structure (6 Steps — Never Change This Order)
-1. 🎯 Hook — Real-life engaging intro
-2. 📖 Core Concept — Textbook def + easy version, tables, ASCII diagrams
-3. 💡 Examples — Numbered list with real-life examples
+1. 🎯 Hook — Real-life engaging intro (`.hook-text`)
+2. 📖 Core Concept — Textbook def + easy version, tables, diagrams
+3. 💡 Examples — real-life list OR worked-example cards
 4. ⚠️ Confusions — Warning boxes for common mistakes
 5. ✏️ Practice — Interactive MCQs + short questions with hidden answers
-6. 📝 Summary — 3-point bullet summary box
+6. 📝 Summary — 3-point summary box
 
-### Special Elements
-- Blue left-border box = textbook definition
-- Green left-border box = easy explanation
-- Orange left-border box = confusion/warning
-- Green background box = summary
-- `data-correct="true/false"` on MCQ option buttons (used by lessons.js)
-- `show-answer-btn` + `sq-answer` pattern for short questions
+### Special Elements (CSS classes)
+- `.def-box` (blue) = textbook definition · `.def-box.easy` (green) = easy version
+- `.confusion-box` (amber) = common confusion/warning · `.summary-box` = summary
+- `.callout` + `.note` / `.tip` / `.know` = coloured info callouts (icon + body)
+- **Math/chemistry (added 2026-06-23):**
+  - `.eq` = centred display equation (`.eq.lead` for an accent border)
+  - `.frac` with `.num` / `.den` = stacked fraction
+  - `.fx` = inline highlighted formula/symbol; use `<sub>`/`<sup>` for chem
+  - `.rxn` with `<span class="arrow">→</span>` = chemical reaction (arrow can hold `<small>heat</small>`)
+  - `.example` → `.example-head` (`.example-tag`) + `.example-body` (`.step-label`, `.ans`/`.ans-label`) = worked-example card
+  - `ol.steps` = numbered step list with badges · `.chip` = key-term pill
+- `data-correct="true/false"` on `.mcq-opt` buttons (handled by `lessons.js`)
+- `.reveal-btn` + next-sibling `.answer-box` = show/hide answer (handled by `lessons.js`)
+- `lessons.js` also injects the sticky `.reading-progress` bar on every lesson page
 
 ---
 
@@ -211,10 +230,10 @@ When Usama provides lesson content:
 
 ---
 
-## Current Stats (as of 2026-05-21)
+## Current Stats (as of 2026-06-23)
 
-- Total lessons completed: **4**
-- Chemistry: 1 lesson done
+- Total lessons completed: **11**
+- Chemistry: 8 done — Chapter 1 (Stoichiometry) complete: 7 lessons + solved exercise
 - Mathematics: 3 lessons done (Unit 1 complete)
 - Physics: 0 lessons done
 - English: 0 lessons done

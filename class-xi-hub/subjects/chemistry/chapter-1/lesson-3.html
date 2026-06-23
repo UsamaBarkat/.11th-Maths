@@ -1,24 +1,15 @@
 <!DOCTYPE html>
-<!--
-  lesson-3.html — "Elements, Compounds, and Mixtures"
-  Subject: Chemistry | Chapter 1 | Lesson 3 of 7
-  Loaded CSS: style.css (base) + subjects.css (green theme) + lessons.css (lesson layout)
-  Loaded JS : main.js (dark mode) + lessons.js (MCQs + show-answer)
--->
 <html lang="en" data-subject="chemistry">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elements, Compounds &amp; Mixtures — Ch.1 Lesson 3 | Chemistry</title>
-
+  <title>Stoichiometric Calculations — Ch.1 Lesson 3 | Chemistry</title>
   <link rel="stylesheet" href="../../../css/style.css" />
   <link rel="stylesheet" href="../../../css/subjects.css" />
   <link rel="stylesheet" href="../../../css/lessons.css" />
 </head>
-
 <body>
 
-  <!-- ══════ HEADER ══════ -->
   <header class="site-header">
     <div class="container">
       <a href="../../../index.html" class="site-logo">📚 Class XI Hub <span>— Sindh Board</span></a>
@@ -26,521 +17,267 @@
     </div>
   </header>
 
-  <!-- ══════ BREADCRUMB ══════ -->
   <nav class="lesson-breadcrumb" aria-label="breadcrumb">
     <div class="container-narrow">
       <a href="../../../index.html">Home</a>
       <span class="sep">›</span>
       <a href="../index.html">🧪 Chemistry</a>
       <span class="sep">›</span>
-      <a href="index.html">Chapter 1</a>
+      <a href="index.html">Stoichiometry</a>
       <span class="sep">›</span>
       <span class="current">Lesson 3 of 7</span>
     </div>
   </nav>
 
-  <!-- ══════ LESSON BODY ══════ -->
   <main class="lesson-page">
     <div class="container-narrow">
 
-      <!-- Title + meta info -->
       <div class="lesson-header">
-        <h1>Elements, Compounds, and Mixtures</h1>
+        <h1>Stoichiometric Calculations</h1>
         <div class="lesson-meta">
           <span class="meta-badge">Chapter 1 · Lesson 3 of 7</span>
           <span>🧪 Chemistry</span>
-          <span>⏱ 12–15 min read</span>
+          <span>⏱ 14–16 min read</span>
         </div>
       </div>
 
-
-      <!-- ════════════════════════════════════════
-           STEP 1: HOOK
-      ════════════════════════════════════════ -->
+      <!-- HOOK -->
       <section class="lesson-section">
         <h2>🎯 Why Should You Care?</h2>
-
         <div class="hook-text">
-          Look at your kitchen right now. There is salt on the shelf — two completely
-          different substances (sodium and chlorine) locked together. There is air
-          all around you — a loose blend of gases that you can separate any time.
-          And the water you drink is a compound with its own fixed formula.<br><br>
-          Everything in the universe is either an <strong>element</strong>, a
-          <strong>compound</strong>, or a <strong>mixture</strong>. Once you know the
-          difference, you can look at any substance — lassi, brass, sea water, rust —
-          and instantly say what type it is. That is exactly what this lesson teaches you.
+          <p>A chef follows a recipe: "2 cups of flour make 1 cake." From that, they know 6 cups make
+          3 cakes. A <strong>balanced chemical equation is a recipe</strong> — it tells you exactly how
+          much product you get from a given amount of reactant.</p>
+          <p>In this lesson we use that recipe to calculate unknown <strong>masses and volumes</strong>:
+          how much CO<sub>2</sub> burning fuel makes, how much oxygen a reaction releases, and so on.</p>
         </div>
       </section>
 
-
-      <!-- ════════════════════════════════════════
-           STEP 2: CORE CONCEPT
-      ════════════════════════════════════════ -->
+      <!-- CORE -->
       <section class="lesson-section">
-        <h2>📖 Core Concept</h2>
+        <h2>📖 Core Concept: The Mole-Ratio Method</h2>
+        <p>The numbers in front of the formulas in a balanced equation (the <strong>coefficients</strong>)
+        give the <strong>mole ratio</strong> — the recipe. Every stoichiometry problem follows the same
+        four steps:</p>
 
-        <!-- Big picture diagram -->
-        <div class="diagram">
-          <pre>
-              MATTER
-                |
-       ┌────────┴────────┐
-       |                 |
-  PURE SUBSTANCE       MIXTURE
-       |            (variable composition)
-   ┌───┴───┐              |
-   |       |        ┌─────┴──────┐
-ELEMENT COMPOUND    |            |
-(one    (two or  HOMOGENEOUS HETEROGENEOUS
- type)  more,   (uniform)   (non-uniform)
-        fixed
-        ratio)
-          </pre>
-        </div>
-
-        <!-- ── ELEMENTS ── -->
-        <h3>1. Elements</h3>
-
-        <div class="def-box">
-          <div class="def-label">📚 Textbook Definition</div>
-          <p>An <strong>element</strong> is a pure substance that cannot be broken down
-          into simpler substances by any chemical or physical method. It is made of only
-          one kind of atom.</p>
-        </div>
-
-        <div class="def-box easy">
-          <div class="def-label">✅ Easy Version</div>
-          <p>An element is the simplest form of matter. No matter how much you heat it,
-          burn it, or react it — you will never get something simpler. Gold is always
-          gold. Oxygen is always oxygen.</p>
-        </div>
-
-        <p>There are <strong>118 known elements</strong>, all listed in the Periodic Table.
-        They are divided into three broad groups:</p>
-
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr><th>Group</th><th>Description</th><th>Examples</th></tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>Metals</strong></td><td>Shiny, conduct electricity, solid at room temperature (except mercury)</td><td>Iron (Fe), Copper (Cu), Gold (Au), Sodium (Na)</td></tr>
-              <tr><td><strong>Non-Metals</strong></td><td>Dull, poor conductors, often gases or brittle solids</td><td>Oxygen (O), Carbon (C), Sulfur (S), Chlorine (Cl)</td></tr>
-              <tr><td><strong>Metalloids</strong></td><td>Properties between metals and non-metals</td><td>Silicon (Si), Arsenic (As)</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr><th>Element</th><th>Symbol</th><th>Where you see it in daily life</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Iron</td><td>Fe</td><td>Iron gates, tawa, nails</td></tr>
-              <tr><td>Oxygen</td><td>O</td><td>Air you breathe, hospital oxygen</td></tr>
-              <tr><td>Gold</td><td>Au</td><td>Jewellery, mobile phone circuits</td></tr>
-              <tr><td>Carbon</td><td>C</td><td>Pencil lead, coal, diamonds</td></tr>
-              <tr><td>Copper</td><td>Cu</td><td>Electrical wires, brass utensils</td></tr>
-              <tr><td>Sulfur</td><td>S</td><td>Matchsticks, medicines</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- ── COMPOUNDS ── -->
-        <h3>2. Compounds</h3>
-
-        <div class="def-box">
-          <div class="def-label">📚 Textbook Definition</div>
-          <p>A <strong>compound</strong> is a pure substance formed when two or more
-          elements combine chemically in a <em>fixed ratio</em>. The properties of a
-          compound are completely different from the elements that form it. It can only
-          be broken down by chemical means.</p>
-        </div>
-
-        <div class="def-box easy">
-          <div class="def-label">✅ Easy Version</div>
-          <p>A compound is when elements join together so tightly — through a chemical
-          bond — that they lose their own identity and become something totally new.
-          Salt (NaCl) is made of sodium (a dangerous metal) and chlorine (a poisonous
-          gas) — but together they make something safe to eat!</p>
-        </div>
-
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr><th>Compound</th><th>Formula</th><th>Elements inside</th><th>Real-life use</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Water</td><td>H₂O</td><td>Hydrogen + Oxygen (2:1 ratio)</td><td>Drinking, cooking</td></tr>
-              <tr><td>Table Salt</td><td>NaCl</td><td>Sodium + Chlorine (1:1 ratio)</td><td>Food seasoning</td></tr>
-              <tr><td>Carbon Dioxide</td><td>CO₂</td><td>Carbon + Oxygen (1:2 ratio)</td><td>Cold drinks, fire extinguishers</td></tr>
-              <tr><td>Sugar</td><td>C₁₂H₂₂O₁₁</td><td>Carbon + Hydrogen + Oxygen</td><td>Chai, sweets, biscuits</td></tr>
-              <tr><td>Rust</td><td>Fe₂O₃</td><td>Iron + Oxygen</td><td>Iron gates turning brown</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p><strong>⭐ Exam point:</strong> In a compound, the ratio is always fixed.
-        Water is always H₂O — never H₃O or HO. This fixed ratio is what makes a
-        compound a <em>pure</em> substance.</p>
-
-        <!-- ── MIXTURES ── -->
-        <h3>3. Mixtures</h3>
-
-        <div class="def-box">
-          <div class="def-label">📚 Textbook Definition</div>
-          <p>A <strong>mixture</strong> is a combination of two or more substances
-          (elements or compounds) that are <em>not</em> chemically combined. Each
-          substance keeps its own properties, the composition can vary, and the
-          components can be separated by physical methods.</p>
-        </div>
-
-        <div class="def-box easy">
-          <div class="def-label">✅ Easy Version</div>
-          <p>A mixture is when you just put things together without any chemical
-          reaction happening. Like daal and rice on your plate — they sit together
-          but are not joined. You can pick them apart with a spoon.</p>
-        </div>
-
-        <h3>4. Types of Mixtures</h3>
-
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr><th>Type</th><th>What it means</th><th>Examples</th></tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Homogeneous</strong><br><em>(uniform)</em></td>
-                <td>Looks the same throughout — you cannot see separate parts with your eyes</td>
-                <td>Salt water, air, brass (copper + zinc), vinegar, sugar dissolved in chai</td>
-              </tr>
-              <tr>
-                <td><strong>Heterogeneous</strong><br><em>(non-uniform)</em></td>
-                <td>You CAN see different parts — the composition is not the same everywhere</td>
-                <td>Sand + iron filings, oil + water, muddy water, salad, daal chawal on a plate</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- ── BIG COMPARISON TABLE ── -->
-        <h3>5. Element vs Compound vs Mixture</h3>
-
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Property</th>
-                <th>Element</th>
-                <th>Compound</th>
-                <th>Mixture</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Made of</strong></td>
-                <td>One type of atom only</td>
-                <td>Two or more elements chemically joined</td>
-                <td>Two or more substances physically mixed</td>
-              </tr>
-              <tr>
-                <td><strong>Fixed composition?</strong></td>
-                <td>✅ Yes (pure)</td>
-                <td>✅ Yes (fixed ratio)</td>
-                <td>❌ No (can vary)</td>
-              </tr>
-              <tr>
-                <td><strong>Can be broken down?</strong></td>
-                <td>❌ Not by any chemical method</td>
-                <td>✅ Yes, by chemical reaction only</td>
-                <td>✅ Yes, by physical methods</td>
-              </tr>
-              <tr>
-                <td><strong>Properties</strong></td>
-                <td>Its own unique properties</td>
-                <td>Different from the elements it is made of</td>
-                <td>Each part keeps its own properties</td>
-              </tr>
-              <tr>
-                <td><strong>Example</strong></td>
-                <td>Iron (Fe), Oxygen (O)</td>
-                <td>Water (H₂O), Salt (NaCl)</td>
-                <td>Air, salt water, muddy water</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- ── SEPARATION TECHNIQUES ── -->
-        <h3>6. How to Separate Mixtures</h3>
-
-        <p>Because the parts of a mixture are not chemically joined, physical methods
-        can separate them:</p>
-
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr><th>Technique</th><th>How it works</th><th>Real-life example</th></tr>
-            </thead>
-            <tbody>
-              <tr><td><strong>Filtration</strong></td><td>Passes mixture through filter paper — solid stays, liquid passes</td><td>Removing mud from dirty water</td></tr>
-              <tr><td><strong>Evaporation</strong></td><td>Heating drives off the liquid, leaving the dissolved solid</td><td>Getting salt back from salt water</td></tr>
-              <tr><td><strong>Distillation</strong></td><td>Boiling a liquid, collecting and cooling the vapor</td><td>Getting pure water from sea water; separating petrol from crude oil</td></tr>
-              <tr><td><strong>Magnetic Separation</strong></td><td>A magnet pulls out magnetic metals</td><td>Separating iron filings from sand</td></tr>
-              <tr><td><strong>Chromatography</strong></td><td>Components travel at different speeds through a medium</td><td>Separating ink dyes; testing food colors in lab</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-      </section><!-- end step 2 -->
-
-
-      <!-- ════════════════════════════════════════
-           STEP 3: REAL-LIFE EXAMPLES
-      ════════════════════════════════════════ -->
-      <section class="lesson-section">
-        <h2>💡 Real-Life Examples</h2>
-
-        <ol>
-          <li>
-            <strong>Table salt 🧂</strong> — NaCl is a compound. Sodium alone violently
-            explodes in water. Chlorine alone is a deadly gas. But together, chemically
-            bonded in a 1:1 ratio, they form the safe salt you put on your food every day.
-          </li>
-          <li>
-            <strong>Lassi 🥛</strong> — Lassi (yogurt + water + sugar) is a heterogeneous
-            or homogeneous mixture depending on how well it is blended. You can separate
-            the fat by churning — no chemical reaction needed.
-          </li>
-          <li>
-            <strong>Sea water 🌊</strong> — Sea water is a homogeneous mixture of water,
-            salt, and dissolved gases. Evaporate it and you get salt back — proof it is
-            a mixture, not a compound.
-          </li>
-          <li>
-            <strong>Brass utensils 🫕</strong> — Your brass degchi is a homogeneous
-            mixture (alloy) of copper and zinc. You can vary the amounts — not all brass
-            is identical. That variable composition is the mark of a mixture.
-          </li>
-          <li>
-            <strong>Air 🌬️</strong> — Air is a homogeneous mixture of roughly 78%
-            nitrogen, 21% oxygen, and small amounts of CO₂ and other gases. Hospitals
-            use fractional distillation to separate pure oxygen from air.
-          </li>
-          <li>
-            <strong>Sand from the beach 🏖️</strong> — Beach sand is a heterogeneous
-            mixture of silicon dioxide, shell fragments, and minerals. You can see the
-            different particles — classic heterogeneous mixture.
-          </li>
+        <ol class="steps">
+          <li><strong>Write the balanced chemical equation.</strong></li>
+          <li><strong>Convert the known quantity into moles</strong> (mass ÷ molar mass, or volume ÷ 22.4 for a gas at STP).</li>
+          <li><strong>Use the mole ratio</strong> from the equation to find moles of the unknown.</li>
+          <li><strong>Convert moles of the unknown</strong> back into the required mass or volume.</li>
         </ol>
+
+        <div class="callout note">
+          <div class="callout-icon">🧭</div>
+          <div class="callout-body">
+            <div class="callout-title">Three flavours, one method</div>
+            <p><strong>Mass–mass:</strong> given a mass, find a mass. &nbsp;<strong>Mass–volume:</strong>
+            given a mass, find a gas volume. &nbsp;<strong>Volume–volume:</strong> given a gas volume,
+            find a gas volume. All three use the exact same four steps.</p>
+          </div>
+        </div>
       </section>
 
+      <!-- MASS-MASS / MASS-VOLUME -->
+      <section class="lesson-section">
+        <h2>💡 Worked Examples</h2>
 
-      <!-- ════════════════════════════════════════
-           STEP 4: COMMON CONFUSIONS
-      ════════════════════════════════════════ -->
+        <h3>A · Mass → Mass</h3>
+        <div class="example">
+          <div class="example-head"><span class="example-tag">Example 1.7</span> Calculate the mass of carbon dioxide produced by the complete thermal decomposition of 50 g of limestone (CaCO<sub>3</sub>).</div>
+          <div class="example-body">
+            <div class="step-label">Step 1 — balanced equation</div>
+            <div class="rxn">
+              CaCO<sub>3</sub>
+              <span class="arrow"><small>heat</small>→</span>
+              CaO + CO<sub>2</sub>
+            </div>
+            <div class="step-label">Step 2 — known → moles (molar mass CaCO<sub>3</sub> = 100 g/mol)</div>
+            <div class="eq">Moles of CaCO<sub>3</sub> =
+              <span class="frac"><span class="num">50</span><span class="den">100</span></span> = 0.5 mole
+            </div>
+            <div class="step-label">Step 3 — mole ratio</div>
+            <p>From the equation, 1 mole of CaCO<sub>3</sub> gives 1 mole of CO<sub>2</sub>.
+            So 0.5 mole CaCO<sub>3</sub> → <strong>0.5 mole CO<sub>2</sub></strong>.</p>
+            <div class="step-label">Step 4 — moles → mass (molar mass CO<sub>2</sub> = 44 g/mol)</div>
+            <div class="eq">Mass of CO<sub>2</sub> = 0.5 × 44</div>
+            <div class="ans"><span class="ans-label">Answer</span>= 22 g of CO<sub>2</sub></div>
+          </div>
+        </div>
+
+        <h3>B · Mass → Volume of Gas</h3>
+        <div class="example">
+          <div class="example-head"><span class="example-tag">Example 1.8</span> 49 g of potassium chlorate (KClO<sub>3</sub>) decomposes completely. Determine the volume of oxygen gas liberated at STP.</div>
+          <div class="example-body">
+            <div class="step-label">Step 1 — balanced equation</div>
+            <div class="rxn">
+              2KClO<sub>3</sub>
+              <span class="arrow"><small>heat</small>→</span>
+              2KCl + 3O<sub>2</sub>
+            </div>
+            <div class="step-label">Step 2 — known → moles (molar mass KClO<sub>3</sub> = 122.5 g/mol)</div>
+            <div class="eq">Moles of KClO<sub>3</sub> =
+              <span class="frac"><span class="num">49</span><span class="den">122.5</span></span> = 0.4 mole
+            </div>
+            <div class="step-label">Step 3 — mole ratio</div>
+            <p>2 moles KClO<sub>3</sub> give 3 moles O<sub>2</sub>, so:</p>
+            <div class="eq">Moles of O<sub>2</sub> =
+              <span class="frac"><span class="num">3</span><span class="den">2</span></span> × 0.4 = 0.6 mole
+            </div>
+            <div class="step-label">Step 4 — moles → volume (× 22.4 at STP)</div>
+            <div class="eq">Volume of O<sub>2</sub> = 0.6 × 22.4</div>
+            <div class="ans"><span class="ans-label">Answer</span>= 13.44 dm<sup>3</sup> of O<sub>2</sub> at STP</div>
+          </div>
+        </div>
+
+        <h3>C · Volume → Volume of Gas</h3>
+        <div class="example">
+          <div class="example-head"><span class="example-tag">Example 1.9</span> Calculate the volume of carbon dioxide at STP produced by the complete burning of 50 dm<sup>3</sup> of butane (C<sub>4</sub>H<sub>10</sub>) in excess oxygen.</div>
+          <div class="example-body">
+            <div class="step-label">Step 1 — balanced equation</div>
+            <div class="rxn">
+              2C<sub>4</sub>H<sub>10</sub> + 13O<sub>2</sub>
+              <span class="arrow"><small>heat</small>→</span>
+              8CO<sub>2</sub> + 10H<sub>2</sub>O
+            </div>
+            <div class="step-label">Shortcut for gases</div>
+            <p>For gases at the same temperature and pressure, the <strong>mole ratio equals the volume
+            ratio</strong> (Avogadro's law). So we can use the coefficients directly as volumes:</p>
+            <div class="eq">2 dm<sup>3</sup> butane → 8 dm<sup>3</sup> CO<sub>2</sub></div>
+            <div class="eq">50 dm<sup>3</sup> butane →
+              <span class="frac"><span class="num">8</span><span class="den">2</span></span> × 50
+            </div>
+            <div class="ans"><span class="ans-label">Answer</span>= 200 dm<sup>3</sup> of CO<sub>2</sub> at STP</div>
+          </div>
+        </div>
+
+        <div class="callout tip">
+          <div class="callout-icon">⚡</div>
+          <div class="callout-body">
+            <div class="callout-title">Volume–volume is fastest</div>
+            <p>When <em>both</em> the known and unknown are gases at the same conditions, skip moles entirely
+            — just use the coefficient ratio as a volume ratio. This only works gas-to-gas.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONFUSIONS -->
       <section class="lesson-section">
         <h2>⚠️ Common Confusions</h2>
 
         <div class="confusion-box">
-          <div class="conf-title">⚠️ Confusion #1: "Air is a compound because it has many gases"</div>
-          <p>❌ <strong>No!</strong> In air, gases are just mixed — not chemically joined.
-          The ratio of gases in air can vary from place to place (more CO₂ in a city,
-          more O₂ on a mountain). Compounds always have a fixed ratio. So air is a
-          <em>mixture</em>.</p>
+          <div class="conf-title">⚠️ "I can use the ratio with an unbalanced equation."</div>
+          <p>❌ Never. The mole ratio is only correct once the equation is <strong>balanced</strong>.
+          Balance first, always — otherwise every later step is wrong.</p>
         </div>
 
         <div class="confusion-box">
-          <div class="conf-title">⚠️ Confusion #2: "Salt water is a compound"</div>
-          <p>❌ <strong>No!</strong> Just boil or evaporate salt water — you get the
-          salt back without any chemical reaction. No chemical reaction needed means
-          it is a <em>mixture</em> (homogeneous). In a true compound you need a
-          chemical reaction to break it apart.</p>
+          <div class="conf-title">⚠️ "I can take the volume ratio of a solid and a gas."</div>
+          <p>❌ The volume-ratio shortcut works only between <strong>gases</strong>. A solid like
+          CaCO<sub>3</sub> has no "22.4 dm³" — for solids you must use mass and moles.</p>
         </div>
 
         <div class="confusion-box">
-          <div class="conf-title">⚠️ Confusion #3: "Compounds and mixtures are the same thing"</div>
-          <p>❌ <strong>Big difference!</strong> In a compound, elements <em>lose their
-          identity</em> — sodium and chlorine no longer exist separately in salt.
-          In a mixture, every part <em>keeps its own identity</em> — you can taste
-          the salt and feel the water in salt water separately.</p>
+          <div class="conf-title">⚠️ "Mole ratio means 1 : 1 always."</div>
+          <p>✅ Only if the coefficients are equal. In 2KClO<sub>3</sub> → 2KCl + 3O<sub>2</sub> the ratio
+          of KClO<sub>3</sub> to O<sub>2</sub> is <strong>2 : 3</strong>, not 1 : 1. Read the coefficients
+          carefully.</p>
         </div>
+      </section>
 
-        <!-- Memory trick -->
-        <div class="def-box easy">
-          <div class="def-label">🔑 Quick Memory Trick</div>
-          <p>
-            <strong>E</strong>lement = one type only (Everything pure, one kind)<br>
-            <strong>C</strong>ompound = Chemically combined, fixed ratio (Completely new substance)<br>
-            <strong>M</strong>ixture = Manually mixed, separable (Mix and unmix freely)<br><br>
-            Just remember: <strong>ECM</strong> — "Every Chemistry Matters"
-          </p>
-        </div>
-
-      </section><!-- end step 4 -->
-
-
-      <!-- ════════════════════════════════════════
-           STEP 5: PRACTICE
-      ════════════════════════════════════════ -->
+      <!-- PRACTICE -->
       <section class="lesson-section">
         <h2>✏️ Practice Time</h2>
 
-        <!-- MCQs -->
         <div class="mcq-set">
           <h3>Multiple Choice Questions</h3>
-          <p class="text-muted">Click an option to check your answer. One chance only!</p>
+          <p>Click an option to check your answer. One chance only!</p>
 
-          <!-- Q1 -->
           <div class="mcq-card">
-            <p class="q-text">Q1. Which of the following is an element?</p>
+            <p class="q-text">Q1. In CaCO<sub>3</sub> → CaO + CO<sub>2</sub>, how many moles of CO<sub>2</sub> come from 2 moles of CaCO<sub>3</sub>?</p>
             <ul class="mcq-options">
-              <li><button class="mcq-opt" data-correct="false">(a) Water (H₂O)</button></li>
-              <li><button class="mcq-opt" data-correct="false">(b) Salt (NaCl)</button></li>
-              <li><button class="mcq-opt" data-correct="true">(c) Copper (Cu)</button></li>
-              <li><button class="mcq-opt" data-correct="false">(d) Air</button></li>
+              <li><button class="mcq-opt" data-correct="false">(a) 1 mole</button></li>
+              <li><button class="mcq-opt" data-correct="true">(b) 2 moles</button></li>
+              <li><button class="mcq-opt" data-correct="false">(c) 0.5 mole</button></li>
+              <li><button class="mcq-opt" data-correct="false">(d) 44 moles</button></li>
             </ul>
             <div class="mcq-feedback"></div>
           </div>
 
-          <!-- Q2 -->
           <div class="mcq-card">
-            <p class="q-text">Q2. In a compound, elements are combined in a:</p>
+            <p class="q-text">Q2. The very first step in any stoichiometry problem is to:</p>
             <ul class="mcq-options">
-              <li><button class="mcq-opt" data-correct="false">(a) Variable ratio</button></li>
-              <li><button class="mcq-opt" data-correct="true">(b) Fixed ratio</button></li>
-              <li><button class="mcq-opt" data-correct="false">(c) Random ratio</button></li>
-              <li><button class="mcq-opt" data-correct="false">(d) Any ratio you like</button></li>
+              <li><button class="mcq-opt" data-correct="false">(a) Convert to grams</button></li>
+              <li><button class="mcq-opt" data-correct="true">(b) Write the balanced equation</button></li>
+              <li><button class="mcq-opt" data-correct="false">(c) Multiply by 22.4</button></li>
+              <li><button class="mcq-opt" data-correct="false">(d) Find Avogadro's number</button></li>
             </ul>
             <div class="mcq-feedback"></div>
           </div>
 
-          <!-- Q3 -->
           <div class="mcq-card">
-            <p class="q-text">Q3. Which of the following is a homogeneous mixture?</p>
+            <p class="q-text">Q3. For two gases at the same temperature and pressure, the mole ratio equals the:</p>
             <ul class="mcq-options">
-              <li><button class="mcq-opt" data-correct="false">(a) Sand and iron filings</button></li>
-              <li><button class="mcq-opt" data-correct="false">(b) Oil and water</button></li>
-              <li><button class="mcq-opt" data-correct="true">(c) Salt dissolved in water</button></li>
-              <li><button class="mcq-opt" data-correct="false">(d) Muddy water</button></li>
+              <li><button class="mcq-opt" data-correct="false">(a) Mass ratio</button></li>
+              <li><button class="mcq-opt" data-correct="false">(b) Density ratio</button></li>
+              <li><button class="mcq-opt" data-correct="true">(c) Volume ratio</button></li>
+              <li><button class="mcq-opt" data-correct="false">(d) Particle size ratio</button></li>
             </ul>
             <div class="mcq-feedback"></div>
           </div>
+        </div>
 
-          <!-- Q4 -->
-          <div class="mcq-card">
-            <p class="q-text">Q4. The best method to separate iron filings from sand is:</p>
-            <ul class="mcq-options">
-              <li><button class="mcq-opt" data-correct="false">(a) Filtration</button></li>
-              <li><button class="mcq-opt" data-correct="false">(b) Evaporation</button></li>
-              <li><button class="mcq-opt" data-correct="false">(c) Distillation</button></li>
-              <li><button class="mcq-opt" data-correct="true">(d) Magnetic separation</button></li>
-            </ul>
-            <div class="mcq-feedback"></div>
-          </div>
-
-        </div><!-- end mcq-set -->
-
-        <!-- Short Questions -->
         <div class="short-q-set mt-4">
           <h3>Short Questions</h3>
-          <p class="text-muted">Try answering yourself first, then click "Show Answer".</p>
+          <p>Try the full four steps before revealing.</p>
 
           <div class="short-q-card">
-            <p class="q-text">Q5. Define element and compound. Give two examples of each.</p>
+            <p class="q-text">Q4. What mass of CaO is formed when 100 g of CaCO<sub>3</sub> decomposes? (CaCO<sub>3</sub> = 100, CaO = 56)</p>
             <button class="reveal-btn">Show Answer</button>
             <div class="answer-box">
-              <strong>Answer:</strong><br>
-              An <strong>element</strong> is a pure substance made of only one type of atom
-              that cannot be broken down by any chemical method.
-              Examples: Iron (Fe), Oxygen (O).<br><br>
-              A <strong>compound</strong> is a pure substance formed when two or more elements
-              chemically combine in a fixed ratio, producing a substance with entirely new
-              properties. Examples: Water (H₂O), Salt (NaCl).
+              <strong>Answer:</strong> Moles of CaCO<sub>3</sub> = 100 ÷ 100 = 1 mole → 1 mole CaO →
+              mass = 1 × 56 = <strong>56 g of CaO</strong>.
             </div>
           </div>
 
           <div class="short-q-card">
-            <p class="q-text">Q6. What is the difference between a compound and a mixture? Give one example of each.</p>
+            <p class="q-text">Q5. What volume of O<sub>2</sub> at STP is released from 245 g of KClO<sub>3</sub>? (KClO<sub>3</sub> = 122.5)</p>
             <button class="reveal-btn">Show Answer</button>
             <div class="answer-box">
-              <strong>Answer:</strong><br>
-              In a <strong>compound</strong>, elements are chemically combined in a fixed ratio.
-              The components lose their original properties, and separation requires a chemical
-              reaction. Example: Water (H₂O).<br><br>
-              In a <strong>mixture</strong>, substances are physically combined in any ratio.
-              Each component keeps its own properties, and separation is done by physical methods.
-              Example: Salt water (salt + water — you can evaporate to separate).
+              <strong>Answer:</strong> Moles KClO<sub>3</sub> = 245 ÷ 122.5 = 2 moles →
+              O<sub>2</sub> = (3/2) × 2 = 3 moles → volume = 3 × 22.4 = <strong>67.2 dm<sup>3</sup></strong>.
             </div>
           </div>
+        </div>
+      </section>
 
-          <div class="short-q-card">
-            <p class="q-text">Q7. Classify the following as element, compound, or mixture: (a) Gold &nbsp;(b) CO₂ &nbsp;(c) Muddy water &nbsp;(d) Brass</p>
-            <button class="reveal-btn">Show Answer</button>
-            <div class="answer-box">
-              <strong>Answer:</strong><br>
-              (a) <strong>Gold</strong> → Element (made of only gold atoms; cannot be broken down further)<br>
-              (b) <strong>CO₂</strong> → Compound (carbon and oxygen chemically combined in fixed ratio 1:2)<br>
-              (c) <strong>Muddy water</strong> → Heterogeneous mixture (mud and water mixed, not chemically joined; visible separate parts)<br>
-              (d) <strong>Brass</strong> → Homogeneous mixture / alloy (copper and zinc mixed; composition can vary; looks uniform)
-            </div>
-          </div>
-
-        </div><!-- end short-q-set -->
-
-      </section><!-- end step 5 -->
-
-
-      <!-- ════════════════════════════════════════
-           STEP 6: SUMMARY
-      ════════════════════════════════════════ -->
+      <!-- SUMMARY -->
       <section class="lesson-section">
         <h2>📝 Summary</h2>
-
         <div class="summary-box">
           <h3>3 Key Points from This Lesson</h3>
           <ol>
-            <li>
-              <strong>Elements</strong> are the simplest pure substances (one type of atom,
-              118 known, cannot be broken down chemically). <strong>Compounds</strong> form
-              when two or more elements chemically combine in a <em>fixed ratio</em> — the
-              result has completely new properties different from its elements.
-            </li>
-            <li>
-              <strong>Mixtures</strong> have a variable composition, each component keeps
-              its own properties, and they are separated by physical methods (filtration,
-              evaporation, distillation, magnetic separation, chromatography).
-            </li>
-            <li>
-              Mixtures are either <strong>homogeneous</strong> (uniform throughout, e.g.
-              salt water, air, brass) or <strong>heterogeneous</strong> (non-uniform, parts
-              visible, e.g. muddy water, sand + iron filings, oil + water).
-            </li>
+            <li>A balanced equation is a <strong>recipe</strong>; its coefficients give the <strong>mole ratio</strong>.</li>
+            <li>Four steps every time: <strong>balance → known to moles → mole ratio → unknown to mass/volume</strong>.</li>
+            <li>For <strong>gas-to-gas</strong> at the same conditions, the volume ratio equals the coefficient ratio — no moles needed.</li>
           </ol>
         </div>
       </section>
 
-
-      <!-- ════════════════════════════════════════
-           LESSON NAVIGATION
-      ════════════════════════════════════════ -->
       <nav class="lesson-nav" aria-label="Lesson navigation">
-        <a href="lesson-2.html" class="nav-btn">← Lesson 2</a>
+        <a href="lesson-2.html" class="nav-btn">← Previous</a>
         <a href="index.html" class="nav-btn">📋 Chapter Overview</a>
-        <span class="nav-btn disabled">Lesson 4 →</span>
+        <a href="lesson-4.html" class="nav-btn primary">Next: Rounding off Data →</a>
       </nav>
 
-    </div><!-- end container-narrow -->
+    </div>
   </main>
 
   <footer class="site-footer">
-    <div class="container"><p>Built with patience and curiosity · Usama · Class XI FSc · 2026</p></div>
+    <div class="container"><p>Built with patience and curiosity · <strong>Usama</strong> · Class XI · Sindh Board · 2026</p></div>
   </footer>
 
   <script src="../../../js/main.js"></script>
   <script src="../../../js/lessons.js"></script>
-
 </body>
 </html>
