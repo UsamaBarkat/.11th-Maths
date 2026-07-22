@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit 1: Measurements — Class XI Physics (Sindh Board)</title>
+  <meta name="description" content="A complete beginner's guide to Measurements: physical quantities, SI units, dimensions, errors and uncertainty, significant figures and graphs — with worked examples and a fully solved exercise." />
+
+  <!-- KaTeX for math rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <script>(function(){var t=localStorage.getItem('phy-theme');
+    if(t==='dark'||(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches))
+      document.documentElement.setAttribute('data-theme','dark');})();</script>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <button id="menu-btn" class="icon-btn" aria-label="Open unit list">☰</button>
+    <a href="../index.html" class="brand">
+      <span class="logo">⚛️</span>
+      <span>Class XI Physics <small>Sindh Textbook Board</small></span>
+    </a>
+    <span class="spacer"></span>
+    <button id="theme-btn" class="icon-btn" aria-label="Toggle theme">🌙</button>
+  </header>
+
+  <div class="backdrop"></div>
+
+  <div class="layout">
+
+    <!-- SIDEBAR: 14 units -->
+    <nav class="sidebar" aria-label="All units">
+      <div class="side-title">The 14 Units</div>
+
+      <a class="unit-link active" href="chapter-1.html">
+        <span class="u-num">1</span><span class="u-name">Measurements</span><span class="u-wt">11%</span>
+      </a>
+      <span class="unit-link locked"><span class="u-num">2</span><span class="u-name">Kinematics</span><span class="u-wt">5%</span></span>
+      <span class="unit-link locked"><span class="u-num">3</span><span class="u-name">Dynamics</span><span class="u-wt">6%</span></span>
+      <span class="unit-link locked"><span class="u-num">4</span><span class="u-name">Rotational &amp; Circular Motion</span><span class="u-wt">8%</span></span>
+      <span class="unit-link locked"><span class="u-num">5</span><span class="u-name">Work, Energy &amp; Power</span><span class="u-wt">10%</span></span>
+      <span class="unit-link locked"><span class="u-num">6</span><span class="u-name">Fluid Statics</span><span class="u-wt">4%</span></span>
+      <span class="unit-link locked"><span class="u-num">7</span><span class="u-name">Fluid Dynamics</span><span class="u-wt">6%</span></span>
+      <span class="unit-link locked"><span class="u-num">8</span><span class="u-name">Electric Fields</span><span class="u-wt">11%</span></span>
+      <span class="unit-link locked"><span class="u-num">9</span><span class="u-name">Capacitors</span><span class="u-wt">3%</span></span>
+      <span class="unit-link locked"><span class="u-num">10</span><span class="u-name">D.C Circuits</span><span class="u-wt">10%</span></span>
+      <span class="unit-link locked"><span class="u-num">11</span><span class="u-name">Oscillations</span><span class="u-wt">7%</span></span>
+      <span class="unit-link locked"><span class="u-num">12</span><span class="u-name">Acoustics</span><span class="u-wt">8%</span></span>
+      <span class="unit-link locked"><span class="u-num">13</span><span class="u-name">Physical Optics</span><span class="u-wt">8%</span></span>
+      <span class="unit-link locked"><span class="u-num">14</span><span class="u-name">Communication</span><span class="u-wt">4%</span></span>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+      <div class="content-inner">
+
+        <!-- HERO -->
+        <div class="chapter-hero">
+          <div class="crumbs"><a href="../index.html">Home</a> › Physics › <b>Unit 1</b></div>
+          <span class="kicker">Unit 1 · Weightage 11%</span>
+          <h1>Measurements</h1>
+          <p class="sub">Before we can do <em>any</em> physics, we have to be able to measure things and
+             write those measurements down honestly. This unit builds that foundation from zero — what a
+             quantity is, the units we measure in, how to track errors, and how to read graphs.</p>
+          <div class="meta">
+            <span class="pill">📊 Weightage <b>11%</b></span>
+            <span class="pill">🕒 Teaching periods <b>17</b></span>
+            <span class="pill">🧩 <b>8</b> sections</span>
+            <span class="pill">✅ Solved exercise</span>
+          </div>
+        </div>
+
+        <div class="callout note">
+          <div class="c-label">👋 How to read this unit</div>
+          <p>Every new word is <span class="term">defined the first time it appears</span>, and every
+          formula is broken down symbol-by-symbol with its unit. Work through it top to bottom — each
+          section uses only ideas from the ones before it. Numbers in worked examples carry their units
+          the whole way through, exactly as you must do in the exam.</p>
+        </div>
+
+        <!-- ON THIS PAGE -->
+        <div class="toc-card">
+          <h4>On this page</h4>
+          <ol>
+            <li><a href="#scope">What physics is &amp; why we measure</a></li>
+            <li><a href="#units">Physical quantities &amp; the SI units</a></li>
+            <li><a href="#techniques">Measuring instruments</a></li>
+            <li><a href="#dimensions">Dimensions &amp; dimensional analysis</a></li>
+            <li><a href="#errors">Errors &amp; uncertainty</a></li>
+            <li><a href="#sigfig">Significant figures</a></li>
+            <li><a href="#precision">Precision, accuracy &amp; resolution</a></li>
+            <li><a href="#graphs">Graphs in physics</a></li>
+            <li><a href="#misconceptions">Common mistakes</a></li>
+            <li><a href="#glossary">Key terms</a></li>
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#exercise">Solved exercise</a></li>
+          </ol>
+        </div>
+
+
+        <!-- ===================== 1. SCOPE ===================== -->
+        <h2 id="scope"><span class="sec-no">1.1</span> &nbsp;What Physics Is, and Why We Measure</h2>
+
+        <p>Look around you. A bird glides without flapping, a car turns stored petrol into motion, the sky
+        is blue, your phone buzzes with a message from far away. Every one of these follows the same set of
+        rules — the rules of <span class="term">physics</span>.</p>
+
+        <div class="callout def">
+          <div class="c-label">📖 Definition — Physics</div>
+          <p><strong>Physics</strong> is the branch of science that studies <strong>matter, energy, space
+          and time</strong>, and how they interact with one another. Its goal is to find a small set of
+          laws (written as mathematical equations) that can <em>explain</em> what we see and
+          <em>predict</em> what will happen next.</p>
+        </div>
+
+        <p>Physics is huge, so we split it into sub-fields. You don't need to memorise these now — just get
+        a feel for the map of the subject:</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Branch</th><th>What it studies</th></tr></thead>
+            <tbody>
+              <tr><td><b>Classical mechanics</b></td><td>Motion of ordinary objects and the forces on them (Newton's laws, momentum, energy).</td></tr>
+              <tr><td><b>Electromagnetism</b></td><td>Electric and magnetic fields, charges, currents and light as an electromagnetic wave.</td></tr>
+              <tr><td><b>Thermodynamics</b></td><td>Heat, temperature and energy transfer.</td></tr>
+              <tr><td><b>Optics</b></td><td>The behaviour of light — reflection, refraction, diffraction.</td></tr>
+              <tr><td><b>Quantum mechanics</b></td><td>The strange rules that govern atoms and sub-atomic particles.</td></tr>
+              <tr><td><b>Relativity</b></td><td>Objects moving very fast or in strong gravity; how space and time bend.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Physics in science, technology and society</h3>
+        <p>Physics is not just theory. It gives engineers the laws they use to build bridges, power grids
+        and microchips; it gives doctors X-rays, MRI and laser surgery; and it trains anyone who studies
+        it to <strong>reason carefully from evidence</strong>. That habit — measure, calculate, check —
+        is exactly what this unit is about.</p>
+
+        <div class="callout keyidea">
+          <div class="c-label">💡 The big idea of this unit</div>
+          <p>Physics is built on <strong>measurement</strong>. A law is only trusted if its predictions
+          match measured numbers. So the very first skill in physics is knowing how to measure a quantity,
+          state its unit, and honestly report how sure you are of it.</p>
+        </div>
+
+
+        <!-- ===================== 2. UNITS ===================== -->
+        <h2 id="units"><span class="sec-no">1.2</span> &nbsp;Physical Quantities and the SI Units</h2>
+
+        <div class="callout def">
+          <div class="c-label">📖 Definition — Physical quantity</div>
+          <p>A <strong>physical quantity</strong> is anything in nature that can be <strong>measured</strong>,
+          such as length, mass, time or temperature. Measuring it always gives two parts: a
+          <strong>number</strong> and a <strong>unit</strong>. Writing "5" is meaningless; writing
+          "5&nbsp;metres" tells us how much.</p>
+        </div>
+
+        <p>A <span class="term">unit</span> is a fixed, agreed-upon amount of a quantity that we compare
+        everything else against. If everyone used their own foot to measure length, no two answers would
+        agree — so the world adopted one shared system: the <strong>SI system</strong>
+        (<em>Système International d'Unités</em>, French for "International System of Units").</p>
+
+        <h3 id="base-units">1.2.1 &nbsp;The seven SI base units</h3>
+        <p>The SI system starts from <strong>seven base quantities</strong>. They are called "base" because
+        they are chosen as the starting point — everything else is built from them.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Base quantity</th><th>Unit</th><th>Symbol</th></tr></thead>
+            <tbody>
+              <tr><td>Length</td><td>metre</td><td><span class="u">m</span></td></tr>
+              <tr><td>Mass</td><td>kilogram</td><td><span class="u">kg</span></td></tr>
+              <tr><td>Time</td><td>second</td><td><span class="u">s</span></td></tr>
+              <tr><td>Electric current</td><td>ampere</td><td><span class="u">A</span></td></tr>
+              <tr><td>Thermodynamic temperature</td><td>kelvin</td><td><span class="u">K</span></td></tr>
+              <tr><td>Amount of substance</td><td>mole</td><td><span class="u">mol</span></td></tr>
+              <tr><td>Luminous intensity</td><td>candela</td><td><span class="u">cd</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 id="derived-units">1.2.2 &nbsp;Derived units</h3>
+        <div class="callout def">
+          <div class="c-label">📖 Definition — Derived unit</div>
+          <p>A <strong>derived unit</strong> is made by <strong>multiplying or dividing</strong> base units
+          together. For example, speed is length ÷ time, so its unit is the metre per second,
+          <span class="u">m/s</span>.</p>
+        </div>
+        <p>The unit of force, the <strong>newton</strong> ($\mathrm{N}$), is a derived unit: since force =
+        mass × acceleration, $1\ \mathrm{N} = 1\ \mathrm{kg\cdot m/s^2}$. A few more:</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Physical quantity</th><th>Derived unit</th><th>Symbol</th><th>In base units</th></tr></thead>
+            <tbody>
+              <tr><td>Area</td><td>square metre</td><td><span class="u">m²</span></td><td>$\mathrm{m^2}$</td></tr>
+              <tr><td>Volume</td><td>cubic metre</td><td><span class="u">m³</span></td><td>$\mathrm{m^3}$</td></tr>
+              <tr><td>Speed / velocity</td><td>metre per second</td><td><span class="u">m/s</span></td><td>$\mathrm{m\,s^{-1}}$</td></tr>
+              <tr><td>Force</td><td>newton</td><td><span class="u">N</span></td><td>$\mathrm{kg\,m\,s^{-2}}$</td></tr>
+              <tr><td>Pressure</td><td>pascal</td><td><span class="u">Pa</span></td><td>$\mathrm{kg\,m^{-1}\,s^{-2}}$</td></tr>
+              <tr><td>Energy / work</td><td>joule</td><td><span class="u">J</span></td><td>$\mathrm{kg\,m^2\,s^{-2}}$</td></tr>
+              <tr><td>Power</td><td>watt</td><td><span class="u">W</span></td><td>$\mathrm{kg\,m^2\,s^{-3}}$</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 id="supplementary-units">1.2.3 &nbsp;Supplementary units</h3>
+        <p>Two special quantities — <strong>plane angle</strong> and <strong>solid angle</strong> — are pure
+        ratios, so they have a unit but <strong>no dimensions</strong> (more on dimensions soon). They are
+        called <span class="term">supplementary units</span>.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Quantity</th><th>Unit</th><th>Symbol</th><th>Meaning</th></tr></thead>
+            <tbody>
+              <tr><td>Plane angle</td><td>radian</td><td><span class="u">rad</span></td><td>The angle at the centre of a circle where the arc length equals the radius (≈ 57.3°).</td></tr>
+              <tr><td>Solid angle</td><td>steradian</td><td><span class="u">sr</span></td><td>The 3-D "cone" angle at the centre of a sphere that cuts out an area $r^2$ on the surface.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <figure>
+          <div class="fig-box">
+            <svg class="diagram" viewBox="0 0 420 200" width="420" height="200" role="img" aria-label="A radian: the angle where arc length equals the radius">
+              <circle cx="120" cy="100" r="70" fill="none" class="stroke" stroke-width="1.6"/>
+              <!-- two radii at ~57.3 deg -->
+              <line x1="120" y1="100" x2="190" y2="100" class="accent" stroke-width="2.4"/>
+              <line x1="120" y1="100" x2="158" y2="41" class="accent" stroke-width="2.4"/>
+              <!-- arc equal to radius (thick) -->
+              <path d="M 190 100 A 70 70 0 0 0 158 41" fill="none" class="fill-accent" stroke="currentColor" stroke-width="4"/>
+              <text x="196" y="86" class="lbl-sm">arc = r</text>
+              <text x="150" y="118" class="lbl-sm">r</text>
+              <text x="128" y="86">θ = 1 rad</text>
+              <text x="70" y="192" class="lbl-sm">Plane angle (radian)</text>
+
+              <!-- sphere sketch for steradian -->
+              <circle cx="320" cy="100" r="62" fill="none" class="stroke" stroke-width="1.6"/>
+              <ellipse cx="320" cy="100" rx="62" ry="20" fill="none" class="axis" stroke-width="1"/>
+              <path d="M320 100 L372 74 M320 100 L372 118 M320 100 L360 62 M320 100 L360 138" class="accent" stroke-width="1.6"/>
+              <path d="M360 62 A 20 40 0 0 0 360 138" fill="none" class="fill-accent" stroke="currentColor" stroke-width="3"/>
+              <text x="292" y="192" class="lbl-sm">Solid angle (steradian)</text>
+            </svg>
+          </div>
+          <figcaption><b>Fig 1.1</b> — One radian is set by an arc as long as the radius; one steradian is its 3-D cousin on a sphere.</figcaption>
+        </figure>
+
+        <h3>1.2.4 &nbsp;Conventions and prefixes</h3>
+        <p>To keep everyone consistent, SI has rules for <em>writing</em> units:</p>
+        <ul>
+          <li>Unit symbols are written in <strong>lower case</strong> (m, s, kg) — <em>unless</em> the unit is named after a scientist, then the symbol is capital (<span class="u">N</span> for Newton, <span class="u">A</span> for Ampère, <span class="u">K</span> for Kelvin).</li>
+          <li>Use a unit that fits the size of the thing measured: metres for a room, kilometres for a road.</li>
+        </ul>
+        <p>For very large or very small amounts we attach a <span class="term">prefix</span>, a word-part that multiplies the unit by a power of ten:</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Prefix</th><th>Symbol</th><th>Multiplies by</th></tr></thead>
+            <tbody>
+              <tr><td>giga</td><td><span class="u">G</span></td><td>$10^{9}$</td></tr>
+              <tr><td>mega</td><td><span class="u">M</span></td><td>$10^{6}$</td></tr>
+              <tr><td>kilo</td><td><span class="u">k</span></td><td>$10^{3}$</td></tr>
+              <tr><td>centi</td><td><span class="u">c</span></td><td>$10^{-2}$</td></tr>
+              <tr><td>milli</td><td><span class="u">m</span></td><td>$10^{-3}$</td></tr>
+              <tr><td>micro</td><td><span class="u">µ</span></td><td>$10^{-6}$</td></tr>
+              <tr><td>nano</td><td><span class="u">n</span></td><td>$10^{-9}$</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>So $1\ \mathrm{km} = 10^{3}\ \mathrm{m}$ and $1\ \mathrm{ms} = 10^{-3}\ \mathrm{s}$.</p>
+
+
+        <!-- ===================== 3. TECHNIQUES ===================== -->
+        <h2 id="techniques"><span class="sec-no">1.3</span> &nbsp;How We Actually Measure Things</h2>
+        <p>Knowing the unit is half the job; you also need an instrument. Here are the standard tools for
+        each base quantity you will meet this year.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Quantity</th><th>Instruments</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td>Length</td><td>Ruler, measuring tape, <b>vernier calliper</b>, <b>screw-gauge micrometer</b>, laser rangefinder</td><td>Callipers and micrometers read much smaller lengths than a ruler.</td></tr>
+              <tr><td>Mass</td><td>Physical (beam) balance, electronic balance</td><td>Mass is measured by comparing, not by weighing on a spring.</td></tr>
+              <tr><td>Time</td><td>Stopwatch, mechanical clock, <b>ticker timer</b>, atomic clock</td><td>Atomic clocks (caesium/rubidium) are the most precise.</td></tr>
+              <tr><td>Temperature</td><td>Liquid-in-glass thermometer, digital thermometer, thermocouple</td><td>A thermocouple uses the tiny voltage across two joined metals.</td></tr>
+              <tr><td>Electrical</td><td>Voltmeter (in <b>parallel</b>), ammeter (in <b>series</b>), ohmmeter/multimeter, <b>C.R.O.</b></td><td>A cathode-ray oscilloscope (C.R.O.) draws a voltage as a wave on a screen.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout note">
+          <div class="c-label">🔎 The ticker timer &amp; the C.R.O.</div>
+          <p>A <strong>ticker timer</strong> makes dots on a paper tape at equal time intervals (e.g. every
+          $\tfrac{1}{50}\,\mathrm{s}$). Dots close together mean slow motion; dots far apart mean fast
+          motion — so the tape is a record of speed. A <strong>C.R.O.</strong> plots voltage (vertical)
+          against time (horizontal), letting you literally see and measure an electrical signal.</p>
+        </div>
+
+
+        <!-- ===================== 4. DIMENSIONS ===================== -->
+        <h2 id="dimensions"><span class="sec-no">1.4</span> &nbsp;Dimensions &amp; Dimensional Analysis</h2>
+
+        <div class="callout def">
+          <div class="c-label">📖 Definition — Dimension</div>
+          <p>The <strong>dimension</strong> of a quantity tells you <em>which base quantities</em> it is
+          built from, and to <em>what power</em>. We write the base dimensions in square brackets:
+          length&nbsp;$[L]$, mass&nbsp;$[M]$, time&nbsp;$[T]$, electric current&nbsp;$[A]$ and
+          temperature&nbsp;$[K]$.</p>
+        </div>
+
+        <p>Think of dimensions as the "recipe" of a quantity, ignoring the actual numbers. Speed is length
+        divided by time, so its dimension is</p>
+
+        <div class="formula">
+          <div class="f-eq">$$\text{speed}=\frac{\text{displacement}}{\text{time}}=\frac{[L]}{[T]}=[M^0\,L\,T^{-1}]$$</div>
+          <div class="f-where">
+            <div class="wl">Reading this</div>
+            <dl>
+              <dt>$M^0$</dt><dd>mass appears to the power 0 — i.e. speed does <b>not</b> depend on mass.</dd>
+              <dt>$L$</dt><dd>length appears to the power +1.</dd>
+              <dt>$T^{-1}$</dt><dd>time appears to the power −1 (it is "per second").</dd>
+            </dl>
+          </div>
+        </div>
+
+        <p>Here are the dimensions of quantities you will use all year. Notice that different quantities can
+        share the same dimensions (work and energy, for instance):</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Quantity</th><th>Built from</th><th>Dimensional formula</th></tr></thead>
+            <tbody>
+              <tr><td>Area</td><td>length × breadth</td><td>$[L^2]$</td></tr>
+              <tr><td>Density</td><td>mass ÷ volume</td><td>$[M\,L^{-3}]$</td></tr>
+              <tr><td>Velocity</td><td>displacement ÷ time</td><td>$[L\,T^{-1}]$</td></tr>
+              <tr><td>Acceleration</td><td>velocity ÷ time</td><td>$[L\,T^{-2}]$</td></tr>
+              <tr><td>Force</td><td>mass × acceleration</td><td>$[M\,L\,T^{-2}]$</td></tr>
+              <tr><td>Momentum</td><td>mass × velocity</td><td>$[M\,L\,T^{-1}]$</td></tr>
+              <tr><td>Work / Energy</td><td>force × displacement</td><td>$[M\,L^2\,T^{-2}]$</td></tr>
+              <tr><td>Power</td><td>work ÷ time</td><td>$[M\,L^2\,T^{-3}]$</td></tr>
+              <tr><td>Pressure</td><td>force ÷ area</td><td>$[M\,L^{-1}\,T^{-2}]$</td></tr>
+              <tr><td>Electric charge</td><td>current × time</td><td>$[A\,T]$</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>1.4.1 &nbsp;Use #1 — Checking an equation (homogeneity)</h3>
+        <p>A correct physics equation must have the <strong>same dimensions on both sides</strong> — you
+        cannot equate metres to seconds. This is called the <span class="term">principle of
+        homogeneity</span>, and it is a quick way to catch a wrong formula.</p>
+
+        <div class="worked">
+          <div class="w-head"><span class="tag">Worked example 1.1</span><span class="q">Show that the impulse equation $Ft = m\,v_f - m\,v_i = m\,\Delta v$ is dimensionally correct.</span></div>
+          <div class="w-body">
+            <div class="step-label">Step 1 — write each side in dimensions</div>
+            <p>Left side $Ft$: force × time $=[M\,L\,T^{-2}]\,[T]=[M\,L\,T^{-1}]$.</p>
+            <p>Right side $m\,\Delta v$: mass × velocity $=[M]\,[L\,T^{-1}]=[M\,L\,T^{-1}]$.</p>
+            <div class="step-label">Step 2 — compare</div>
+            <p>Both sides equal $[M\,L\,T^{-1}]$ (the dimensions of momentum), so the equation is
+            <strong>homogeneous</strong> and therefore dimensionally correct. ✓</p>
+            <div class="answer"><span class="a-label">Answer</span>Both sides have dimension $[M\,L\,T^{-1}]$ → the equation is dimensionally consistent.</div>
+          </div>
+        </div>
+
+        <h3>1.4.2 &nbsp;Use #2 — Deriving a formula</h3>
+        <p>If we can guess <em>which</em> quantities a result depends on, dimensions can often reconstruct
+        the formula (up to a plain number). Take the time period $T$ of a simple pendulum. It is reasonable
+        to assume $T$ depends on the bob's mass $m$, the string length $L$, and gravity $g$
+        (with $[g]=[L\,T^{-2}]$):</p>
+
+        <div class="formula">
+          <div class="f-eq">$$T = k\,m^{x}\,L^{y}\,g^{z}$$</div>
+          <div class="f-where">
+            <div class="wl">where</div>
+            <dl>
+              <dt>$k$</dt><dd>a <b>dimensionless</b> number (dimensions can't find it).</dd>
+              <dt>$x,y,z$</dt><dd>unknown powers we will solve for.</dd>
+            </dl>
+          </div>
+        </div>
+
+        <p>Writing both sides in dimensions:
+        $[T] = [M]^{x}\,[L]^{y}\,[L\,T^{-2}]^{z} = [M]^{x}\,[L]^{y+z}\,[T]^{-2z}$.
+        Now match the power of each base dimension on the two sides:</p>
+        <ul>
+          <li>Mass: $\;0 = x \Rightarrow x = 0$ (period does not depend on mass!)</li>
+          <li>Time: $\;1 = -2z \Rightarrow z = -\tfrac12$</li>
+          <li>Length: $\;0 = y + z \Rightarrow y = \tfrac12$</li>
+        </ul>
+        <p>So $T = k\,L^{1/2}\,g^{-1/2}$. Experiment shows the number $k = 2\pi$, giving the familiar result:</p>
+        <div class="formula">
+          <div class="f-eq">$$T = 2\pi\sqrt{\dfrac{L}{g}}$$</div>
+          <div class="f-where"><div class="wl">terms</div><dl>
+            <dt>$T$</dt><dd>time for one full swing, in seconds <span class="u">s</span>.</dd>
+            <dt>$L$</dt><dd>length of the string, in <span class="u">m</span>.</dd>
+            <dt>$g$</dt><dd>acceleration due to gravity, $\approx 9.8\ \mathrm{m\,s^{-2}}$.</dd>
+          </dl></div>
+        </div>
+
+        <div class="callout misconception">
+          <div class="c-label">⚠️ Limitations of dimensional analysis</div>
+          <ul>
+            <li>It can never find the plain number $k$ (like $2\pi$ or $\tfrac12$).</li>
+            <li>It fails for equations containing $\sin$, $\cos$, $\log$ or $e^x$ (these need dimensionless inputs).</li>
+            <li>It can't tell you whether a quantity is a scalar or a vector.</li>
+            <li>It struggles when a quantity depends on more than three others.</li>
+          </ul>
+        </div>
+
+
+        <!-- ===================== 5. ERRORS ===================== -->
+        <h2 id="errors"><span class="sec-no">1.5</span> &nbsp;Errors &amp; Uncertainty</h2>
+        <p>No measurement is ever perfect. A physicist's job is not to pretend otherwise, but to
+        <strong>state honestly how uncertain a result is</strong>. First, two words that sound alike but
+        mean different things:</p>
+
+        <div class="callout def">
+          <div class="c-label">📖 Error vs. uncertainty</div>
+          <p><strong>Error</strong> is the difference between your measured value and the true value.
+          <strong>Uncertainty</strong> is the <em>range</em> around your measurement inside which the true
+          value is expected to lie — it is our honest estimate of how much we could be off. We write a
+          result as <strong>value ± uncertainty</strong>, e.g. $(5.12 \pm 0.01)\ \mathrm{mm}$.</p>
+        </div>
+
+        <h3>1.5.1 &nbsp;Two families of error</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th></th><th>Systematic error</th><th>Random error</th></tr></thead>
+            <tbody>
+              <tr><td><b>What it is</b></td><td>A consistent, one-direction error with a clear cause.</td><td>Unpredictable scatter, different each time, often no single cause.</td></tr>
+              <tr><td><b>Examples</b></td><td>A scale that reads 2 g too high; a zero error; a stopwatch running slow.</td><td>Reaction-time when clicking a stopwatch; a draught nudging a balance.</td></tr>
+              <tr><td><b>Direction</b></td><td>Always the same way (can be + or −, but consistent).</td><td>Sometimes too high, sometimes too low.</td></tr>
+              <tr><td><b>How to reduce</b></td><td>Find and remove the cause; calibrate the instrument.</td><td>Take many readings and <b>average</b> them.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 id="least-count">1.5.2 &nbsp;Least count &amp; the uncertainty of a single reading</h3>
+        <div class="callout def">
+          <div class="c-label">📖 Definition — Least count</div>
+          <p>The <strong>least count</strong> (or <strong>resolution</strong>) of an instrument is the
+          <strong>smallest increment it can read</strong> — the value of its smallest scale division. A
+          ruler marked in millimetres has a least count of $1\ \mathrm{mm}$.</p>
+        </div>
+        <p>When you take a <strong>single</strong> reading from an instrument, the uncertainty is
+        <strong>half of its least count</strong>. Why half? Because you round to the nearest mark, so the
+        true value lies within half a division either side.</p>
+        <div class="callout keyidea">
+          <div class="c-label">🔑 Key rule</div>
+          <p>$$\text{uncertainty in one reading} = \tfrac{1}{2}\times(\text{least count})$$
+          Example: a bathroom scale marked every $1\ \mathrm{N}$ reads a man as $142\ \mathrm{N}$. His true
+          weight is between $141.5$ and $142.5\ \mathrm{N}$, so we write $W = (142 \pm 0.5)\ \mathrm{N}$.</p>
+        </div>
+
+        <h3>1.5.3 &nbsp;Fractional and percentage uncertainty</h3>
+        <p>An uncertainty of $0.5\ \mathrm{N}$ is tiny on a $142\ \mathrm{N}$ weight but huge on a
+        $1\ \mathrm{N}$ weight. To compare fairly, we scale it against the value:</p>
+        <div class="formula">
+          <div class="f-eq">$$\text{fractional uncertainty}=\frac{\Delta x}{x}, \qquad \text{percentage uncertainty}=\frac{\Delta x}{x}\times 100\%$$</div>
+          <div class="f-where"><div class="wl">terms</div><dl>
+            <dt>$x$</dt><dd>the measured value.</dd>
+            <dt>$\Delta x$</dt><dd>its absolute uncertainty (same units as $x$).</dd>
+          </dl></div>
+        </div>
+        <p>For the man's weight: percentage uncertainty $=\dfrac{0.5}{142}\times100\% = 0.35\%$.</p>
+
+        <h3 id="propagation">1.5.4 &nbsp;Combining uncertainties</h3>
+        <p>Usually a final answer is <em>calculated</em> from several measured quantities. Each one carries
+        its own uncertainty, and they combine by three simple rules:</p>
+
+        <div class="callout keyidea">
+          <div class="c-label">🔑 The three combining rules</div>
+          <ul>
+            <li><b>Adding or subtracting</b> quantities → <b>add their absolute uncertainties</b>.
+              &nbsp; If $q = a \pm b$ then $\Delta q = \Delta a + \Delta b$.</li>
+            <li><b>Multiplying or dividing</b> quantities → <b>add their percentage uncertainties</b>.</li>
+            <li><b>Raising to a power</b> $n$ → <b>multiply the percentage uncertainty by $n$</b>.
+              &nbsp; If $q = x^{n}$ then $\dfrac{\Delta q}{q} = n\,\dfrac{\Delta x}{x}$.</li>
+          </ul>
+        </div>
+
+        <div class="worked">
+          <div class="w-head"><span class="tag">Worked example 1.2</span><span class="q">A copper wire is $18.2 \pm 0.04\ \mathrm{cm}$ long when cold and $19.7 \pm 0.02\ \mathrm{cm}$ when hot. Find its extension and the uncertainty.</span></div>
+          <div class="w-body">
+            <div class="step-label">Step 1 — this is a subtraction, so add the absolute uncertainties</div>
+            <p>$\Delta(\text{extension}) = 0.04 + 0.02 = 0.06\ \mathrm{cm}$.</p>
+            <div class="step-label">Step 2 — subtract the values</div>
+            <p>Extension $= 19.7 - 18.2 = 1.5\ \mathrm{cm}$.</p>
+            <div class="answer"><span class="a-label">Answer</span>Extension $= (1.5 \pm 0.06)\ \mathrm{cm}$.</div>
+          </div>
+        </div>
+
+        <div class="worked">
+          <div class="w-head"><span class="tag">Worked example 1.3</span><span class="q">A radius is measured as $R = 7.5\ \mathrm{cm}$ with error $\Delta R = 0.03\ \mathrm{cm}$. Find the uncertainty in the sphere's volume.</span></div>
+          <div class="w-body">
+            <div class="step-label">Step 1 — the formula involves a cube (power 3)</div>
+            <p>$V = \tfrac{4}{3}\pi R^{3}$. Because $R$ is cubed, the <b>percentage</b> uncertainty is multiplied by 3:</p>
+            <p>$$\frac{\Delta V}{V} = 3\,\frac{\Delta R}{R} = 3\times\frac{0.03}{7.5} = 0.012 = 1.2\%.$$</p>
+            <div class="step-label">Step 2 — find $V$, then the absolute uncertainty</div>
+            <p>$V = \tfrac{4}{3}\pi (7.5)^{3} = 1767\ \mathrm{cm^3}$, so $\Delta V = 0.012\times 1767 \approx 21\ \mathrm{cm^3}$.</p>
+            <div class="answer"><span class="a-label">Answer</span>$V = (1767 \pm 21)\ \mathrm{cm^3}$, i.e. a 1.2% uncertainty.</div>
+          </div>
+        </div>
+
+        <div class="worked">
+          <div class="w-head"><span class="tag">Worked example 1.4</span><span class="q">A block's weight is $8.0 \pm 0.3\ \mathrm{N}$, resting on an area $3.5 \pm 0.2\ \mathrm{m^2}$. Find the pressure and its uncertainty.</span></div>
+          <div class="w-body">
+            <div class="step-label">Step 1 — pressure is a division, so add percentage uncertainties</div>
+            <p>% in weight $=\dfrac{0.3}{8.0}\times100 = 3.75\%$; &nbsp; % in area $=\dfrac{0.2}{3.5}\times100 = 5.71\%$.</p>
+            <p>Total % uncertainty $= 3.75\% + 5.71\% = 9.46\%$.</p>
+            <div class="step-label">Step 2 — compute pressure and convert % back to absolute</div>
+            <p>$P = \dfrac{8.0}{3.5} = 2.3\ \mathrm{Pa}$; &nbsp; $\Delta P = 9.46\%\times 2.3 = 0.22\ \mathrm{Pa}$.</p>
+            <div class="answer"><span class="a-label">Answer</span>$P = (2.3 \pm 0.2)\ \mathrm{Pa}$.</div>
+          </div>
+        </div>
+
+
+        <!-- ===================== 6. SIG FIG ===================== -->
+        <h2 id="sigfig"><span class="sec-no">1.6</span> &nbsp;Significant Figures</h2>
+        <div class="callout def">
+          <div class="c-label">📖 Definition — Significant figures</div>
+          <p><strong>Significant figures</strong> are the digits in a number that carry real,
+          trustworthy information about a measurement. Reporting more digits than you actually measured is
+          fake precision.</p>
+        </div>
+
+        <h3>1.6.1 &nbsp;The rules for counting them</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Rule</th><th>Example</th><th>Sig. figs</th></tr></thead>
+            <tbody>
+              <tr><td>1. All non-zero digits are significant.</td><td>12.3</td><td>3</td></tr>
+              <tr><td>2. Zeros <em>between</em> non-zero digits are significant.</td><td>102</td><td>3</td></tr>
+              <tr><td>3. Trailing zeros after a decimal point are significant.</td><td>12.300</td><td>5</td></tr>
+              <tr><td>4. Leading zeros (left of the first non-zero digit) are <b>not</b> significant.</td><td>0.0056</td><td>2</td></tr>
+              <tr><td>5. A zero to the right of the decimal and of a non-zero digit is significant.</td><td>0.0560</td><td>3</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>1.6.2 &nbsp;Using them in calculations</h3>
+        <ul>
+          <li><b>Multiplying / dividing:</b> the answer keeps the <b>least</b> number of significant figures of the values used.</li>
+          <li><b>Adding / subtracting:</b> the answer keeps the least number of <b>decimal places</b>.</li>
+          <li>Round only the <b>final</b> answer — never round in the middle of a calculation.</li>
+        </ul>
+        <p>Example: a wall $2.345\ \mathrm{m}$ by $3.56\ \mathrm{m}$ has area $2.345 \times 3.56 =
+        8.3482\ \mathrm{m^2}$, but $3.56$ has only 3 sig figs, so we report $8.35\ \mathrm{m^2}$.</p>
+
+        <h3>1.6.3 &nbsp;Scientific (exponential) notation</h3>
+        <p>Very large or very small numbers are clumsy to write. In <span class="term">scientific
+        notation</span> a number is written as a coefficient (between 1 and 10) times a power of ten,
+        $N\times10^{x}$. The speed of light $299\,792\,458\ \mathrm{m/s}$ becomes a tidy
+        $3\times10^{8}\ \mathrm{m/s}$, and an electron's mass $0.000\ldots911\ \mathrm{g}$ becomes
+        $9.11\times10^{-28}\ \mathrm{g}$. It doesn't change the value — just how we write it.</p>
+
+
+        <!-- ===================== 7. PRECISION ===================== -->
+        <h2 id="precision"><span class="sec-no">1.7</span> &nbsp;Precision, Accuracy &amp; Resolution</h2>
+        <p>These three words are used loosely in everyday life but mean very specific things in physics.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Accuracy</th><th>Precision</th></tr></thead>
+            <tbody>
+              <tr><td>How close a measurement is to the <b>true / standard</b> value.</td><td>How close repeated measurements are to <b>each other</b>.</td></tr>
+              <tr><td>Can be judged from a single measurement.</td><td>Needs several measurements to judge.</td></tr>
+              <tr><td>You can be accurate by luck on one try.</td><td>Readings can be precise yet all wrong (if there's a systematic error).</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <figure>
+          <div class="fig-box">
+            <svg class="diagram" viewBox="0 0 460 150" width="460" height="150" role="img" aria-label="Dartboards showing accuracy versus precision">
+              <!-- board 1: accurate + precise (tight, centred) -->
+              <g transform="translate(58,60)">
+                <circle r="46" fill="none" class="axis"/><circle r="30" fill="none" class="axis"/><circle r="14" fill="none" class="axis"/>
+                <circle cx="2" cy="-3" r="3.2" class="fill-accent"/><circle cx="-4" cy="2" r="3.2" class="fill-accent"/><circle cx="4" cy="4" r="3.2" class="fill-accent"/><circle cx="-1" cy="-6" r="3.2" class="fill-accent"/>
+                <text x="0" y="70" text-anchor="middle" class="lbl-sm">Accurate &amp;</text>
+                <text x="0" y="84" text-anchor="middle" class="lbl-sm">precise</text>
+              </g>
+              <!-- board 2: precise not accurate (tight, off-centre) -->
+              <g transform="translate(178,60)">
+                <circle r="46" fill="none" class="axis"/><circle r="30" fill="none" class="axis"/><circle r="14" fill="none" class="axis"/>
+                <circle cx="26" cy="-24" r="3.2" class="fill-accent"/><circle cx="30" cy="-18" r="3.2" class="fill-accent"/><circle cx="22" cy="-18" r="3.2" class="fill-accent"/><circle cx="27" cy="-13" r="3.2" class="fill-accent"/>
+                <text x="0" y="70" text-anchor="middle" class="lbl-sm">Precise but</text>
+                <text x="0" y="84" text-anchor="middle" class="lbl-sm">not accurate</text>
+              </g>
+              <!-- board 3: accurate not precise (spread, centred avg) -->
+              <g transform="translate(298,60)">
+                <circle r="46" fill="none" class="axis"/><circle r="30" fill="none" class="axis"/><circle r="14" fill="none" class="axis"/>
+                <circle cx="20" cy="8" r="3.2" class="fill-accent"/><circle cx="-22" cy="-6" r="3.2" class="fill-accent"/><circle cx="4" cy="-24" r="3.2" class="fill-accent"/><circle cx="-2" cy="22" r="3.2" class="fill-accent"/>
+                <text x="0" y="70" text-anchor="middle" class="lbl-sm">Accurate but</text>
+                <text x="0" y="84" text-anchor="middle" class="lbl-sm">not precise</text>
+              </g>
+              <!-- board 4: neither -->
+              <g transform="translate(418,60)">
+                <circle r="46" fill="none" class="axis"/><circle r="30" fill="none" class="axis"/><circle r="14" fill="none" class="axis"/>
+                <circle cx="30" cy="18" r="3.2" class="fill-accent"/><circle cx="-28" cy="-4" r="3.2" class="fill-accent"/><circle cx="10" cy="-30" r="3.2" class="fill-accent"/><circle cx="-6" cy="30" r="3.2" class="fill-accent"/>
+                <text x="0" y="70" text-anchor="middle" class="lbl-sm">Neither</text>
+              </g>
+            </svg>
+          </div>
+          <figcaption><b>Fig 1.2</b> — The classic dartboard picture: <b>precision</b> = tightly grouped; <b>accuracy</b> = centred on the bullseye.</figcaption>
+        </figure>
+
+        <div class="callout note">
+          <div class="c-label">📌 Why resolution &amp; repeating matter</div>
+          <p>An instrument with a <strong>smaller least count</strong> (higher resolution) gives more
+          precise readings and smaller uncertainty. And taking <strong>more readings and averaging</strong>
+          cancels out random error, revealing the true trend with more confidence. Both are cheap ways to
+          improve an experiment.</p>
+        </div>
+
+
+        <!-- ===================== 8. GRAPHS ===================== -->
+        <h2 id="graphs"><span class="sec-no">1.8</span> &nbsp;Graphs in Physics</h2>
+        <p>A <span class="term">graph</span> turns a table of numbers into a picture, making trends and
+        relationships jump out. Two terms first:</p>
+        <div class="callout def">
+          <div class="c-label">📖 Independent vs. dependent variable</div>
+          <p>The <strong>independent variable</strong> is the one <em>you</em> change/control (the cause);
+          it goes on the <strong>x-axis</strong>. The <strong>dependent variable</strong> is the one you
+          measure in response (the effect); it goes on the <strong>y-axis</strong>.</p>
+        </div>
+
+        <h3>1.8.1 &nbsp;Line of best fit &amp; error bars</h3>
+        <p>Real data points scatter a little. The <strong>line of best fit</strong> is the single straight
+        line that passes as close as possible to all of them, showing the overall trend. <strong>Error
+        bars</strong> are short lines through each point showing its uncertainty — short bars mean precise
+        data, long bars mean less precise.</p>
+
+        <figure>
+          <div class="fig-box">
+            <svg class="diagram" viewBox="0 0 360 220" width="360" height="220" role="img" aria-label="Scatter of points with a line of best fit">
+              <line x1="40" y1="185" x2="335" y2="185" class="axis" stroke-width="1.4"/>
+              <line x1="40" y1="185" x2="40" y2="20" class="axis" stroke-width="1.4"/>
+              <text x="330" y="205" class="lbl-sm">x</text><text x="22" y="26" class="lbl-sm">y</text>
+              <!-- points -->
+              <g class="fill-accent">
+                <circle cx="70" cy="160" r="3"/><circle cx="95" cy="150" r="3"/><circle cx="120" cy="150" r="3"/>
+                <circle cx="140" cy="130" r="3"/><circle cx="165" cy="128" r="3"/><circle cx="190" cy="112" r="3"/>
+                <circle cx="215" cy="108" r="3"/><circle cx="240" cy="92" r="3"/><circle cx="265" cy="86" r="3"/>
+                <circle cx="290" cy="70" r="3"/><circle cx="150" cy="112" r="3"/><circle cx="205" cy="130" r="3"/>
+              </g>
+              <line x1="60" y1="165" x2="300" y2="66" class="accent" stroke-width="2.4"/>
+              <text x="205" y="60" class="lbl-sm">line of best fit</text>
+            </svg>
+          </div>
+          <figcaption><b>Fig 1.3</b> — The best-fit line ignores the scatter and captures the underlying trend.</figcaption>
+        </figure>
+
+        <h3>1.8.2 &nbsp;Slope, intercept &amp; extrapolation</h3>
+        <p>For a straight-line graph we compare it with the equation of a line,</p>
+        <div class="formula">
+          <div class="f-eq">$$y = m x + c$$</div>
+          <div class="f-where"><div class="wl">terms</div><dl>
+            <dt>$m$</dt><dd>the <b>slope</b> (gradient) $= \dfrac{\Delta y}{\Delta x}$, the rise over the run.</dd>
+            <dt>$c$</dt><dd>the <b>y-intercept</b> — the value of $y$ where the line crosses the y-axis (when $x=0$).</dd>
+          </dl></div>
+        </div>
+        <p>For example, a position–time graph that rises by $30\ \mathrm{m}$ over $15\ \mathrm{s}$ has slope
+        $\dfrac{30}{15} = 2\ \mathrm{m\,s^{-1}}$ — the slope of a position–time graph <em>is</em> the speed.
+        A <strong>straight</strong> line means constant speed; a <strong>curve</strong> means the speed is
+        changing (acceleration), and its slope is different at every point.</p>
+        <p><span class="term">Extrapolation</span> means extending the best-fit line <em>beyond</em> the
+        measured data to predict a value we didn't measure. Extending a volume–temperature line down until
+        the volume would reach zero, for instance, predicts absolute zero at $-273.15\ \mathrm{°C}$.</p>
+
+        <figure>
+          <div class="fig-box">
+            <svg class="diagram" viewBox="0 0 380 210" width="380" height="210" role="img" aria-label="Two position-time graphs: a straight line and a curve">
+              <!-- linear -->
+              <g>
+                <line x1="30" y1="170" x2="170" y2="170" class="axis" stroke-width="1.3"/>
+                <line x1="30" y1="170" x2="30" y2="30" class="axis" stroke-width="1.3"/>
+                <line x1="30" y1="170" x2="150" y2="50" class="accent" stroke-width="2.4"/>
+                <text x="60" y="196" class="lbl-sm">Time →</text>
+                <text x="86" y="45" class="lbl-sm">straight = constant speed</text>
+              </g>
+              <!-- non-linear -->
+              <g transform="translate(200,0)">
+                <line x1="30" y1="170" x2="170" y2="170" class="axis" stroke-width="1.3"/>
+                <line x1="30" y1="170" x2="30" y2="30" class="axis" stroke-width="1.3"/>
+                <path d="M30 170 Q 120 168 150 45" fill="none" class="accent" stroke-width="2.4"/>
+                <text x="60" y="196" class="lbl-sm">Time →</text>
+                <text x="70" y="45" class="lbl-sm">curve = accelerating</text>
+              </g>
+            </svg>
+          </div>
+          <figcaption><b>Fig 1.4</b> — On a position–time graph, a straight line is steady speed; a curve means the speed is changing.</figcaption>
+        </figure>
+
+
+        <!-- ===================== MISCONCEPTIONS ===================== -->
+        <h2 id="misconceptions">⚠️ Common Mistakes to Avoid</h2>
+        <div class="callout misconception">
+          <div class="c-label">Mistake 1 — dropping the unit</div>
+          <p>A number with no unit is meaningless in physics. Always carry the unit through the whole
+          calculation; the units on the two sides of your final equation must match.</p>
+        </div>
+        <div class="callout misconception">
+          <div class="c-label">Mistake 2 — confusing accuracy and precision</div>
+          <p>They are not the same. Tightly-grouped (precise) readings can still all be wrong (inaccurate)
+          because of a systematic error such as a zero error.</p>
+        </div>
+        <div class="callout misconception">
+          <div class="c-label">Mistake 3 — combining uncertainties the wrong way</div>
+          <p>Add <b>absolute</b> uncertainties only for <b>+ / −</b>. For <b>× / ÷</b> you add
+          <b>percentage</b> uncertainties, and for a power you multiply the percentage by that power. Never
+          mix them up.</p>
+        </div>
+        <div class="callout misconception">
+          <div class="c-label">Mistake 4 — keeping too many digits</div>
+          <p>Your answer can't be more precise than your least-precise measurement. Round the final result
+          to the correct number of significant figures.</p>
+        </div>
+        <div class="callout misconception">
+          <div class="c-label">Mistake 5 — trusting dimensions too far</div>
+          <p>A dimensionally-correct equation can still be wrong, because dimensions can't find pure numbers
+          like $\tfrac12$ or $2\pi$. Dimensional analysis <em>rules things out</em>; it doesn't prove them
+          right.</p>
+        </div>
+
+
+        <!-- ===================== GLOSSARY ===================== -->
+        <h2 id="glossary">📚 Key Terms</h2>
+        <div class="glossary">
+          <dl>
+            <div class="row"><dt>Physical quantity</dt><dd>Anything that can be measured; reported as a number with a unit.</dd></div>
+            <div class="row"><dt>SI unit</dt><dd>The internationally agreed unit for a quantity; built from 7 base units.</dd></div>
+            <div class="row"><dt>Derived unit</dt><dd>A unit made by multiplying/dividing base units (e.g. m/s, N, J).</dd></div>
+            <div class="row"><dt>Supplementary unit</dt><dd>Radian and steradian — units with no dimensions.</dd></div>
+            <div class="row"><dt>Dimension</dt><dd>The base-quantity "recipe" of a quantity, written in $[\,]$, e.g. $[ML^2T^{-2}]$.</dd></div>
+            <div class="row"><dt>Homogeneity</dt><dd>The rule that both sides of a correct equation share the same dimensions.</dd></div>
+            <div class="row"><dt>Error</dt><dd>The difference between a measured value and the true value.</dd></div>
+            <div class="row"><dt>Uncertainty</dt><dd>The range around a measurement in which the true value likely lies (value ± Δ).</dd></div>
+            <div class="row"><dt>Systematic error</dt><dd>A consistent, one-direction error with a clear cause (e.g. zero error).</dd></div>
+            <div class="row"><dt>Random error</dt><dd>Unpredictable scatter; reduced by averaging many readings.</dd></div>
+            <div class="row"><dt>Least count</dt><dd>The smallest increment an instrument can read; its resolution.</dd></div>
+            <div class="row"><dt>Significant figures</dt><dd>The trustworthy digits in a measured number.</dd></div>
+            <div class="row"><dt>Accuracy</dt><dd>Closeness of a measurement to the true value.</dd></div>
+            <div class="row"><dt>Precision</dt><dd>Closeness of repeated measurements to each other.</dd></div>
+            <div class="row"><dt>Slope</dt><dd>$\Delta y/\Delta x$ of a graph; e.g. the slope of a position–time graph is speed.</dd></div>
+            <div class="row"><dt>Extrapolation</dt><dd>Extending a graph's trend beyond the measured data to estimate a value.</dd></div>
+          </dl>
+        </div>
+
+
+        <!-- ===================== SUMMARY ===================== -->
+        <h2 id="summary">📝 Chapter Summary</h2>
+        <div class="summary">
+          <h3>Everything you must remember</h3>
+          <ul>
+            <li>A measurement = <b>number + unit</b>; the world uses the <b>SI system</b>, built on 7 base units (m, kg, s, A, K, mol, cd).</li>
+            <li><b>Derived units</b> come from multiplying/dividing base units; <b>supplementary units</b> (rad, sr) have a unit but no dimension.</li>
+            <li><b>Dimensions</b> $[M],[L],[T],[A],[K]$ let you (i) check equations by <b>homogeneity</b> and (ii) derive formulas up to a plain number.</li>
+            <li>Dimensional analysis <b>can't</b> find numbers like $2\pi$, handle $\sin/\log/e^x$, or distinguish scalars from vectors.</li>
+            <li><b>Error</b> = measured − true; <b>uncertainty</b> = the ± range. Errors are <b>systematic</b> (consistent) or <b>random</b> (scattered, reduced by averaging).</li>
+            <li>Single reading uncertainty $=\tfrac12\times$ least count. Combining: <b>+/−</b> add absolute; <b>×/÷</b> add %; power $n$ → multiply % by $n$.</li>
+            <li><b>Significant figures</b> show real precision; for ×/÷ keep the least number of sig figs, and round only at the end.</li>
+            <li><b>Accuracy</b> = close to true value; <b>precision</b> = readings close to each other — a smaller <b>least count</b> improves precision.</li>
+            <li>On a graph, <b>slope</b> $=\Delta y/\Delta x$ and the <b>intercept</b> is $y$ at $x=0$; a straight position–time line means constant speed, a curve means acceleration; <b>extrapolation</b> extends the trend beyond the data.</li>
+          </ul>
+        </div>
+
+
+        <!-- ===================== EXERCISE ===================== -->
+        <h2 id="exercise">✅ Solved Exercise</h2>
+        <p class="lead">Board-style questions in the same format as the textbook — every one with a full,
+        worked solution (not just the final answer). Try each yourself first, then reveal.</p>
+
+        <!-- SECTION A: MCQ -->
+        <span class="ex-section-label">Section A — Multiple Choice Questions</span>
+
+        <div class="mcq">
+          <div class="q">1. The respective numbers of significant figures for $23.023$, $0.0003$ and $2.1\times10^{-3}$ are:</div>
+          <ul class="opts"><li>a. 5, 1, 2</li><li>b. 5, 1, 5</li><li>c. 5, 5, 2</li><li>d. 4, 4, 2</li></ul>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p>$23.023$ → all 5 digits count (zeros are between non-zeros) = <b>5</b>. $0.0003$ → leading zeros don't count = <b>1</b>. $2.1\times10^{-3}$ → only the coefficient $2.1$ counts = <b>2</b>.</p>
+            <p class="answer">Answer: a. 5, 1, 2</p>
+          </div></details>
+        </div>
+
+        <div class="mcq">
+          <div class="q">2. Which of the following is a supplementary quantity?</div>
+          <ul class="opts"><li>a. Mass</li><li>b. Time</li><li>c. Solid angle</li><li>d. Luminosity</li></ul>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p>Plane angle and solid angle are the two supplementary quantities (units radian and steradian).</p>
+            <p class="answer">Answer: c. Solid angle</p>
+          </div></details>
+        </div>
+
+        <div class="mcq">
+          <div class="q">3. The unit of solid angle is:</div>
+          <ul class="opts"><li>a. Second</li><li>b. Steradian</li><li>c. Kilogram</li><li>d. Candela</li></ul>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p>Solid angle is measured in steradians (sr).</p>
+            <p class="answer">Answer: b. Steradian</p>
+          </div></details>
+        </div>
+
+        <div class="mcq">
+          <div class="q">4. The quantity having the same unit in all systems of units is:</div>
+          <ul class="opts"><li>a. mass</li><li>b. time</li><li>c. length</li><li>d. temperature</li></ul>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p>The second is the unit of time in the SI, CGS and FPS systems alike — time is measured the same way everywhere.</p>
+            <p class="answer">Answer: b. time</p>
+          </div></details>
+        </div>
+
+        <div class="mcq">
+          <div class="q">5. Random errors can be eliminated by:</div>
+          <ul class="opts"><li>a. taking many observations and their mean</li><li>b. using more than one instrument</li><li>c. eliminating the cause</li><li>d. careful observation</li></ul>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p>Random errors scatter both ways, so averaging many readings cancels them out. (Removing a <em>cause</em> fixes a systematic error, not a random one.)</p>
+            <p class="answer">Answer: a. taking many observations and their mean</p>
+          </div></details>
+        </div>
+
+        <div class="mcq">
+          <div class="q">6. A systematic error can be:</div>
+          <ul class="opts"><li>a. either positive or negative</li><li>b. negative only</li><li>c. positive only</li><li>d. zero error</li></ul>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p>A systematic error is consistent in one direction, but that direction may make readings read too high (positive) or too low (negative) depending on the fault.</p>
+            <p class="answer">Answer: a. either positive or negative</p>
+          </div></details>
+        </div>
+
+        <div class="mcq">
+          <div class="q">7. $[MLT^{-2}]$ is the dimensional formula of:</div>
+          <ul class="opts"><li>a. strain</li><li>b. force</li><li>c. displacement</li><li>d. pressure</li></ul>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p>Force = mass × acceleration $=[M][LT^{-2}]=[MLT^{-2}]$. (Strain is dimensionless; displacement is $[L]$; pressure is $[ML^{-1}T^{-2}]$.)</p>
+            <p class="answer">Answer: b. force</p>
+          </div></details>
+        </div>
+
+        <div class="mcq">
+          <div class="q">8. Which pair has the same dimensions?</div>
+          <ul class="opts"><li>a. moment of inertia &amp; torque</li><li>b. surface tension &amp; force</li><li>c. impulse &amp; momentum</li><li>d. specific heat &amp; latent heat</li></ul>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p>Impulse $= Ft = [MLT^{-2}][T] = [MLT^{-1}]$; momentum $= mv = [M][LT^{-1}] = [MLT^{-1}]$. Identical.</p>
+            <p class="answer">Answer: c. impulse and momentum</p>
+          </div></details>
+        </div>
+
+        <div class="mcq">
+          <div class="q">9. The dependent variable is the:</div>
+          <ul class="opts"><li>a. cause</li><li>b. effect</li><li>c. cause and effect</li><li>d. reason</li></ul>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p>The dependent variable changes <em>in response</em> to the independent variable — it is the effect, plotted on the y-axis.</p>
+            <p class="answer">Answer: b. effect</p>
+          </div></details>
+        </div>
+
+        <div class="mcq">
+          <div class="q">10. The dimensions of kinetic energy are the same as those of:</div>
+          <ul class="opts"><li>a. acceleration</li><li>b. velocity</li><li>c. work</li><li>d. force</li></ul>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p>Kinetic energy and work are both energy, dimension $[ML^{2}T^{-2}]$.</p>
+            <p class="answer">Answer: c. work</p>
+          </div></details>
+        </div>
+
+
+        <!-- SECTION B: CRQ -->
+        <span class="ex-section-label">Section B — Constructed-Response Questions (CRQs)</span>
+
+        <div class="qa"><div class="q"><span class="qn">1.</span>Give an example of (I) a quantity with a unit but no dimension, (II) a quantity with neither unit nor dimension, (III) a constant with a unit, (IV) a constant with no unit.</div>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p>(I) Plane angle — unit radian, but dimensionless. &nbsp;(II) Relative density (or strain, or refractive index) — a pure ratio, no unit and no dimension. &nbsp;(III) The gravitational constant $G = 6.67\times10^{-11}\ \mathrm{N\,m^2\,kg^{-2}}$. &nbsp;(IV) A pure number such as $\pi$ or $2\pi$.</p>
+          </div></details>
+        </div>
+
+        <div class="qa"><div class="q"><span class="qn">2.</span>When rounding the product or quotient of two measurements, must you consider significant figures?</div>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p>Yes. For multiplication or division, the answer is kept to the <b>least</b> number of significant figures present in the values used, because the result cannot be more precise than the least-precise measurement.</p>
+          </div></details>
+        </div>
+
+        <div class="qa"><div class="q"><span class="qn">3.</span>Derive the period of a mass on a vertical spring, $T = 2\pi\sqrt{m/k}$, by dimensional analysis.</div>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p>Assume $T = k'\,m^{a}k^{b}$, where the spring constant $k$ has dimension $[MT^{-2}]$ (from $F=kx$: $[MLT^{-2}]=[k][L]$). Then $[T]=[M]^{a}[MT^{-2}]^{b}=[M]^{a+b}[T]^{-2b}$. Matching: time $1=-2b\Rightarrow b=-\tfrac12$; mass $0=a+b\Rightarrow a=\tfrac12$. So $T=k'\sqrt{m/k}$, and with $k'=2\pi$, $\;T=2\pi\sqrt{m/k}$.</p>
+          </div></details>
+        </div>
+
+        <div class="qa"><div class="q"><span class="qn">4.</span>Find the dimensions of (a) work, (b) energy, (c) power, (d) momentum.</div>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p>(a) work = force × distance $=[ML^{2}T^{-2}]$. (b) energy — same as work $=[ML^{2}T^{-2}]$. (c) power = work ÷ time $=[ML^{2}T^{-3}]$. (d) momentum = mass × velocity $=[MLT^{-1}]$.</p>
+          </div></details>
+        </div>
+
+        <div class="qa"><div class="q"><span class="qn">5.</span>A wheel's radius is measured as $4.16\ \mathrm{cm}$. Multiplying by 2 for the diameter, should you write $8\ \mathrm{cm}$ or $8.32\ \mathrm{cm}$?</div>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p>$8.32\ \mathrm{cm}$. The "2" is an <b>exact</b> number (a definition, not a measurement) so it has infinite significant figures. The precision is set by $4.16$ (3 sig figs), so the diameter keeps 3 sig figs: $8.32\ \mathrm{cm}$.</p>
+          </div></details>
+        </div>
+
+        <div class="qa"><div class="q"><span class="qn">6.</span>If $y = a + bt + ct^{2}$, where $y$ is in metres and $t$ in seconds, what is the unit of $c$?</div>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p>Every term must have the unit of $y$ (metres). For $ct^{2}$: $[c]\times \mathrm{s^2} = \mathrm{m}$, so $[c] = \mathrm{m/s^{2}} = \mathrm{m\,s^{-2}}$ (metre per second squared).</p>
+          </div></details>
+        </div>
+
+        <div class="qa"><div class="q"><span class="qn">7.</span>Differentiate between accuracy and precision.</div>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p><b>Accuracy</b> is how close a reading is to the true/standard value (needs one measurement, can happen by chance). <b>Precision</b> is how close repeated readings are to each other (needs several measurements). Readings can be precise without being accurate if a systematic error is present.</p>
+          </div></details>
+        </div>
+
+        <div class="qa"><div class="q"><span class="qn">8.</span>Define dependent and independent variables.</div>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p>The <b>independent variable</b> is the one you deliberately change/control (the cause), plotted on the x-axis. The <b>dependent variable</b> is the one you measure in response (the effect), plotted on the y-axis.</p>
+          </div></details>
+        </div>
+
+        <div class="qa"><div class="q"><span class="qn">9.</span>Differentiate systematic error and random error.</div>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p><b>Systematic error</b> is consistent and in one direction, with an identifiable cause (zero error, faulty scale); it is removed by fixing the cause/calibrating. <b>Random error</b> scatters unpredictably in both directions; it is reduced by taking many readings and averaging.</p>
+          </div></details>
+        </div>
+
+        <div class="qa"><div class="q"><span class="qn">10.</span>List the limitations of dimensional analysis.</div>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p>It cannot: find the value of a dimensionless constant (like $2\pi$); derive equations containing trigonometric, exponential or logarithmic functions; tell whether a quantity is a scalar or vector; or handle a quantity that depends on more than three others.</p>
+          </div></details>
+        </div>
+
+        <div class="qa"><div class="q"><span class="qn">11.</span>Describe the least count of a vernier calliper and a screw-gauge micrometer.</div>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p><b>Vernier calliper:</b> least count = (smallest main-scale division) ÷ (number of vernier divisions) $= \dfrac{1\ \mathrm{mm}}{10} = 0.1\ \mathrm{mm} = 0.01\ \mathrm{cm}$.</p>
+            <p><b>Screw-gauge micrometer:</b> least count = pitch ÷ (number of circular-scale divisions) $= \dfrac{0.5\ \mathrm{mm}}{50} = 0.01\ \mathrm{mm}$. The micrometer is therefore ten times finer than the vernier.</p>
+          </div></details>
+        </div>
+
+        <div class="qa"><div class="q"><span class="qn">12.</span>Describe the method of extrapolation.</div>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p>Extrapolation is extending the best-fit line or curve <b>beyond</b> the range of the measured data to estimate a value that was not measured. For example, extending a volume–temperature line until the volume reaches zero predicts absolute zero at $-273.15\ \mathrm{°C}$.</p>
+          </div></details>
+        </div>
+
+
+        <!-- SECTION B: ERQ -->
+        <span class="ex-section-label">Section B — Extended-Response Questions (ERQs)</span>
+
+        <div class="qa"><div class="q"><span class="qn">1.</span>Discuss graphs and their various types with an example.</div>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p>A graph is a visual display of the relationship between two variables (independent on x, dependent on y). Main types: a <b>line graph</b> joins points to show how one quantity changes with another (e.g. distance vs time); a <b>bar graph</b> compares separate categories (e.g. rainfall per month); a <b>scatter plot</b> shows individual data points to reveal a trend or correlation; and a <b>best-fit line</b> is drawn through a scatter to capture the overall trend. Example: plotting a car's position against time gives a straight line whose slope is its constant speed.</p>
+          </div></details>
+        </div>
+
+        <div class="qa"><div class="q"><span class="qn">2.</span>State the rules for determining the number of significant figures in a measurement.</div>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p>(1) All non-zero digits are significant. (2) Zeros between non-zero digits are significant. (3) Trailing zeros after a decimal point are significant. (4) Leading zeros (left of the first non-zero digit) are not significant. (5) A zero right of the decimal point and right of a non-zero digit is significant. In × / ÷, keep the least number of significant figures; in + / −, keep the least number of decimal places.</p>
+          </div></details>
+        </div>
+
+        <div class="qa"><div class="q"><span class="qn">3.</span>What are the uses of dimensional analysis? Explain each.</div>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p><b>(i) Checking an equation</b> — both sides must have identical dimensions (homogeneity); if not, the equation is wrong. <b>(ii) Deriving a relation</b> — if you know which quantities a result depends on, matching powers of $[M],[L],[T]$ reconstructs the formula up to a constant (e.g. the pendulum period). <b>(iii) Converting units</b> — knowing the dimensions lets you convert a quantity from one system of units to another correctly.</p>
+          </div></details>
+        </div>
+
+        <div class="qa"><div class="q"><span class="qn">4.</span>A vernier calliper and a micrometer are shown in the book. Explain how each reading is taken.</div>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p><b>Vernier:</b> read the main-scale mark just before the zero of the vernier scale (say $1.3\ \mathrm{cm}$). Then find the vernier line that best lines up with a main-scale line (say the 4th line); multiply by the least count $0.01\ \mathrm{cm}$ to get $0.04\ \mathrm{cm}$. Reading $= 1.3 + 0.04 = 1.34\ \mathrm{cm}$.</p>
+            <p><b>Micrometer:</b> read the main scale on the sleeve (say $5.5\ \mathrm{mm}$), then the circular thimble line matching the reference line (say 28) × least count $0.01\ \mathrm{mm} = 0.28\ \mathrm{mm}$. Reading $= 5.5 + 0.28 = 5.78\ \mathrm{mm}$.</p>
+          </div></details>
+        </div>
+
+
+        <!-- SECTION B: NUMERICAL -->
+        <span class="ex-section-label">Section B — Numerical Problems</span>
+
+        <div class="qa"><div class="q"><span class="qn">1.</span>What is the percentage uncertainty in the measurement $3.67 \pm 0.25\ \mathrm{m}$?</div>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p>$\%\text{ uncertainty} = \dfrac{\Delta x}{x}\times100 = \dfrac{0.25}{3.67}\times100 = 6.81\%$.</p>
+            <p class="answer">Answer ≈ 6.8%</p>
+          </div></details>
+        </div>
+
+        <div class="qa"><div class="q"><span class="qn">2.</span>Find the area, and its approximate uncertainty, of a circle of radius $3.7\times10^{4}\ \mathrm{cm}$.</div>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p>$A = \pi r^{2} = \pi(3.7\times10^{4})^{2} = 4.30\times10^{9}\ \mathrm{cm^2}$.</p>
+            <p>$r$ has uncertainty $\pm0.05\times10^{4}$, so $\%$ in $r = \dfrac{0.05}{3.7}\times100 = 1.35\%$. Since $A\propto r^{2}$, $\%$ in $A = 2\times1.35\% = 2.7\%$, giving $\Delta A = 0.027\times4.30\times10^{9} = 0.11\times10^{9}\ \mathrm{cm^2}$.</p>
+            <p class="answer">Answer: $A = (4.3 \pm 0.11)\times10^{9}\ \mathrm{cm^2}$</p>
+          </div></details>
+        </div>
+
+        <div class="qa"><div class="q"><span class="qn">3.</span>An aeroplane travels at $850\ \mathrm{km/h}$. How long does it take to travel $1.00\ \mathrm{km}$?</div>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p>$t = \dfrac{d}{v} = \dfrac{1.00\ \mathrm{km}}{850\ \mathrm{km/h}} = 1.176\times10^{-3}\ \mathrm{h}$. Convert to seconds: $\times 3600 = 4.24\ \mathrm{s}$.</p>
+            <p class="answer">Answer ≈ 4.23 s</p>
+          </div></details>
+        </div>
+
+        <div class="qa"><div class="q"><span class="qn">4.</span>A rectangular tank is $25.0\ \mathrm{m}$ long and $15.0\ \mathrm{m}$ wide. If $2980\ \mathrm{m^3}$ of water is pumped in, what is the depth of the water?</div>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p>Depth $= \dfrac{V}{L\times W} = \dfrac{2980}{25.0\times15.0} = \dfrac{2980}{375} = 7.95\ \mathrm{m}$.</p>
+            <p class="answer">Answer = 7.95 m</p>
+          </div></details>
+        </div>
+
+        <div class="qa"><div class="q"><span class="qn">5.</span>Find the volume of an underground tank measuring $1.9\ \mathrm{m}\times1.2\ \mathrm{m}\times0.8\ \mathrm{m}$.</div>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p>$V = 1.9\times1.2\times0.8 = 1.824\ \mathrm{m^3}$.</p>
+            <p class="answer">Answer = 1.824 m³</p>
+          </div></details>
+        </div>
+
+        <div class="qa"><div class="q"><span class="qn">6.</span>Two students write (a) $x = v\,t^{2} + 2at$ and (b) $x = v_{0}t + 2at^{2}$. Which is dimensionally possible?</div>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p>$x$ has dimension $[L]$; each term must match.</p>
+            <p><b>(a)</b> $v\,t^{2} = [LT^{-1}][T^{2}] = [LT]$ — not $[L]$. So (a) is <b>dimensionally incorrect</b>.</p>
+            <p><b>(b)</b> $v_{0}t = [LT^{-1}][T] = [L]$ ✓ and $at^{2} = [LT^{-2}][T^{2}] = [L]$ ✓. So (b) is <b>dimensionally correct</b>.</p>
+            <p class="answer">Answer: (a) incorrect, (b) correct</p>
+          </div></details>
+        </div>
+
+        <div class="qa"><div class="q"><span class="qn">7.</span>One hectare $= 10^{4}\ \mathrm{m^2}$ and one acre $= 4\times10^{4}\ \mathrm{ft^2}$. How many acres are in one hectare? (Take $1\ \mathrm{m} = 3.28\ \mathrm{ft}$.)</div>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p>$1\ \mathrm{m^2} = (3.28)^{2}\ \mathrm{ft^2} = 10.76\ \mathrm{ft^2}$, so $1\ \text{hectare} = 10^{4}\times10.76 = 1.076\times10^{5}\ \mathrm{ft^2}$.</p>
+            <p>Acres $= \dfrac{1.076\times10^{5}}{4\times10^{4}} = 2.69\ \text{acres}$.</p>
+            <p class="answer">Answer ≈ 2.69 acres</p>
+          </div></details>
+        </div>
+
+        <div class="qa"><div class="q"><span class="qn">8.</span>A watch gains or loses no more than $10\ \mathrm{s}$ in a year. Express its accuracy as a percentage.</div>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p>Seconds in a year $= 365\times24\times3600 = 3.15\times10^{7}\ \mathrm{s}$.</p>
+            <p>Accuracy $= \dfrac{10}{3.15\times10^{7}}\times100 = 3.16\times10^{-5}\%$.</p>
+            <p class="answer">Answer ≈ 3.16 × 10⁻⁵ %</p>
+          </div></details>
+        </div>
+
+        <div class="qa"><div class="q"><span class="qn">9.</span>The Moon's diameter is $3480\ \mathrm{km}$. Find the Moon's volume, and how many Moons equal the Earth's volume. (Earth radius $= 6380\ \mathrm{km}$.)</div>
+          <details class="solution"><summary></summary><div class="sol-body">
+            <p>Moon radius $= 1740\ \mathrm{km} = 1.74\times10^{6}\ \mathrm{m}$. &nbsp;$V_{\text{moon}} = \tfrac{4}{3}\pi(1.74\times10^{6})^{3} = 2.2\times10^{19}\ \mathrm{m^3}$.</p>
+            <p>Earth radius $= 6.38\times10^{6}\ \mathrm{m}$. &nbsp;$V_{\text{earth}} = \tfrac{4}{3}\pi(6.38\times10^{6})^{3} = 1.09\times10^{21}\ \mathrm{m^3}$.</p>
+            <p>Number of Moons $= \dfrac{V_{\text{earth}}}{V_{\text{moon}}} = \dfrac{1.09\times10^{21}}{2.2\times10^{19}} \approx 49.3$.</p>
+            <p class="answer">Answer: $V_{\text{moon}} \approx 2.2\times10^{19}\ \mathrm{m^3}$; about 49.3 Moons</p>
+          </div></details>
+        </div>
+
+
+        <!-- CHAPTER NAV -->
+        <nav class="chapter-nav">
+          <a href="../index.html"><span class="nav-dir">← Back to</span><span class="nav-title">All 14 units</span></a>
+          <a class="next" href="../index.html"><span class="nav-dir">Up next</span><span class="nav-title">Unit 2 · Kinematics (soon)</span></a>
+        </nav>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- KaTeX scripts -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
