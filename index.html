@@ -2,10 +2,124 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="0; url=class-xi-hub/index.html" />
-  <title>Redirecting…</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Usama's Class XI Study Space — Sindh Textbook Board</title>
+  <meta name="description" content="Personal Class XI study resources for the Sindh Textbook Board: a multi-subject learning hub and a from-scratch Physics tutorial." />
+  <style>
+    :root{
+      --bg:#0b0d12; --surface:#14171e; --surface-2:#1b1f28; --text:#e8eaf0;
+      --muted:#a3abbb; --faint:#727b8c; --border:#262c37;
+      --chem:#34d399; --math:#60a5fa; --phys:#a78bfa; --eng:#fb923c;
+      --font:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#f6f7f9; --surface:#ffffff; --surface-2:#eef1f5; --text:#161922;
+             --muted:#59616e; --faint:#8b94a3; --border:#e2e6ec; }
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{-webkit-text-size-adjust:100%}
+    body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.65;
+      -webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:100%;max-width:940px;margin:0 auto;padding:0 22px}
+
+    header{padding:22px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.02em}
+    .brand .logo{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;font-size:1.1rem;
+      background:linear-gradient(135deg,#6d7cf0,#a78bfa);color:#fff}
+    .brand small{display:block;color:var(--faint);font-weight:500;font-size:.74rem}
+
+    .hero{text-align:center;padding:46px 0 30px;
+      background:
+        radial-gradient(60% 120% at 18% 0%, rgba(96,165,250,.14), transparent 60%),
+        radial-gradient(60% 120% at 84% 8%, rgba(167,139,250,.14), transparent 60%);
+      border-radius:22px}
+    .hero .eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.03em;
+      color:var(--text);background:var(--surface);border:1px solid var(--border);
+      padding:6px 15px;border-radius:20px;margin-bottom:16px}
+    .hero h1{font-size:clamp(1.9rem,5vw,2.9rem);font-weight:850;letter-spacing:-.03em;line-height:1.1}
+    .hero p{max-width:56ch;margin:14px auto 0;color:var(--muted);font-size:1.06rem}
+
+    main{flex:1;padding:14px 0 40px}
+    .section-label{font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:var(--faint);
+      font-weight:700;margin:34px 0 16px}
+    .cards{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    @media (max-width:680px){.cards{grid-template-columns:1fr}}
+
+    .card{position:relative;overflow:hidden;display:block;background:var(--surface);
+      border:1px solid var(--border);border-radius:18px;padding:26px 24px;
+      box-shadow:0 1px 3px rgba(10,15,30,.14);
+      transition:transform .2s cubic-bezier(.22,.61,.36,1),border-color .2s,box-shadow .2s}
+    .card::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;
+      background:linear-gradient(90deg,var(--accent),transparent)}
+    .card:hover{transform:translateY(-4px);border-color:var(--accent);
+      box-shadow:0 18px 40px rgba(10,15,30,.3)}
+    .card .icon{width:56px;height:56px;border-radius:14px;display:grid;place-items:center;
+      font-size:1.7rem;margin-bottom:16px;
+      background:color-mix(in srgb,var(--accent) 16%,transparent)}
+    .card h2{font-size:1.3rem;font-weight:800;letter-spacing:-.02em;color:var(--accent)}
+    .card p{margin-top:8px;color:var(--muted);font-size:.94rem}
+    .card .tags{margin-top:16px;display:flex;flex-wrap:wrap;gap:7px}
+    .card .tags span{font-size:.74rem;font-weight:600;color:var(--muted);
+      background:var(--surface-2);border:1px solid var(--border);padding:3px 10px;border-radius:20px}
+    .card .go{margin-top:18px;display:inline-flex;align-items:center;gap:6px;
+      font-weight:700;font-size:.9rem;color:var(--accent)}
+
+    .card.hub{--accent:#60a5fa}
+    .card.phys{--accent:#a78bfa}
+
+    footer{text-align:center;color:var(--muted);font-size:.84rem;padding:26px 0;border-top:1px solid var(--border)}
+    footer b{color:var(--text)}
+  </style>
 </head>
 <body>
-  <p>Redirecting to <a href="class-xi-hub/index.html">Class XI Hub</a>…</p>
+
+  <header>
+    <div class="wrap">
+      <div class="brand">
+        <span class="logo">📚</span>
+        <span>Usama's Study Space<small>Class XI · Sindh Textbook Board</small></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <section class="hero">
+      <span class="eyebrow">Welcome back, Usama 👋</span>
+      <h1>Everything for Class XI, in one place</h1>
+      <p>Two study resources: a multi-subject learning hub for quick revision, and a deep,
+         from-scratch Physics tutorial. Pick where you want to go.</p>
+    </section>
+  </div>
+
+  <main>
+    <div class="wrap">
+      <div class="section-label">Choose a resource</div>
+      <div class="cards">
+
+        <a class="card hub" href="class-xi-hub/index.html">
+          <div class="icon">🎓</div>
+          <h2>Class XI Learning Hub</h2>
+          <p>Lesson notes and revision across all four subjects, saved chapter by chapter for quick recall before exams.</p>
+          <div class="tags"><span>🧪 Chemistry</span><span>🔢 Mathematics</span><span>⚛️ Physics</span><span>📖 English</span></div>
+          <span class="go">Open the hub →</span>
+        </a>
+
+        <a class="card phys" href="physics-xi/index.html">
+          <div class="icon">⚛️</div>
+          <h2>Physics Tutorial</h2>
+          <p>A complete, beginner-first walkthrough of the whole Physics syllabus — all 14 units with worked examples, diagrams and fully solved board-style exercises.</p>
+          <div class="tags"><span>14 units</span><span>Math rendered</span><span>Solved exercises</span></div>
+          <span class="go">Start learning →</span>
+        </a>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">Built with patience and curiosity · <b>Usama</b> · Class XI · Sindh Board · 2026</div>
+  </footer>
+
 </body>
 </html>

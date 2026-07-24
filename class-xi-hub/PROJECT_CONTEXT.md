@@ -11,7 +11,7 @@ A personal multi-subject learning hub for Usama, a Class XI (HSSC Part-I) studen
 
 **Deployment:** Vercel (auto-deploys on every push to main branch)
 **Live URL:** `https://learnwithusama.vercel.app`
-**Note:** Root `index.html` at repo root auto-redirects to `class-xi-hub/index.html`
+**Note:** Root `index.html` is a landing page linking to the Class XI Hub (`class-xi-hub/index.html`) and the standalone Physics tutorial (`physics-xi/index.html`).
 
 ---
 
