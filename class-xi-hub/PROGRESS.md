@@ -1,6 +1,6 @@
 # Lesson Progress Tracker
 
-Last updated: 2026-06-23
+Last updated: 2026-07-29
 
 > Site fully redesigned (2026-06-23). Chemistry now follows the real Sindh Textbook
 > Board book: **Chapter 1 = Stoichiometry** (the old "Fundamental Concepts" lessons were
@@ -12,11 +12,11 @@ Last updated: 2026-06-23
 
 | Subject | Lessons Done | Total Planned |
 |---------|-------------|---------------|
-| Chemistry | 8 | ~60+ |
+| Chemistry | 14 | ~60+ |
 | Mathematics | 3 | ~50+ |
 | Physics | 0 | ~40+ |
 | English | 0 | ~30+ |
-| **TOTAL** | **11** | **~180+** |
+| **TOTAL** | **17** | **~180+** |
 
 ---
 
@@ -33,6 +33,16 @@ Last updated: 2026-06-23
 | 2026-06-23 | Chapter 1 | Lesson 6 | Limiting Reactant |
 | 2026-06-23 | Chapter 1 | Lesson 7 | Theoretical, Practical & Percent Yield |
 | 2026-06-23 | Chapter 1 | Exercise | Solved Exercise (MCQs, short, descriptive, numericals) |
+
+### Chemistry — Chapter 2: Atomic Structure
+| Date | Chapter | Lesson # | Title |
+|------|---------|----------|-------|
+| 2026-07-29 | Chapter 2 | Lesson 1 | The Story of the Atom |
+| 2026-07-29 | Chapter 2 | Lesson 2 | Sub-Atomic Particles and Their Characteristics |
+| 2026-07-29 | Chapter 2 | Lesson 3 | Bohr's Atomic Theory |
+| 2026-07-29 | Chapter 2 | Lesson 4 | Radius & Energy of an Electron |
+| 2026-07-29 | Chapter 2 | Lesson 5 | Frequency & Wave Number of Radiation |
+| 2026-07-29 | Chapter 2 | Lesson 6 | Defects of Bohr's Model & Types of Spectra |
 
 ### Mathematics
 | Date | Unit | Lesson # | Title |
@@ -55,12 +65,23 @@ Last updated: 2026-06-23
 - [x] Lesson 7: Theoretical, Practical & Percent Yield
 - [x] Exercise: Fully solved (MCQs, short, descriptive, numerical)
 
+### Chemistry — Chapter 2: Atomic Structure  🟡 (6 lessons done — covers book pages 22–33)
+- [x] Lesson 1: The Story of the Atom
+- [x] Lesson 2: Sub-Atomic Particles and Their Characteristics (2.1)
+- [x] Lesson 3: Bohr's Atomic Theory (2.2)
+- [x] Lesson 4: Radius & Energy of an Electron (2.2.1)
+- [x] Lesson 5: Frequency & Wave Number of Radiation (2.2.1)
+- [x] Lesson 6: Defects of Bohr's Model & Types of Spectra (2.2.2, 2.2.3)
+- [ ] Lesson 7+: hydrogen spectral series, X-rays, photon, quantum numbers, orbitals,
+      Aufbau/Pauli/Hund, electronic configuration, radioactivity —
+      **blocked: the source PDF is truncated and ends at book page 33**
+- [ ] Chapter 2 Exercise (solved)
+
 ---
 
 ## ⏳ NOT STARTED YET
 
 ### Chemistry (real Sindh Board 12-chapter book)
-- Chapter 2: Atomic Structure
 - Chapter 3: Theories of Covalent Bond and Shapes of Molecules
 - Chapter 4: States of Matter: Gases
 - Chapter 5: States of Matter: Liquids
@@ -109,5 +130,6 @@ Last updated: 2026-06-23
 ## 📋 NEXT UP
 
 Options for next lesson:
-- **Chemistry → Chapter 2: Atomic Structure**
+- **Chemistry → Chapter 2 lessons 7+** (needs the rest of the chapter PDF — pages 34 onwards)
+- **Chemistry → Chapter 3: Theories of Covalent Bond and Shapes of Molecules**
 - **Mathematics → Unit 2: Matrices and Determinants**

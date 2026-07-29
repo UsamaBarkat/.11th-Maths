@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en" data-subject="chemistry">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Radius &amp; Energy of an Electron — Ch.2 Lesson 4 | Chemistry</title>
+  <link rel="stylesheet" href="../../../css/style.css" />
+  <link rel="stylesheet" href="../../../css/subjects.css" />
+  <link rel="stylesheet" href="../../../css/lessons.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../../../index.html" class="site-logo">📚 Class XI Hub <span>— Sindh Board</span></a>
+      <button id="dark-mode-btn">🌙 Dark Mode</button>
+    </div>
+  </header>
+
+  <nav class="lesson-breadcrumb" aria-label="breadcrumb">
+    <div class="container-narrow">
+      <a href="../../../index.html">Home</a>
+      <span class="sep">›</span>
+      <a href="../index.html">🧪 Chemistry</a>
+      <span class="sep">›</span>
+      <a href="index.html">Atomic Structure</a>
+      <span class="sep">›</span>
+      <span class="current">Lesson 4 of 6</span>
+    </div>
+  </nav>
+
+  <main class="lesson-page">
+    <div class="container-narrow">
+
+      <div class="lesson-header">
+        <h1>Radius &amp; Energy of an Electron</h1>
+        <div class="lesson-meta">
+          <span class="meta-badge">Chapter 2 · Lesson 4 of 6</span>
+          <span>🧪 Chemistry</span>
+          <span>⏱ 15–18 min read</span>
+          <span class="chip">Topic 2.2.1</span>
+        </div>
+      </div>
+
+      <!-- HOOK -->
+      <section class="lesson-section">
+        <h2>🎯 Why Should You Care?</h2>
+        <div class="hook-text">
+          <p>Bohr did not just say "electrons live in fixed orbits". He did something far bolder — he
+          <strong>calculated exactly how big those orbits are and exactly how much energy each one
+          holds</strong>, using nothing but Coulomb's law and his own quantization rule.</p>
+          <p>And the numbers came out right. That is why the theory was believed.</p>
+          <p>This lesson has two derivations. They look frightening, but each one is just a chain of
+          substitutions. Follow the chain once and you will be able to reproduce it — and the two final
+          formulas are short enough to memorise in a minute.</p>
+        </div>
+      </section>
+
+      <!-- SETUP -->
+      <section class="lesson-section">
+        <h2>📖 The Setup: Two Forces in Balance</h2>
+
+        <p>The truth of the basic assumption of Bohr's theory was established when it was applied to
+        <strong>single electron systems</strong> like hydrogen and ions such as He<sup>+1</sup>,
+        Li<sup>+2</sup> etc. A hydrogen atom consists of a <strong>single electron revolving around the
+        nucleus</strong>.</p>
+
+        <div class="diagram">
+<pre>
+              ─ ─ ─ ─ ─ ─ ─ ─
+           ─                   ─          v (velocity)
+         ─                       ─        ↑
+        │          r             │        │
+        │   (Ze) ─────────── (e⁻, mass m)
+        │                        │
+         ─                     ─
+           ─                 ─
+              ─ ─ ─ ─ ─ ─ ─
+
+   Ze = charge on nucleus      e = charge on electron
+   m  = mass of electron       r = radius of the orbit
+</pre>
+          <div class="cap">Fig 2.2 — the hydrogen atom</div>
+        </div>
+
+        <p>Let <strong>e</strong> and <strong>m</strong> be the charge and mass of the electron,
+        <strong>Ze</strong> the charge on the nucleus, and <strong>r</strong> the radius of the orbit in
+        which the electron moves with velocity <strong>v</strong>.</p>
+
+        <h3>Force 1 — the electrostatic pull (Coulomb's law)</h3>
+        <div class="eq">
+          F = K
+          <span class="frac"><span class="num">Ze<sup>+</sup> e<sup>−</sup></span><span class="den">r<sup>2</sup></span></span>
+        </div>
+        <p>Where K is the proportionality constant. It is equal to
+        <span class="fx">1 / 4πε<sub>o</sub></span>. Hence the attractive force between nucleus and
+        electron is written as:</p>
+        <div class="eq lead">
+          F =
+          <span class="frac"><span class="num">Ze<sup>2</sup></span><span class="den">4πε<sub>o</sub>r<sup>2</sup></span></span>
+        </div>
+
+        <h3>Force 2 — the centrifugal force</h3>
+        <p>At the same time, the centrifugal force on the electron will be:</p>
+        <div class="eq lead">
+          <span class="frac"><span class="num">mv<sup>2</sup></span><span class="den">r</span></span>
+        </div>
+
+        <div class="callout tip">
+          <div class="callout-icon">⚖️</div>
+          <div class="callout-body">
+            <div class="callout-title">The key idea of the whole derivation</div>
+            <p>As far as the electron remains in the same orbit, <strong>the two opposite forces are
+            equal</strong>. The inward pull exactly balances the outward push — that is what keeps the
+            orbit stable. Everything else follows from setting them equal.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- RADIUS DERIVATION -->
+      <section class="lesson-section">
+        <h2>🧮 Derivation 1: Radius of the n<sup>th</sup> Orbit</h2>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="example-tag">Derivation</span>
+            Show that r = a<sub>o</sub>n<sup>2</sup> / Z
+          </div>
+          <div class="example-body">
+
+            <div class="step-label">Step 1 — equate the two forces</div>
+            <div class="eq">
+              <span class="frac"><span class="num">mv<sup>2</sup></span><span class="den">r</span></span>
+              =
+              <span class="frac"><span class="num">Ze<sup>2</sup></span><span class="den">4πε<sub>o</sub>r<sup>2</sup></span></span>
+            </div>
+
+            <div class="step-label">Step 2 — cancel one r from each side</div>
+            <div class="eq">
+              mv<sup>2</sup> =
+              <span class="frac"><span class="num">Ze<sup>2</sup></span><span class="den">4πε<sub>o</sub>r</span></span>
+              &nbsp;&nbsp;— — — — (i)
+            </div>
+
+            <div class="step-label">Step 3 — make r the subject</div>
+            <div class="eq">
+              r =
+              <span class="frac"><span class="num">Ze<sup>2</sup></span><span class="den">4πε<sub>o</sub>mv<sup>2</sup></span></span>
+              &nbsp;&nbsp;— — — — (ii)
+            </div>
+
+            <div class="step-label">Step 4 — bring in Bohr's postulate (iv)</div>
+            <div class="eq">
+              mvr = <span class="frac"><span class="num">nh</span><span class="den">2π</span></span>
+              &nbsp;&nbsp;⟹&nbsp;&nbsp;
+              v = <span class="frac"><span class="num">nh</span><span class="den">2πmr</span></span>
+            </div>
+
+            <div class="step-label">Step 5 — take the square on both sides</div>
+            <div class="eq">
+              v<sup>2</sup> =
+              <span class="frac"><span class="num">n<sup>2</sup>h<sup>2</sup></span><span class="den">4π<sup>2</sup>m<sup>2</sup>r<sup>2</sup></span></span>
+            </div>
+
+            <div class="step-label">Step 6 — put v<sup>2</sup> into equation (ii)</div>
+            <div class="eq">
+              r =
+              <span class="frac"><span class="num">Ze<sup>2</sup> · 4π<sup>2</sup>m<sup>2</sup>r<sup>2</sup></span><span class="den">4πε<sub>o</sub>m n<sup>2</sup>h<sup>2</sup></span></span>
+            </div>
+
+            <div class="step-label">Step 7 — rearrange</div>
+            <div class="eq lead">
+              r =
+              <span class="frac"><span class="num">ε<sub>o</sub>n<sup>2</sup>h<sup>2</sup></span><span class="den">Zπme<sup>2</sup></span></span>
+              &nbsp;&nbsp;— — — — (iii)
+            </div>
+
+            <div class="step-label">Step 8 — bundle the constants</div>
+            <p>Everything except <strong>n</strong> and <strong>Z</strong> is a constant. Assembling all
+            constants in equation (iii):</p>
+            <div class="eq lead">
+              r =
+              <span class="frac"><span class="num">a<sup>o</sup>n<sup>2</sup></span><span class="den">Z</span></span>
+              &nbsp;&nbsp;— — — — (iv)
+              &nbsp;&nbsp;where&nbsp;&nbsp;
+              a<sup>o</sup> =
+              <span class="frac"><span class="num">ε<sub>o</sub>h<sup>2</sup></span><span class="den">πme<sup>2</sup></span></span>
+            </div>
+          </div>
+        </div>
+
+        <h3>The constants you are given</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Symbol</th><th>Name</th><th>Value</th></tr></thead>
+            <tbody>
+              <tr><td>ε<sub>o</sub></td><td>Vacuum permittivity constant</td><td>8.84 × 10<sup>−12</sup> C<sup>2</sup>/J·m</td></tr>
+              <tr><td>h</td><td>Planck's constant</td><td>6.625 × 10<sup>−34</sup> J·s</td></tr>
+              <tr><td>m</td><td>Mass of electron</td><td>9.11 × 10<sup>−31</sup> kg</td></tr>
+              <tr><td>e</td><td>Charge of electron</td><td>1.602 × 10<sup>−19</sup> C</td></tr>
+              <tr><td>a<sup>o</sup></td><td><strong>Bohr's constant</strong></td><td><strong>0.529 × 10<sup>−8</sup> cm = 0.529 Å</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout know">
+          <div class="callout-icon">💡</div>
+          <div class="callout-body">
+            <div class="callout-title">What equation (iv) is for</div>
+            <p>Equation (iv) is used for the determination of the radius of the <strong>n<sup>th</sup>
+            orbit of the hydrogen atom and hydrogen-like ions</strong> viz. He<sup>+</sup>,
+            Li<sup>+2</sup> etc. Notice the shape of it: <strong>radius grows as n<sup>2</sup></strong>
+            and <strong>shrinks as Z grows</strong>. A bigger nuclear charge pulls the electron in
+            tighter.</p>
+          </div>
+        </div>
+
+        <div class="callout note">
+          <div class="callout-icon">📌</div>
+          <div class="callout-body">
+            <div class="callout-title">A note on a<sup>o</sup></div>
+            <p>a<sup>o</sup> (Bohr's constant) is a <strong>pure constant</strong> — its value is always
+            0.529 Å, whatever the element. The Z appears in equation (iv), <em>not</em> inside
+            a<sup>o</sup>. If you see a Z written into the a<sup>o</sup> expression in some printings,
+            treat it as a misprint; using 0.529 Å with r = a<sup>o</sup>n<sup>2</sup>/Z always gives the
+            right answer.</p>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="example-tag">Example 2.1</span>
+            Find the radius of the 4<sup>th</sup> orbit of an electron in a hydrogen atom.
+          </div>
+          <div class="example-body">
+            <div class="step-label">Step 1 — write the formula</div>
+            <p>The radius of n = 4 for the hydrogen atom can be determined by using Bohr's equation.</p>
+            <div class="eq">
+              r = <span class="frac"><span class="num">a<sup>o</sup>n<sup>2</sup></span><span class="den">Z</span></span>
+            </div>
+
+            <div class="step-label">Step 2 — substitute (for hydrogen, Z = 1)</div>
+            <div class="eq">
+              r =
+              <span class="frac"><span class="num">0.529 × (4)<sup>2</sup></span><span class="den">1</span></span>
+            </div>
+
+            <div class="step-label">Step 3 — solve</div>
+            <div class="eq lead">r = 0.529 × 16 = <strong>8.46 Å</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ENERGY DERIVATION -->
+      <section class="lesson-section">
+        <h2>⚡ Derivation 2: Energy of an Electron in the n<sup>th</sup> Orbit</h2>
+
+        <p>In any orbit of an atom, the <strong>total energy of an electron is the sum of potential
+        energy (P.E) and kinetic energy (K.E)</strong>.</p>
+
+        <div class="eq lead">E<sub>total</sub> = K.E + P.E</div>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="example-tag">Derivation</span>
+            Show that E = −K(1/n<sup>2</sup>)
+          </div>
+          <div class="example-body">
+
+            <div class="step-label">Step 1 — find the potential energy</div>
+            <p>P.E is the work done in bringing the electron from infinity to a point at a distance
+            <strong>r</strong> from the nucleus:</p>
+            <div class="eq">P·E = work done = − force × displacement</div>
+            <div class="eq">
+              P·E =
+              <span class="frac"><span class="num">−Ze<sup>2</sup></span><span class="den">4πε<sub>o</sub>r<sup>2</sup></span></span>
+              × r
+              &nbsp;&nbsp;⟹&nbsp;&nbsp;
+              P·E =
+              <span class="frac"><span class="num">−Ze<sup>2</sup></span><span class="den">4πε<sub>o</sub>r</span></span>
+            </div>
+            <p>Here the <strong>negative sign</strong> indicates that P.E <strong>decreases</strong> when
+            the electron is brought from infinity to a point at distance r.</p>
+
+            <div class="step-label">Step 2 — write the total energy</div>
+            <div class="eq">
+              E<sub>total</sub> =
+              ( ½mv<sup>2</sup> ) +
+              ( −<span class="frac"><span class="num">Ze<sup>2</sup></span><span class="den">4πε<sub>o</sub>r</span></span> )
+            </div>
+            <div class="eq">
+              E = [ ½mv<sup>2</sup> ] − [
+              <span class="frac"><span class="num">Ze<sup>2</sup></span><span class="den">4πε<sub>o</sub>r</span></span>
+              ] &nbsp;&nbsp;— — — — (v)
+            </div>
+
+            <div class="step-label">Step 3 — replace mv<sup>2</sup> using equation (i)</div>
+            <p>From the force balance, mv<sup>2</sup> = Ze<sup>2</sup> / 4πε<sub>o</sub>r. Insert it
+            into (v):</p>
+            <div class="eq">
+              E = ½ [
+              <span class="frac"><span class="num">Ze<sup>2</sup></span><span class="den">4πε<sub>o</sub>r</span></span>
+              ] − [
+              <span class="frac"><span class="num">Ze<sup>2</sup></span><span class="den">4πε<sub>o</sub>r</span></span>
+              ]
+            </div>
+
+            <div class="step-label">Step 4 — simplify (½ of a thing minus the whole thing = −½ of it)</div>
+            <div class="eq lead">
+              E =
+              <span class="frac"><span class="num">−Ze<sup>2</sup></span><span class="den">8πε<sub>o</sub>r</span></span>
+              &nbsp;&nbsp;— — — — (vi)
+            </div>
+
+            <div class="step-label">Step 5 — substitute r from equation (iii)</div>
+            <div class="eq">
+              E =
+              <span class="frac"><span class="num">−Ze<sup>2</sup></span><span class="den">8πε<sub>o</sub></span></span>
+              ×
+              <span class="frac"><span class="num">πmZe<sup>2</sup></span><span class="den">ε<sub>o</sub>n<sup>2</sup>h<sup>2</sup></span></span>
+            </div>
+            <div class="eq lead">
+              E =
+              <span class="frac"><span class="num">−mZ<sup>2</sup>e<sup>4</sup></span><span class="den">8ε<sub>o</sub><sup>2</sup>n<sup>2</sup>h<sup>2</sup></span></span>
+              &nbsp;&nbsp;— — — — (vii)
+            </div>
+
+            <div class="step-label">Step 6 — for hydrogen, Z = 1</div>
+            <div class="eq">
+              E =
+              <span class="frac"><span class="num">−me<sup>4</sup></span><span class="den">8ε<sub>o</sub><sup>2</sup>h<sup>2</sup></span></span>
+              (
+              <span class="frac"><span class="num">1</span><span class="den">n<sup>2</sup></span></span>
+              )
+              &nbsp;&nbsp;— — — — (viii)
+            </div>
+
+            <div class="step-label">Step 7 — bundle the constants into K</div>
+            <div class="eq lead">
+              E = −K (
+              <span class="frac"><span class="num">1</span><span class="den">n<sup>2</sup></span></span>
+              )
+              &nbsp;&nbsp;— — — — (ix)
+            </div>
+            <p>Here <strong>K</strong> is a factor assembled by the various constants present in equation
+            (viii). Its value is:</p>
+            <div class="eq lead">
+              K = 2.18 × 10<sup>−18</sup> J/atom &nbsp;&nbsp;or&nbsp;&nbsp; 1312.8 kJ/mol
+            </div>
+          </div>
+        </div>
+
+        <div class="callout tip">
+          <div class="callout-icon">🔑</div>
+          <div class="callout-body">
+            <div class="callout-title">Why the energy is negative</div>
+            <p>The minus sign is not a mistake — it means the electron is <strong>bound</strong> to the
+            nucleus. Zero energy is defined as the electron sitting at infinity, completely free. Any
+            electron inside the atom has <em>less</em> energy than that, so its value is negative. And
+            since E ∝ −1/n<sup>2</sup>, the electron is <strong>most tightly bound at n = 1</strong>
+            (most negative) and gets closer to zero as n rises.</p>
+          </div>
+        </div>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="example-tag">Example 2.2</span>
+            Calculate the energy of an electron in the L-shell of a hydrogen atom
+            (the value of K is 2.178 × 10<sup>−18</sup> J/atom).
+          </div>
+          <div class="example-body">
+            <div class="step-label">Step 1 — identify n</div>
+            <p>The L-shell corresponds to the <strong>second energy level (n = 2)</strong>.</p>
+
+            <div class="step-label">Step 2 — Bohr's formula for energy</div>
+            <div class="eq">
+              E = <span class="frac"><span class="num">−K</span><span class="den">n<sup>2</sup></span></span>
+            </div>
+
+            <div class="step-label">Step 3 — substitute</div>
+            <div class="eq">
+              E =
+              <span class="frac"><span class="num">−2.18 × 10<sup>−18</sup></span><span class="den">(2)<sup>2</sup></span></span>
+            </div>
+
+            <div class="step-label">Step 4 — solve</div>
+            <div class="eq lead">E = −5.45 × 10<sup>−19</sup> joule</div>
+
+            <div class="step-label">Note on the printed answer</div>
+            <p>The textbook prints this answer as <strong>−5.43 × 10<sup>−19</sup> J</strong>. Dividing
+            2.18 × 10<sup>−18</sup> by 4 actually gives <strong>−5.45 × 10<sup>−19</sup> J</strong>
+            (and using 2.178 gives −5.445 × 10<sup>−19</sup> J). The difference is only rounding — write
+            the full working and either value will be accepted.</p>
+          </div>
+        </div>
+
+        <h3>Shell names and n values</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Shell</th><th>n</th><th>Radius (H atom)</th><th>Energy (H atom)</th></tr></thead>
+            <tbody>
+              <tr><td>K</td><td>1</td><td>0.529 Å</td><td>−2.18 × 10<sup>−18</sup> J</td></tr>
+              <tr><td>L</td><td>2</td><td>2.116 Å</td><td>−5.45 × 10<sup>−19</sup> J</td></tr>
+              <tr><td>M</td><td>3</td><td>4.761 Å</td><td>−2.42 × 10<sup>−19</sup> J</td></tr>
+              <tr><td>N</td><td>4</td><td>8.46 Å</td><td>−1.36 × 10<sup>−19</sup> J</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Radii from r = 0.529n<sup>2</sup> Å and energies from E = −2.18 × 10<sup>−18</sup>/n<sup>2</sup> J,
+        both for Z = 1.</p>
+      </section>
+
+      <!-- REAL LIFE -->
+      <section class="lesson-section">
+        <h2>💡 Real-Life Way to Think About It</h2>
+        <ol>
+          <li><strong>Swinging a stone on a string 🪨</strong> — The string pulls inward, the stone
+          pushes outward, and it circles steadily. Cut the string and it flies off. The electrostatic
+          force <em>is</em> the electron's string.</li>
+          <li><strong>Orbits spread out fast 📏</strong> — Because r ∝ n<sup>2</sup>, the 4th orbit is
+          <strong>16 times</strong> bigger than the first, not 4 times. The outer shells are far more
+          spread out than students expect.</li>
+          <li><strong>A well, not a hill 🕳️</strong> — Negative energy means the electron sits in a
+          "well". Getting it out takes work. Deeper (n = 1) means harder to remove — that is why the
+          first ionisation energy is the biggest.</li>
+          <li><strong>Bigger Z pulls harder 🧲</strong> — In He<sup>+</sup> (Z = 2) the same orbit is
+          <em>half</em> the radius of hydrogen's, because the nucleus pulls twice as hard.</li>
+        </ol>
+      </section>
+
+      <!-- CONFUSIONS -->
+      <section class="lesson-section">
+        <h2>⚠️ Common Confusions</h2>
+
+        <div class="confusion-box">
+          <div class="conf-title">⚠️ "The radius doubles when n doubles."</div>
+          <p>❌ Radius depends on <strong>n<sup>2</sup></strong>, not n. Going from n = 2 to n = 4
+          multiplies the radius by <strong>4</strong>, not 2.</p>
+        </div>
+
+        <div class="confusion-box">
+          <div class="conf-title">⚠️ "Energy increases as n increases, so it becomes more positive and larger."</div>
+          <p>⚠️ Energy does increase with n — but it stays <strong>negative</strong>, moving
+          <em>towards</em> zero. −2.18 × 10<sup>−18</sup> J (n = 1) is <strong>lower</strong> than
+          −5.45 × 10<sup>−19</sup> J (n = 2), even though the second number looks smaller in
+          magnitude.</p>
+        </div>
+
+        <div class="confusion-box">
+          <div class="conf-title">⚠️ "K in E = −K/n² is the same K as in Coulomb's law."</div>
+          <p>❌ Two completely different constants that unfortunately share a letter. In Coulomb's law
+          <strong>K = 1/4πε<sub>o</sub></strong>. In the energy equation
+          <strong>K = 2.18 × 10<sup>−18</sup> J/atom</strong>, a bundle of constants from equation
+          (viii). Read from context.</p>
+        </div>
+
+        <div class="confusion-box">
+          <div class="conf-title">⚠️ "0.529 works in every formula as it is."</div>
+          <p>⚠️ Watch your units. a<sup>o</sup> = 0.529 Å = 0.529 × 10<sup>−8</sup> cm =
+          0.529 × 10<sup>−10</sup> m. If the question asks for metres, convert — otherwise your answer is
+          out by a factor of 10<sup>10</sup>.</p>
+        </div>
+
+        <div class="confusion-box">
+          <div class="conf-title">⚠️ "These formulas work for any atom."</div>
+          <p>❌ Only for <strong>single-electron systems</strong>: H, He<sup>+</sup>, Li<sup>+2</sup>,
+          Be<sup>+3</sup>. For neutral helium or anything bigger, Bohr's equations fail — which is
+          Lesson 6's topic.</p>
+        </div>
+      </section>
+
+      <!-- PRACTICE -->
+      <section class="lesson-section">
+        <h2>✏️ Practice Time</h2>
+
+        <div class="mcq-set">
+          <h3>Multiple Choice Questions</h3>
+          <p>Click an option to check your answer. One chance only!</p>
+
+          <div class="mcq-card">
+            <p class="q-text">Q1. The value of Bohr's constant a<sup>o</sup> is:</p>
+            <ul class="mcq-options">
+              <li><button class="mcq-opt" data-correct="false">(a) 0.259 Å</button></li>
+              <li><button class="mcq-opt" data-correct="true">(b) 0.529 Å</button></li>
+              <li><button class="mcq-opt" data-correct="false">(c) 5.29 Å</button></li>
+              <li><button class="mcq-opt" data-correct="false">(d) 8.46 Å</button></li>
+            </ul>
+            <div class="mcq-feedback"></div>
+          </div>
+
+          <div class="mcq-card">
+            <p class="q-text">Q2. The radius of the n<sup>th</sup> orbit is proportional to:</p>
+            <ul class="mcq-options">
+              <li><button class="mcq-opt" data-correct="false">(a) n</button></li>
+              <li><button class="mcq-opt" data-correct="true">(b) n<sup>2</sup></button></li>
+              <li><button class="mcq-opt" data-correct="false">(c) 1/n</button></li>
+              <li><button class="mcq-opt" data-correct="false">(d) 1/n<sup>2</sup></button></li>
+            </ul>
+            <div class="mcq-feedback"></div>
+          </div>
+
+          <div class="mcq-card">
+            <p class="q-text">Q3. The value of K in E = −K/n<sup>2</sup> is:</p>
+            <ul class="mcq-options">
+              <li><button class="mcq-opt" data-correct="false">(a) 6.625 × 10<sup>−34</sup> J·s</button></li>
+              <li><button class="mcq-opt" data-correct="true">(b) 2.18 × 10<sup>−18</sup> J/atom</button></li>
+              <li><button class="mcq-opt" data-correct="false">(c) 1.602 × 10<sup>−19</sup> C</button></li>
+              <li><button class="mcq-opt" data-correct="false">(d) 109678 cm<sup>−1</sup></button></li>
+            </ul>
+            <div class="mcq-feedback"></div>
+          </div>
+
+          <div class="mcq-card">
+            <p class="q-text">Q4. The energy of an electron in an orbit is negative because:</p>
+            <ul class="mcq-options">
+              <li><button class="mcq-opt" data-correct="false">(a) The electron has negative charge</button></li>
+              <li><button class="mcq-opt" data-correct="true">(b) The electron is bound to the nucleus; energy at infinity is taken as zero</button></li>
+              <li><button class="mcq-opt" data-correct="false">(c) Kinetic energy is negative</button></li>
+              <li><button class="mcq-opt" data-correct="false">(d) The nucleus is positive</button></li>
+            </ul>
+            <div class="mcq-feedback"></div>
+          </div>
+        </div>
+
+        <div class="short-q-set mt-4">
+          <h3>Numerical &amp; Short Questions</h3>
+
+          <div class="short-q-card">
+            <p class="q-text">Q5. Find the radius of the 3<sup>rd</sup> orbit of a hydrogen atom.</p>
+            <button class="reveal-btn">Show Answer</button>
+            <div class="answer-box">
+              <strong>Answer:</strong> r = a<sup>o</sup>n<sup>2</sup>/Z =
+              (0.529 × 3<sup>2</sup>)/1 = 0.529 × 9 = <strong>4.761 Å</strong>.
+            </div>
+          </div>
+
+          <div class="short-q-card">
+            <p class="q-text">Q6. Find the radius of the 2<sup>nd</sup> orbit of He<sup>+</sup> (Z = 2).</p>
+            <button class="reveal-btn">Show Answer</button>
+            <div class="answer-box">
+              <strong>Answer:</strong> r = a<sup>o</sup>n<sup>2</sup>/Z =
+              (0.529 × 2<sup>2</sup>)/2 = (0.529 × 4)/2 = <strong>1.058 Å</strong>.
+              Note it is <em>half</em> the hydrogen value for the same n, because Z is twice as large.
+            </div>
+          </div>
+
+          <div class="short-q-card">
+            <p class="q-text">Q7. Calculate the energy of an electron in the K-shell of a hydrogen atom.</p>
+            <button class="reveal-btn">Show Answer</button>
+            <div class="answer-box">
+              <strong>Answer:</strong> The K-shell is n = 1.
+              E = −K/n<sup>2</sup> = −2.18 × 10<sup>−18</sup>/(1)<sup>2</sup> =
+              <strong>−2.18 × 10<sup>−18</sup> joule</strong>. This is the lowest (most negative) energy
+              an electron in hydrogen can have — the ground state.
+            </div>
+          </div>
+
+          <div class="short-q-card">
+            <p class="q-text">Q8. Why are the two forces on the electron set equal in Bohr's derivation?</p>
+            <button class="reveal-btn">Show Answer</button>
+            <div class="answer-box">
+              <strong>Answer:</strong> Because as long as the electron remains in the same orbit, the
+              orbit is stable — so the inward <strong>electrostatic force of attraction</strong>
+              (Ze<sup>2</sup>/4πε<sub>o</sub>r<sup>2</sup>) must be exactly balanced by the outward
+              <strong>centrifugal force</strong> (mv<sup>2</sup>/r). Equating them is what makes the
+              radius calculable.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SUMMARY -->
+      <section class="lesson-section">
+        <h2>📝 Summary</h2>
+        <div class="summary-box">
+          <h3>5 Key Points from This Lesson</h3>
+          <ol>
+            <li>The orbit is stable because the <strong>electrostatic force = centrifugal force</strong>:
+            Ze<sup>2</sup>/4πε<sub>o</sub>r<sup>2</sup> = mv<sup>2</sup>/r.</li>
+            <li>Combining that with <strong>mvr = nh/2π</strong> gives
+            <strong>r = ε<sub>o</sub>n<sup>2</sup>h<sup>2</sup> / Zπme<sup>2</sup></strong>, which
+            bundles into <strong>r = a<sup>o</sup>n<sup>2</sup>/Z</strong> with
+            <strong>a<sup>o</sup> = 0.529 Å</strong>.</li>
+            <li>Total energy = K.E + P.E leads to <strong>E = −Ze<sup>2</sup>/8πε<sub>o</sub>r</strong>,
+            and substituting r gives
+            <strong>E = −mZ<sup>2</sup>e<sup>4</sup> / 8ε<sub>o</sub><sup>2</sup>n<sup>2</sup>h<sup>2</sup></strong>.</li>
+            <li>For hydrogen this simplifies to <strong>E = −K/n<sup>2</sup></strong> with
+            <strong>K = 2.18 × 10<sup>−18</sup> J/atom = 1312.8 kJ/mol</strong>.</li>
+            <li>Worked results to remember: <strong>r<sub>4</sub>(H) = 8.46 Å</strong> and
+            <strong>E<sub>L-shell</sub>(H) ≈ −5.45 × 10<sup>−19</sup> J</strong>.</li>
+          </ol>
+        </div>
+      </section>
+
+      <nav class="lesson-nav" aria-label="Lesson navigation">
+        <a href="lesson-3.html" class="nav-btn">← Previous</a>
+        <a href="index.html" class="nav-btn">📋 Chapter Overview</a>
+        <a href="lesson-5.html" class="nav-btn primary">Next: Frequency &amp; Wave Number →</a>
+      </nav>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>Built with patience and curiosity · <strong>Usama</strong> · Class XI · Sindh Board · 2026</p></div>
+  </footer>
+
+  <script src="../../../js/main.js"></script>
+  <script src="../../../js/lessons.js"></script>
+</body>
+</html>
