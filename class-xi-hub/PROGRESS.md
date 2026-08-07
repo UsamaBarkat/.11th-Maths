@@ -1,6 +1,6 @@
 # Lesson Progress Tracker
 
-Last updated: 2026-07-29
+Last updated: 2026-08-07
 
 > Site fully redesigned (2026-06-23). Chemistry now follows the real Sindh Textbook
 > Board book: **Chapter 1 = Stoichiometry** (the old "Fundamental Concepts" lessons were
@@ -12,11 +12,11 @@ Last updated: 2026-07-29
 
 | Subject | Lessons Done | Total Planned |
 |---------|-------------|---------------|
-| Chemistry | 14 | ~60+ |
+| Chemistry | 22 | ~60+ |
 | Mathematics | 3 | ~50+ |
 | Physics | 0 | ~40+ |
 | English | 0 | ~30+ |
-| **TOTAL** | **17** | **~180+** |
+| **TOTAL** | **25** | **~180+** |
 
 ---
 
@@ -43,6 +43,18 @@ Last updated: 2026-07-29
 | 2026-07-29 | Chapter 2 | Lesson 4 | Radius & Energy of an Electron |
 | 2026-07-29 | Chapter 2 | Lesson 5 | Frequency & Wave Number of Radiation |
 | 2026-07-29 | Chapter 2 | Lesson 6 | Defects of Bohr's Model & Types of Spectra |
+
+### Chemistry — Chapter 3: Theories of Covalent Bonding and Shapes of Molecules
+| Date | Chapter | Lesson # | Title |
+|------|---------|----------|-------|
+| 2026-08-07 | Chapter 3 | Lesson 1 | Valence Bond Theory & the Sigma/Pi Bond |
+| 2026-08-07 | Chapter 3 | Lesson 2 | Molecular Orbital Theory |
+| 2026-08-07 | Chapter 3 | Lesson 3 | VSEPR Theory & Shapes of Molecules |
+| 2026-08-07 | Chapter 3 | Lesson 4 | Hybridization |
+| 2026-08-07 | Chapter 3 | Lesson 5 | Bond Energy & Bond Length |
+| 2026-08-07 | Chapter 3 | Lesson 6 | Ionic Character & Dipole Moment |
+| 2026-08-07 | Chapter 3 | Lesson 7 | Effect of Bonding on Physical & Chemical Properties |
+| 2026-08-07 | Chapter 3 | Exercise | Solved Exercise (MCQs, short, descriptive) |
 
 ### Mathematics
 | Date | Unit | Lesson # | Title |
@@ -73,16 +85,35 @@ Last updated: 2026-07-29
 - [x] Lesson 5: Frequency & Wave Number of Radiation (2.2.1)
 - [x] Lesson 6: Defects of Bohr's Model & Types of Spectra (2.2.2, 2.2.3)
 - [ ] Lesson 7+: hydrogen spectral series, X-rays, photon, quantum numbers, orbitals,
-      Aufbau/Pauli/Hund, electronic configuration, radioactivity —
-      **blocked: the source PDF is truncated and ends at book page 33**
-- [ ] Chapter 2 Exercise (solved)
+      Aufbau/Pauli/Hund, electronic configuration, radioactivity
+      (book pages 34–49 — **now unblocked**: the full book is at
+      `D:\AI-300\Books\Chemistry XI.pdf`, PDF pages 40–55)
+- [ ] Chapter 2 Exercise (solved) — book pages 48–49
+
+### Chemistry — Chapter 3: Theories of Covalent Bonding ✅ (all 7 lessons + exercise done)
+- [x] Lesson 1: Valence Bond Theory & the Sigma/Pi Bond (3.1.1)
+- [x] Lesson 2: Molecular Orbital Theory (3.1.2)
+- [x] Lesson 3: VSEPR Theory & Shapes of Molecules (3.2.1)
+- [x] Lesson 4: Hybridization (3.2.2)
+- [x] Lesson 5: Bond Energy & Bond Length (3.3.1, 3.3.2)
+- [x] Lesson 6: Ionic Character & Dipole Moment (3.3.3, 3.3.4)
+- [x] Lesson 7: Effect of Bonding on Physical & Chemical Properties (3.4)
+- [x] Exercise: Fully solved (10 MCQs, 6 short, 4 descriptive)
+
+---
+
+## 📚 SOURCE MATERIAL
+
+- `D:\AI-300\Books\Chemistry XI.pdf` — the **complete** Sindh Board Class XI Chemistry
+  textbook, 275 pages. **PDF page = printed page + 6.** Body text is vector outlines, so
+  pages must be rendered as images and read visually (PyMuPDF at 150 dpi works well).
+- `D:\AI-300\Books\Chapter 3.pdf` — Chapter 3 only, 25 pages (printed 50–74).
 
 ---
 
 ## ⏳ NOT STARTED YET
 
 ### Chemistry (real Sindh Board 12-chapter book)
-- Chapter 3: Theories of Covalent Bond and Shapes of Molecules
 - Chapter 4: States of Matter: Gases
 - Chapter 5: States of Matter: Liquids
 - Chapter 6: States of Matter: Solids
@@ -130,6 +161,7 @@ Last updated: 2026-07-29
 ## 📋 NEXT UP
 
 Options for next lesson:
-- **Chemistry → Chapter 2 lessons 7+** (needs the rest of the chapter PDF — pages 34 onwards)
-- **Chemistry → Chapter 3: Theories of Covalent Bond and Shapes of Molecules**
+- **Chemistry → Chapter 2 lessons 7+ and its exercise** — now unblocked by the full book
+  (printed pages 34–49 = PDF pages 40–55). This finishes the half-built chapter.
+- **Chemistry → Chapter 4: States of Matter: Gases** (printed page 75 onwards)
 - **Mathematics → Unit 2: Matrices and Determinants**
