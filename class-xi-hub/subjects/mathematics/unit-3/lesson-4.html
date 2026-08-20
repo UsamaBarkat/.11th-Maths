@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en" data-subject="mathematics">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Properties of Addition &amp; Scalar Multiplication — Unit 3 Lesson 4 | Mathematics</title>
+  <link rel="stylesheet" href="../../../css/style.css" />
+  <link rel="stylesheet" href="../../../css/subjects.css" />
+  <link rel="stylesheet" href="../../../css/lessons.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../../../index.html" class="site-logo">📚 Class XI Hub <span>— Sindh Board</span></a>
+      <button id="dark-mode-btn">🌙 Dark Mode</button>
+    </div>
+  </header>
+
+  <nav class="lesson-breadcrumb" aria-label="breadcrumb">
+    <div class="container-narrow">
+      <a href="../../../index.html">Home</a>
+      <span class="sep">›</span>
+      <a href="../index.html">🔢 Mathematics</a>
+      <span class="sep">›</span>
+      <a href="index.html">Vectors</a>
+      <span class="sep">›</span>
+      <span class="current">Lesson 4 of 8</span>
+    </div>
+  </nav>
+
+  <main class="lesson-page">
+    <div class="container-narrow">
+
+      <div class="lesson-header">
+        <h1>Properties of Addition &amp; Scalar Multiplication</h1>
+        <div class="lesson-meta">
+          <span class="meta-badge">Unit 3 · Lesson 4 of 8</span>
+          <span>🔢 Mathematics</span>
+          <span>⏱ 14–16 min read</span>
+          <span class="chip">Sections 3.3 – 3.4</span>
+        </div>
+      </div>
+
+      <!-- HOOK -->
+      <section class="lesson-section">
+        <h2>🎯 Why Should You Care?</h2>
+        <div class="hook-text">
+          <p>In the last three lessons you added vectors, subtracted them and scaled them — and you almost
+          certainly rewrote \(\vec{A}+\vec{B}\) as \(\vec{B}+\vec{A}\) somewhere along the way without
+          stopping to ask whether you were allowed to.</p>
+          <p>You were. But <em>why</em> you were is the whole content of this lesson. Vectors are not numbers:
+          a vector carries a direction as well as a size, and there is no reason on the face of it that
+          moving 5 km east then 3 km north should land you in the same place as moving 3 km north then
+          5 km east. It <strong>does</strong> — and the proof is a parallelogram.</p>
+          <p>Sections 3.3 and 3.4 collect the <strong>eight rules that make vector algebra safe</strong>:
+          four for addition (commutative, associative, an identity \(\vec{0}\), an inverse \(-\vec{A}\)) and
+          four for scalar multiplication (commutative, associative and two distributive laws). Every
+          rearrangement you will ever make in the dot-product and cross-product lessons ahead is licensed by
+          one of these eight. Learn them once here and you never have to think about them again.</p>
+        </div>
+      </section>
+
+      <!-- 3.3.1 (i) COMMUTATIVE LAW FOR VECTOR ADDITION -->
+      <section class="lesson-section">
+        <h2>➕ Commutative Law for Vector Addition</h2>
+
+        <div class="def-box">
+          <div class="def-label">📚 Statement</div>
+          <p>"The <strong>sum of two vectors remains the same irrespective of their order</strong>."</p>
+          <p>Let \(\vec{A}\) and \(\vec{B}\) be two vectors. Then by the commutative law for vector
+          addition:</p>
+        </div>
+
+        <div class="eq">\[\vec{A}+\vec{B}=\vec{B}+\vec{A}\]</div>
+
+        <h3>The construction</h3>
+        <p>Consider two vectors \(\vec{A}\) and \(\vec{B}\), which represent two <strong>adjacent sides of a
+        parallelogram OPQR</strong> as shown in Fig 3.25. Because opposite sides of a parallelogram are equal
+        and parallel, the same two vectors appear twice each — \(\vec{B}\) along both \(\overrightarrow{OP}\)
+        and \(\overrightarrow{RQ}\), and \(\vec{A}\) along both \(\overrightarrow{OR}\) and
+        \(\overrightarrow{PQ}\).</p>
+
+        <div class="diagram">
+          <svg viewBox="0 0 640 360" width="640" height="360" role="img" aria-label="Parallelogram O P Q R. The route O to P to Q adds B then A, the route O to R to Q adds A then B, and both reach the same diagonal resultant R.">
+            <defs>
+              <marker id="ar-l4f325" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+                <path d="M0,0 L9,3.5 L0,7 z" fill="currentColor"/>
+              </marker>
+            </defs>
+
+            <path d="M120,290 L400,290" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ar-l4f325)"/>
+            <path d="M400,290 L520,90"  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ar-l4f325)"/>
+            <path d="M120,290 L240,90"  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ar-l4f325)"/>
+            <path d="M240,90 L520,90"   fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ar-l4f325)"/>
+
+            <circle cx="120" cy="290" r="3" fill="currentColor"/>
+            <circle cx="400" cy="290" r="3" fill="currentColor"/>
+            <circle cx="240" cy="90"  r="3" fill="currentColor"/>
+            <circle cx="520" cy="90"  r="3" fill="currentColor"/>
+
+            <text x="104" y="303" font-size="14" fill="currentColor" text-anchor="end">O</text>
+            <text x="410" y="312" font-size="14" fill="currentColor" text-anchor="start">P</text>
+            <text x="232" y="80"  font-size="14" fill="currentColor" text-anchor="end">R</text>
+            <text x="530" y="80"  font-size="14" fill="currentColor" text-anchor="start">Q</text>
+
+            <text x="260" y="314" font-size="14" fill="currentColor" text-anchor="middle">B&#8407;</text>
+            <text x="380" y="76"  font-size="14" fill="currentColor" text-anchor="middle">B&#8407;</text>
+            <text x="166" y="186" font-size="14" fill="currentColor" text-anchor="end">A&#8407;</text>
+            <text x="474" y="197" font-size="14" fill="currentColor" text-anchor="start">A&#8407;</text>
+
+            <g style="color: var(--accent)">
+              <defs>
+                <marker id="ar-l4f325-acc" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+                  <path d="M0,0 L9,3.5 L0,7 z" fill="currentColor"/>
+                </marker>
+              </defs>
+              <path d="M120,290 L520,90" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ar-l4f325-acc)"/>
+              <text x="290" y="165" font-size="14" fill="currentColor" text-anchor="middle">R&#8407; = A&#8407; + B&#8407;</text>
+              <text x="350" y="224" font-size="14" fill="currentColor" text-anchor="middle">R&#8407; = B&#8407; + A&#8407;</text>
+            </g>
+          </svg>
+          <div class="cap">Fig 3.25 — Parallelogram OPQR. Travelling O → P → Q adds B&#8407; then A&#8407;; travelling O → R → Q adds A&#8407; then B&#8407;. Both routes finish at Q, so both describe the same resultant R&#8407; (drawn in the accent colour).</div>
+        </div>
+
+        <h3>The proof — two triangles, one diagonal</h3>
+        <p>The diagonal \(\overrightarrow{OQ}=\vec{R}\) closes both triangles, so we can apply the triangle
+        law of vector addition twice over.</p>
+
+        <p>In \(\triangle OPQ\), by the triangle law of vector addition:</p>
+        <div class="eq">\[\vec{R}=\vec{B}+\vec{A}\qquad \text{...(i)}\]</div>
+
+        <p>In \(\triangle OQR\), by the triangle law of vector addition:</p>
+        <div class="eq">\[\vec{R}=\vec{A}+\vec{B}\qquad \text{...(ii)}\]</div>
+
+        <p>From (i) and (ii), we get:</p>
+        <div class="eq lead">\[\vec{A}+\vec{B}=\vec{B}+\vec{A}\]</div>
+
+        <div class="callout tip">
+          <div class="callout-icon">🔑</div>
+          <div class="callout-body">
+            <div class="callout-title">Why the parallelogram does all the work</div>
+            <p>The two triangles are not two different calculations — they are two different <em>readings of
+            the same diagonal</em>. Because \(\vec{R}\) is one arrow, and because two things equal to the
+            same thing are equal to each other, the order of the sum cannot matter. That single diagonal is
+            the entire proof.</p>
+          </div>
+        </div>
+      </section>
+      <!-- 3.3.1 (ii) ASSOCIATIVE LAW FOR VECTOR ADDITION -->
+      <section class="lesson-section">
+        <h2>🔗 Associative Law for Vector Addition</h2>
+
+        <div class="def-box">
+          <div class="def-label">📚 Statement</div>
+          <p>"The <strong>sum of three vectors remains the same irrespective of their order or the grouping
+          in which they are arranged</strong>."</p>
+          <p>Let \(\vec{A}\), \(\vec{B}\) and \(\vec{C}\) be three vectors. Then by the associative law of
+          vector addition:</p>
+        </div>
+
+        <div class="eq">\[\vec{A}+\left(\vec{B}+\vec{C}\right)=\left(\vec{A}+\vec{B}\right)+\vec{C}\]</div>
+
+        <h3>The construction</h3>
+        <p>Consider three vectors \(\vec{A}\), \(\vec{B}\), \(\vec{C}\) and their resultant vector \(\vec{R}\)
+        represented by the line segments \(\overrightarrow{OP}\), \(\overrightarrow{PQ}\),
+        \(\overrightarrow{QR}\) and \(\overrightarrow{OR}\) respectively, as shown in Fig 3.26.</p>
+        <p>We apply the triangle law of vector addition to obtain the two groupings
+        \(\left(\vec{A}+\vec{B}\right)\) and \(\left(\vec{B}+\vec{C}\right)\) — these are the two diagonals
+        of the figure.</p>
+
+        <div class="diagram">
+          <svg viewBox="0 0 640 360" width="640" height="360" role="img" aria-label="Quadrilateral O P Q R with sides A, B and C and base R. The diagonal O to Q is A plus B and the diagonal P to R is B plus C, and both groupings reach the same point R.">
+            <defs>
+              <marker id="ar-l4f326" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+                <path d="M0,0 L9,3.5 L0,7 z" fill="currentColor"/>
+              </marker>
+            </defs>
+
+            <path d="M110,300 L200,90"  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ar-l4f326)"/>
+            <path d="M200,90 L480,90"   fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ar-l4f326)"/>
+            <path d="M480,90 L560,300"  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ar-l4f326)"/>
+
+            <path d="M110,300 L480,90"  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ar-l4f326)"/>
+            <path d="M200,90 L560,300"  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ar-l4f326)"/>
+
+            <circle cx="110" cy="300" r="3" fill="currentColor"/>
+            <circle cx="200" cy="90"  r="3" fill="currentColor"/>
+            <circle cx="480" cy="90"  r="3" fill="currentColor"/>
+            <circle cx="560" cy="300" r="3" fill="currentColor"/>
+
+            <text x="98"  y="316" font-size="14" fill="currentColor" text-anchor="end">O</text>
+            <text x="192" y="80"  font-size="14" fill="currentColor" text-anchor="end">P</text>
+            <text x="488" y="80"  font-size="14" fill="currentColor" text-anchor="start">Q</text>
+            <text x="572" y="316" font-size="14" fill="currentColor" text-anchor="start">R</text>
+
+            <text x="140" y="192" font-size="14" fill="currentColor" text-anchor="end">A&#8407;</text>
+            <text x="340" y="74"  font-size="14" fill="currentColor" text-anchor="middle">B&#8407;</text>
+            <text x="535" y="195" font-size="14" fill="currentColor" text-anchor="start">C&#8407;</text>
+
+            <text x="222" y="221" font-size="14" fill="currentColor" text-anchor="middle">A&#8407; + B&#8407;</text>
+            <text x="452" y="220" font-size="14" fill="currentColor" text-anchor="middle">B&#8407; + C&#8407;</text>
+
+            <g style="color: var(--accent)">
+              <defs>
+                <marker id="ar-l4f326-acc" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+                  <path d="M0,0 L9,3.5 L0,7 z" fill="currentColor"/>
+                </marker>
+              </defs>
+              <path d="M110,300 L560,300" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ar-l4f326-acc)"/>
+              <text x="335" y="326" font-size="14" fill="currentColor" text-anchor="middle">R&#8407;</text>
+            </g>
+          </svg>
+          <div class="cap">Fig 3.26 — The two diagonals are the two groupings. A&#8407; + B&#8407; is the diagonal O → Q; B&#8407; + C&#8407; is the diagonal P → R. Whichever pair you add first, the journey still ends at R, so the resultant R&#8407; (accent colour) is the same.</div>
+        </div>
+
+        <h3>The proof — two triangles, one base</h3>
+
+        <p>Now in \(\triangle OPR\):</p>
+        <div class="eq">\[\overrightarrow{OR}=\overrightarrow{OP}+\overrightarrow{PR}\]</div>
+        <p>i.e.</p>
+        <div class="eq">\[\vec{R}=\vec{A}+\left(\vec{B}+\vec{C}\right)\qquad \text{...(i)}\]</div>
+
+        <p>And in \(\triangle OQR\):</p>
+        <div class="eq">\[\overrightarrow{OR}=\overrightarrow{OQ}+\overrightarrow{QR}\]</div>
+        <p>i.e.</p>
+        <div class="eq">\[\vec{R}=\left(\vec{A}+\vec{B}\right)+\vec{C}\qquad \text{...(ii)}\]</div>
+
+        <p>From (i) and (ii) we get:</p>
+        <div class="eq lead">\[\vec{A}+\left(\vec{B}+\vec{C}\right)=\left(\vec{A}+\vec{B}\right)+\vec{C}\]</div>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="example-tag">Example</span>
+            \(\vec{A}=5\hat{i}+\hat{j}-\hat{k}\), \(\vec{B}=\hat{i}+5\hat{j}-7\hat{k}\) and
+            \(\vec{C}=\hat{i}+\hat{j}-\hat{k}\) are three vectors. Verify the associative law of vector
+            addition.
+          </div>
+          <div class="example-body">
+            <div class="step-label">Verification — the law to be checked</div>
+            <div class="eq">\[\vec{A}+\left(\vec{B}+\vec{C}\right)=\left(\vec{A}+\vec{B}\right)+\vec{C}\]</div>
+
+            <div class="step-label">Step 1 — evaluate the left-hand side</div>
+            <div class="eq">\[
+              \begin{aligned}
+              \text{L.H.S}&amp;=\vec{A}+\left(\vec{B}+\vec{C}\right)\\[2pt]
+              &amp;=\left(5\hat{i}+\hat{j}-\hat{k}\right)+\left[\left(\hat{i}+5\hat{j}-7\hat{k}\right)+\left(\hat{i}+\hat{j}-\hat{k}\right)\right]\\[2pt]
+              &amp;=\left(5\hat{i}+\hat{j}-\hat{k}\right)+\left(2\hat{i}+6\hat{j}-8\hat{k}\right)\\[2pt]
+              &amp;=(5+2)\hat{i}+(1+6)\hat{j}+(-1-8)\hat{k}\\[2pt]
+              &amp;=7\hat{i}+7\hat{j}-9\hat{k}
+              \end{aligned}
+            \]</div>
+
+            <div class="step-label">Step 2 — evaluate the right-hand side</div>
+            <div class="eq">\[
+              \begin{aligned}
+              \text{R.H.S}&amp;=\left(\vec{A}+\vec{B}\right)+\vec{C}\\[2pt]
+              &amp;=\left[\left(5\hat{i}+\hat{j}-\hat{k}\right)+\left(\hat{i}+5\hat{j}-7\hat{k}\right)\right]+\left(\hat{i}+\hat{j}-\hat{k}\right)\\[2pt]
+              &amp;=\left(6\hat{i}+6\hat{j}-8\hat{k}\right)+\left(\hat{i}+\hat{j}-\hat{k}\right)\\[2pt]
+              &amp;=(6+1)\hat{i}+(6+1)\hat{j}+(-8-1)\hat{k}\\[2pt]
+              &amp;=7\hat{i}+7\hat{j}-9\hat{k}
+              \end{aligned}
+            \]</div>
+
+            <div class="step-label">Step 3 — compare</div>
+            <p>Since \(\text{L.H.S}=\text{R.H.S}\), therefore
+            \(\vec{A}+\left(\vec{B}+\vec{C}\right)=\left(\vec{A}+\vec{B}\right)+\vec{C}\).</p>
+
+            <div class="ans"><span class="ans-label">Answer</span>Both sides equal \(7\hat{i}+7\hat{j}-9\hat{k}\) — hence verified.</div>
+          </div>
+        </div>
+      </section>
+      <!-- 3.3.2 (i) THE ZERO VECTOR IS THE IDENTITY -->
+      <section class="lesson-section">
+        <h2>0️⃣ The Zero Vector Is the Identity for Vector Addition</h2>
+
+        <div class="def-box">
+          <div class="def-label">📚 Statement</div>
+          <p>Let \(V\) be the set of all vectors in space, containing the vector \(\vec{0}\) which satisfies
+          the property:</p>
+          <p>\(\vec{0}+\vec{v}=\vec{v}+\vec{0}=\vec{v}\), for any vector \(\vec{v}\in V\).</p>
+          <p>Therefore, \(\vec{0}\) is the <strong>identity for vector addition</strong>.</p>
+        </div>
+
+        <h3>Proof</h3>
+        <p>Let \(\vec{v}=v_1\hat{i}+v_2\hat{j}+v_3\hat{k}\).</p>
+        <p>Then there exists a vector \(\vec{0}=0\hat{i}+0\hat{j}+0\hat{k}\), such that:</p>
+
+        <div class="eq">\[
+          \vec{v}+\vec{0}=\left(v_1\hat{i}+v_2\hat{j}+v_3\hat{k}\right)+\left(0\hat{i}+0\hat{j}+0\hat{k}\right)=v_1\hat{i}+v_2\hat{j}+v_3\hat{k}
+        \]</div>
+
+        <p>So,</p>
+        <div class="eq lead">\[\vec{v}+\vec{0}=\vec{v}\]</div>
+
+        <p>and similarly we can prove that \(\vec{0}+\vec{v}=\vec{v}\).</p>
+        <p>Hence, \(\vec{0}\) is the <strong>additive identity</strong>, or identity for vector addition.</p>
+
+        <div class="callout note">
+          <div class="callout-icon">🧭</div>
+          <div class="callout-body">
+            <div class="callout-title">\(\vec{0}\) is a vector, not the number 0</div>
+            <p>The zero vector \(\vec{0}=0\hat{i}+0\hat{j}+0\hat{k}\) has <strong>magnitude zero and no
+            defined direction</strong>. It is the displacement of standing perfectly still: adding it to any
+            journey changes nothing. Writing \(\vec{v}+0\) with a plain scalar zero is not a legal
+            expression — you cannot add a number to a vector.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3.3.2 (ii) ADDITIVE INVERSE -->
+      <section class="lesson-section">
+        <h2>↔️ −A&#8407; Is the Additive Inverse of A&#8407;</h2>
+
+        <div class="def-box">
+          <div class="def-label">📚 Statement</div>
+          <p>Let \(\vec{A}\) be a vector. The additive inverse \(-\vec{A}\), which is also called the
+          <strong>negative vector</strong> of \(\vec{A}\), is a vector which when added to \(\vec{A}\) gives
+          the additive identity, i.e.</p>
+        </div>
+
+        <div class="eq">\[\vec{A}+\left(-\vec{A}\right)=\vec{0}\]</div>
+
+        <h3>Proof</h3>
+        <p>Let \(\vec{A}=a_1\hat{i}+a_2\hat{j}+a_3\hat{k}\) be a vector in space.</p>
+        <p>Then \(-\vec{A}=-a_1\hat{i}-a_2\hat{j}-a_3\hat{k}\).</p>
+        <p>Now,</p>
+
+        <div class="eq">\[
+          \begin{aligned}
+          \vec{A}+\left(-\vec{A}\right)&amp;=a_1\hat{i}+a_2\hat{j}+a_3\hat{k}+\left(-a_1\hat{i}-a_2\hat{j}-a_3\hat{k}\right)\\[2pt]
+          &amp;=a_1\hat{i}+a_2\hat{j}+a_3\hat{k}-a_1\hat{i}-a_2\hat{j}-a_3\hat{k}\;=\;\vec{0}
+          \end{aligned}
+        \]</div>
+
+        <p>Thus, \(-\vec{A}\) is the <strong>additive inverse</strong> of \(\vec{A}\).</p>
+
+        <div class="example">
+          <div class="example-head">
+            <span class="example-tag">Example</span>
+            If \(\vec{A}=4\hat{i}+\hat{j}-\hat{k}\) and \(\vec{B}=-4\hat{i}-\hat{j}+\hat{k}\), then show that
+            \(\vec{A}\) and \(\vec{B}\) are additive inverses of each other.
+          </div>
+          <div class="example-body">
+            <div class="step-label">Solution — add the two vectors component by component</div>
+            <div class="eq">\[
+              \begin{aligned}
+              \vec{A}+\vec{B}&amp;=\left(4\hat{i}+\hat{j}-\hat{k}\right)+\left(-4\hat{i}-\hat{j}+\hat{k}\right)\\[2pt]
+              &amp;=(4-4)\hat{i}+(1-1)\hat{j}+(-1+1)\hat{k}\;=\;\vec{0}
+              \end{aligned}
+            \]</div>
+
+            <div class="step-label">Conclusion</div>
+            <p>Since \(\vec{A}+\vec{B}=\vec{0}\), the sum is the additive identity.</p>
+
+            <div class="ans"><span class="ans-label">Answer</span>\(\vec{A}\) and \(\vec{B}\) are additive inverses of each other. Hence shown.</div>
+          </div>
+        </div>
+      </section>
+      <!-- 3.4.1 (i) & (ii) SCALAR MULTIPLICATION: COMMUTATIVE AND ASSOCIATIVE -->
+      <section class="lesson-section">
+        <h2>✖️ Scalar Multiplication: Commutative and Associative Laws</h2>
+
+        <p>Section 3.4 turns from adding vectors to <strong>stretching them</strong>. The book asks us to
+        state and verify three properties of scalar multiplication:</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>#</th><th>Law</th><th>Statement</th></tr></thead>
+            <tbody>
+              <tr><td>(i)</td><td><strong>Commutative law</strong> for scalar multiplication</td><td>\(m\!\left(\vec{a}\right)=\left(\vec{a}\right)m\)</td></tr>
+              <tr><td>(ii)</td><td><strong>Associative law</strong> for scalar multiplication</td><td>\(m\!\left(n\!\left(\vec{a}\right)\right)=(mn)\!\left(\vec{a}\right)\)</td></tr>
+              <tr><td>(iii)</td><td><strong>Distributive laws</strong> for scalar multiplication</td><td>\(m\!\left(\vec{a}+\vec{b}\right)=m\vec{a}+m\vec{b}\) &nbsp;and&nbsp; \((m+n)\vec{a}=m\vec{a}+n\vec{a}\)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Throughout section 3.4 the book writes a vector in <strong>component (row) form</strong>,
+        \(\vec{a}=[x,\,y,\,z]\), because every one of these proofs is just the matching property of ordinary
+        real numbers applied to each component in turn.</p>
+
+        <h3>(i) Commutative law for scalar multiplication</h3>
+        <p>Let \(\vec{a}\) be a vector and \(m\) be any scalar such that \(m\in\mathbb{R}\). Then</p>
+        <div class="eq">\[m\!\left(\vec{a}\right)=\left(\vec{a}\right)m\]</div>
+        <p>is called the <strong>commutative law for scalar multiplication</strong>.</p>
+
+        <div class="def-box">
+          <div class="def-label">✍️ Proof</div>
+          <p>Let \(\vec{a}=[x,\,y,\,z]\) be a vector, then</p>
+        </div>
+
+        <div class="eq">\[
+          \begin{aligned}
+          m\!\left(\vec{a}\right)&amp;=m[x,\,y,\,z]=[mx,\,my,\,mz]\\[2pt]
+          \text{and}\quad [mx,\,my,\,mz]&amp;=[xm,\,ym,\,zm]\\[2pt]
+          &amp;=[x,\,y,\,z]\,m=\left(\vec{a}\right)m
+          \end{aligned}
+        \]</div>
+
+        <p>Thus, \(m\!\left(\vec{a}\right)=\left(\vec{a}\right)m\). Hence proved.</p>
+
+        <h3>(ii) Associative law for scalar multiplication</h3>
+        <p>Let \(\vec{a}\) be a vector and \(m,\,n\) be scalars such that \(m,\,n\in\mathbb{R}\). Then</p>
+        <div class="eq">\[m\!\left(n\!\left(\vec{a}\right)\right)=(mn)\vec{a}\]</div>
+        <p>is called the <strong>associative law for scalar multiplication</strong>.</p>
+
+        <div class="def-box">
+          <div class="def-label">✍️ Proof</div>
+          <p>Let \(\vec{a}=[x,\,y,\,z]\) be a vector, then</p>
+        </div>
+
+        <div class="eq">\[
+          \begin{aligned}
+          n\!\left(\vec{a}\right)&amp;=n[x,\,y,\,z]=[nx,\,ny,\,nz]\\[2pt]
+          \text{Now}\quad m\!\left(n\!\left(\vec{a}\right)\right)&amp;=m[nx,\,ny,\,nz]\\[2pt]
+          &amp;=[m(nx),\,m(ny),\,m(nz)]\\[2pt]
+          &amp;=(mn)[x,\,y,\,z]\\[2pt]
+          &amp;=(mn)\vec{a}
+          \end{aligned}
+        \]</div>
+
+        <p>Thus, \(m\!\left(n\!\left(\vec{a}\right)\right)=(mn)\vec{a}\). Hence proved.</p>
+
+        <div class="callout know">
+          <div class="callout-icon">💡</div>
+          <div class="callout-body">
+            <div class="callout-title">Do You Know? — where the proof actually happens</div>
+            <p>Look closely at the step \([m(nx),\,m(ny),\,m(nz)]=[(mn)x,\,(mn)y,\,(mn)z]\). Nothing about
+            vectors is used there — it is the <strong>associative law of multiplication for real
+            numbers</strong>, applied three times. Every proof in section 3.4 works this way: the vector
+            property is inherited, component by component, from the arithmetic you already trust.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3.4.1 (iii) DISTRIBUTIVE LAWS -->
+      <section class="lesson-section">
+        <h2>📤 Distributive Laws for Scalar Multiplication</h2>
+
+        <p>Let \(\vec{a}\) and \(\vec{b}\) be two vectors in space and \(m,\,n\in\mathbb{R}\) be scalars.
+        Then</p>
+        <div class="eq">\[\text{(i)}\quad m\!\left(\vec{a}+\vec{b}\right)=m\vec{a}+m\vec{b}\qquad\qquad \text{(ii)}\quad (m+n)\vec{a}=m\vec{a}+n\vec{a}\]</div>
+        <p>are called the <strong>distributive laws for scalar multiplication</strong>. Note that they
+        distribute over <em>different</em> sums: the first spreads one scalar across a sum of
+        <strong>vectors</strong>, the second spreads one vector across a sum of <strong>scalars</strong>.</p>
+
+        <h3>(i) \(m\!\left(\vec{a}+\vec{b}\right)=m\vec{a}+m\vec{b}\)</h3>
+
+        <div class="def-box">
+          <div class="def-label">✍️ Proof</div>
+          <p>Let \(\vec{a}=[x,\,y,\,z]\) and \(\vec{b}=[u,\,v,\,w]\) be two vectors in space and
+          \(m\in\mathbb{R}\) be a scalar. Then</p>
+        </div>
+
+        <div class="eq">\[
+          \begin{aligned}
+          m\!\left(\vec{a}+\vec{b}\right)&amp;=m\left\{[x,\,y,\,z]+[u,\,v,\,w]\right\}=m[x+u,\;y+v,\;z+w]\\[2pt]
+          &amp;=[mx+mu,\;my+mv,\;mz+mw]\\[2pt]
+          &amp;=[mx,\,my,\,mz]+[mu,\,mv,\,mw]\\[2pt]
+          &amp;=m[x,\,y,\,z]+m[u,\,v,\,w]=m\vec{a}+m\vec{b}
+          \end{aligned}
+        \]</div>
+
+        <p>Thus, \(m\!\left(\vec{a}+\vec{b}\right)=m\vec{a}+m\vec{b}\). Hence proved.</p>
+
+        <h3>(ii) \((m+n)\vec{a}=m\vec{a}+n\vec{a}\)</h3>
+
+        <div class="def-box">
+          <div class="def-label">✍️ Proof</div>
+          <p>Let \(\vec{a}=[x,\,y,\,z]\) be a vector in space and \(m,\,n\in\mathbb{R}\) be scalars. Then</p>
+        </div>
+
+        <div class="eq">\[
+          \begin{aligned}
+          (m+n)\vec{a}&amp;=(m+n)[x,\,y,\,z]=[(m+n)x,\;(m+n)y,\;(m+n)z]\\[2pt]
+          &amp;=[(mx+nx),\;(my+ny),\;(mz+nz)]\\[2pt]
+          &amp;=[mx,\,my,\,mz]+[nx,\,ny,\,nz]\\[2pt]
+          &amp;=m[x,\,y,\,z]+n[x,\,y,\,z]\\[2pt]
+          &amp;=m\vec{a}+n\vec{a}
+          \end{aligned}
+        \]</div>
+
+        <p>Thus, \((m+n)\vec{a}=m\vec{a}+n\vec{a}\). Hence proved.</p>
+
+        <div class="callout tip">
+          <div class="callout-icon">🔍</div>
+          <div class="callout-body">
+            <div class="callout-title">Spot the difference between the two</div>
+            <p>In law (i) the <strong>plus sign inside the bracket joins two vectors</strong> and \(m\) is a
+            single scalar. In law (ii) the <strong>plus sign inside the bracket joins two scalars</strong>
+            and \(\vec{a}\) is a single vector. They look almost identical on the page and are proved almost
+            identically — but they are two separate statements, which is why the book numbers them
+            separately.</p>
+          </div>
+        </div>
+      </section>
+      <!-- QUICK REFERENCE -->
+      <section class="lesson-section">
+        <h2>🗂️ Quick Reference — All Eight Properties</h2>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>#</th><th>Property</th><th>Statement</th><th>Governs</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td><strong>Commutative law</strong></td><td>\(\vec{A}+\vec{B}=\vec{B}+\vec{A}\)</td><td>Vector addition</td></tr>
+              <tr><td>2</td><td><strong>Associative law</strong></td><td>\(\vec{A}+\left(\vec{B}+\vec{C}\right)=\left(\vec{A}+\vec{B}\right)+\vec{C}\)</td><td>Vector addition</td></tr>
+              <tr><td>3</td><td><strong>Additive identity</strong></td><td>\(\vec{0}+\vec{v}=\vec{v}+\vec{0}=\vec{v}\)</td><td>Vector addition</td></tr>
+              <tr><td>4</td><td><strong>Additive inverse</strong></td><td>\(\vec{A}+\left(-\vec{A}\right)=\vec{0}\)</td><td>Vector addition</td></tr>
+              <tr><td>5</td><td><strong>Commutative law</strong></td><td>\(m\!\left(\vec{a}\right)=\left(\vec{a}\right)m\)</td><td>Scalar multiplication</td></tr>
+              <tr><td>6</td><td><strong>Associative law</strong></td><td>\(m\!\left(n\!\left(\vec{a}\right)\right)=(mn)\vec{a}\)</td><td>Scalar multiplication</td></tr>
+              <tr><td>7</td><td><strong>Distributive law</strong> (over a vector sum)</td><td>\(m\!\left(\vec{a}+\vec{b}\right)=m\vec{a}+m\vec{b}\)</td><td>Scalar multiplication</td></tr>
+              <tr><td>8</td><td><strong>Distributive law</strong> (over a scalar sum)</td><td>\((m+n)\vec{a}=m\vec{a}+n\vec{a}\)</td><td>Scalar multiplication</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout tip">
+          <div class="callout-icon">⚡</div>
+          <div class="callout-body">
+            <div class="callout-title">Two proof techniques, that is all</div>
+            <p>Properties <strong>1 and 2</strong> are proved <strong>geometrically</strong> — draw the
+            figure, apply the triangle law twice, read the same arrow two ways. Properties
+            <strong>3 to 8</strong> are proved <strong>algebraically</strong> — write the vector in
+            components and let ordinary real-number arithmetic do the work. If you can reproduce one proof
+            of each kind, you can reproduce all eight.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- REAL LIFE -->
+      <section class="lesson-section">
+        <h2>💡 Real-Life Way to Think About It</h2>
+        <ol>
+          <li><strong>Two streets to the same corner 🚶</strong> — Walk one block east then one block north,
+          or one block north then one block east. Different pavements, identical corner. That corner is the
+          diagonal of Fig 3.25, and it is why addition is <strong>commutative</strong>.</li>
+          <li><strong>Packing a three-leg trip 🧳</strong> — Home → airport → hotel → office. You can think
+          of it as "the trip to the hotel, then on to the office", or "home to the airport, then the rest of
+          the journey". The grouping is a story you tell yourself; the office does not move. That is the
+          <strong>associative law</strong>.</li>
+          <li><strong>Standing still ⏸️</strong> — \(\vec{0}\) is the move that is not a move. Insert it
+          anywhere in a journey and the destination is unchanged. That is what "<strong>identity</strong>"
+          means.</li>
+          <li><strong>Retracing your steps ↩️</strong> — \(-\vec{A}\) is the <em>same walk taken
+          backwards</em>: same distance, opposite direction. Do both and you are back where you started,
+          which is exactly \(\vec{A}+\left(-\vec{A}\right)=\vec{0}\).</li>
+          <li><strong>Doubling a recipe 🍲</strong> — Doubling "flour plus sugar" is the same as doubling the
+          flour and doubling the sugar. Distributing the scalar across the sum is a thing you already do
+          without thinking; law 7 says vectors behave the same way.</li>
+          <li><strong>Three laps plus two laps 🏃</strong> — Running a track \(3+2\) times is running it 3
+          times and then 2 more. Same track, added counts — that is law 8, and note it is the
+          <em>scalars</em> being added, not the laps.</li>
+        </ol>
+      </section>
+
+      <!-- CONFUSIONS -->
+      <section class="lesson-section">
+        <h2>⚠️ Common Confusions</h2>
+
+        <div class="confusion-box">
+          <div class="conf-title">⚠️ "Addition is commutative, so subtraction must be too."</div>
+          <p>❌ It is not. \(\vec{A}-\vec{B}\) and \(\vec{B}-\vec{A}\) have the <strong>same magnitude but
+          opposite directions</strong> — they are additive inverses of each other, not equals. Only
+          <em>addition</em> was proved commutative in 3.3.1, and the proof used a parallelogram that has no
+          equivalent for subtraction.</p>
+        </div>
+
+        <div class="confusion-box">
+          <div class="conf-title">⚠️ "\(\vec{0}\) and \(0\) are the same thing."</div>
+          <p>❌ \(\vec{0}=0\hat{i}+0\hat{j}+0\hat{k}\) is a <strong>vector</strong> with zero magnitude and no
+          defined direction. \(0\) is a <strong>scalar</strong>. \(\vec{A}+\left(-\vec{A}\right)=\vec{0}\) is
+          correct; writing \(=0\) is not, because the two sides would not even be the same kind of object.</p>
+        </div>
+
+        <div class="confusion-box">
+          <div class="conf-title">⚠️ "\(-\vec{A}\) is a shorter vector, or points downwards."</div>
+          <p>❌ The negative vector has <strong>exactly the same magnitude</strong> as \(\vec{A}\). Only the
+          direction reverses — it points along the same line, the opposite way. "Negative" here means
+          <em>reversed</em>, never <em>smaller</em>.</p>
+        </div>
+
+        <div class="confusion-box">
+          <div class="conf-title">⚠️ "\(m\!\left(\vec{a}+\vec{b}\right)=m\vec{a}+\vec{b}\)."</div>
+          <p>❌ The scalar must reach <strong>every term inside the bracket</strong>. Law 7 gives
+          \(m\vec{a}+m\vec{b}\). Scaling only the first vector changes the resultant's direction as well as
+          its length — it is not a small slip, it is a different answer.</p>
+        </div>
+
+        <div class="confusion-box">
+          <div class="conf-title">⚠️ "The associative law for scalar multiplication is the same as the one for addition."</div>
+          <p>❌ They are different statements about different operations.
+          \(\vec{A}+\left(\vec{B}+\vec{C}\right)=\left(\vec{A}+\vec{B}\right)+\vec{C}\) regroups
+          <strong>three vectors being added</strong> (proved with Fig 3.26).
+          \(m\!\left(n\!\left(\vec{a}\right)\right)=(mn)\vec{a}\) regroups <strong>two scalars stretching one
+          vector</strong> (proved in components). Same word, different law.</p>
+        </div>
+      </section>
+      <!-- PRACTICE -->
+      <section class="lesson-section">
+        <h2>✏️ Practice Time</h2>
+
+        <div class="mcq-set">
+          <h3>Multiple Choice Questions</h3>
+          <p>Click an option to check your answer. One chance only!</p>
+
+          <div class="mcq-card">
+            <p class="q-text">Q1. In Fig 3.25, applying the triangle law of vector addition in \(\triangle OPQ\) gives:</p>
+            <ul class="mcq-options">
+              <li><button class="mcq-opt" data-correct="false">(a) \(\vec{R}=\vec{A}+\vec{B}\)</button></li>
+              <li><button class="mcq-opt" data-correct="true">(b) \(\vec{R}=\vec{B}+\vec{A}\)</button></li>
+              <li><button class="mcq-opt" data-correct="false">(c) \(\vec{R}=\vec{A}-\vec{B}\)</button></li>
+              <li><button class="mcq-opt" data-correct="false">(d) \(\vec{R}=\vec{B}-\vec{A}\)</button></li>
+            </ul>
+            <div class="mcq-feedback"></div>
+          </div>
+
+          <div class="mcq-card">
+            <p class="q-text">Q2. The identity element for vector addition is:</p>
+            <ul class="mcq-options">
+              <li><button class="mcq-opt" data-correct="false">(a) the scalar \(1\)</button></li>
+              <li><button class="mcq-opt" data-correct="false">(b) the scalar \(0\)</button></li>
+              <li><button class="mcq-opt" data-correct="true">(c) the zero vector \(\vec{0}\)</button></li>
+              <li><button class="mcq-opt" data-correct="false">(d) the negative vector \(-\vec{A}\)</button></li>
+            </ul>
+            <div class="mcq-feedback"></div>
+          </div>
+
+          <div class="mcq-card">
+            <p class="q-text">Q3. If \(\vec{A}=3\hat{i}-2\hat{j}+\hat{k}\), then the additive inverse of \(\vec{A}\) is:</p>
+            <ul class="mcq-options">
+              <li><button class="mcq-opt" data-correct="false">(a) \(3\hat{i}+2\hat{j}+\hat{k}\)</button></li>
+              <li><button class="mcq-opt" data-correct="true">(b) \(-3\hat{i}+2\hat{j}-\hat{k}\)</button></li>
+              <li><button class="mcq-opt" data-correct="false">(c) \(-3\hat{i}-2\hat{j}-\hat{k}\)</button></li>
+              <li><button class="mcq-opt" data-correct="false">(d) \(\vec{0}\)</button></li>
+            </ul>
+            <div class="mcq-feedback"></div>
+          </div>
+
+          <div class="mcq-card">
+            <p class="q-text">Q4. Which of the following is a <strong>distributive</strong> law for scalar multiplication?</p>
+            <ul class="mcq-options">
+              <li><button class="mcq-opt" data-correct="false">(a) \(m\!\left(\vec{a}\right)=\left(\vec{a}\right)m\)</button></li>
+              <li><button class="mcq-opt" data-correct="false">(b) \(m\!\left(n\!\left(\vec{a}\right)\right)=(mn)\vec{a}\)</button></li>
+              <li><button class="mcq-opt" data-correct="true">(c) \((m+n)\vec{a}=m\vec{a}+n\vec{a}\)</button></li>
+              <li><button class="mcq-opt" data-correct="false">(d) \(\vec{A}+\left(\vec{B}+\vec{C}\right)=\left(\vec{A}+\vec{B}\right)+\vec{C}\)</button></li>
+            </ul>
+            <div class="mcq-feedback"></div>
+          </div>
+
+          <div class="mcq-card">
+            <p class="q-text">Q5. If \(\vec{A}=2\hat{i}+\hat{j}\), \(\vec{B}=\hat{i}-3\hat{j}\) and \(\vec{C}=-\hat{i}+2\hat{j}\), then \(\vec{A}+\left(\vec{B}+\vec{C}\right)\) equals:</p>
+            <ul class="mcq-options">
+              <li><button class="mcq-opt" data-correct="true">(a) \(2\hat{i}\)</button></li>
+              <li><button class="mcq-opt" data-correct="false">(b) \(2\hat{i}+2\hat{j}\)</button></li>
+              <li><button class="mcq-opt" data-correct="false">(c) \(2\hat{i}-\hat{j}\)</button></li>
+              <li><button class="mcq-opt" data-correct="false">(d) \(-2\hat{i}\)</button></li>
+            </ul>
+            <div class="mcq-feedback"></div>
+          </div>
+        </div>
+
+        <div class="short-q-set mt-4">
+          <h3>Short Questions</h3>
+
+          <div class="short-q-card">
+            <p class="q-text">Q6. State the commutative and associative laws for vector addition, and name the figure used to prove each.</p>
+            <button class="reveal-btn">Show Answer</button>
+            <div class="answer-box">
+              <strong>Answer:</strong> The <strong>commutative law</strong> states that the sum of two
+              vectors remains the same irrespective of their order:
+              \(\vec{A}+\vec{B}=\vec{B}+\vec{A}\). It is proved from the parallelogram
+              <strong>OPQR of Fig 3.25</strong>, by applying the triangle law in \(\triangle OPQ\) and again
+              in \(\triangle OQR\) — both readings give the same diagonal \(\vec{R}\).
+              The <strong>associative law</strong> states that the sum of three vectors remains the same
+              irrespective of their order or grouping:
+              \(\vec{A}+\left(\vec{B}+\vec{C}\right)=\left(\vec{A}+\vec{B}\right)+\vec{C}\). It is proved
+              from <strong>Fig 3.26</strong>, by applying the triangle law in \(\triangle OPR\) and again in
+              \(\triangle OQR\) — both give the same base \(\overrightarrow{OR}=\vec{R}\).
+            </div>
+          </div>
+
+          <div class="short-q-card">
+            <p class="q-text">Q7. Prove, using components, that \(\vec{0}\) is the identity for vector addition.</p>
+            <button class="reveal-btn">Show Answer</button>
+            <div class="answer-box">
+              <strong>Answer:</strong> Let \(\vec{v}=v_1\hat{i}+v_2\hat{j}+v_3\hat{k}\). There exists a
+              vector \(\vec{0}=0\hat{i}+0\hat{j}+0\hat{k}\) such that
+              \(\vec{v}+\vec{0}=\left(v_1\hat{i}+v_2\hat{j}+v_3\hat{k}\right)+\left(0\hat{i}+0\hat{j}+0\hat{k}\right)=v_1\hat{i}+v_2\hat{j}+v_3\hat{k}=\vec{v}\).
+              Similarly \(\vec{0}+\vec{v}=\vec{v}\). Since
+              \(\vec{0}+\vec{v}=\vec{v}+\vec{0}=\vec{v}\) for every \(\vec{v}\), the vector \(\vec{0}\) is
+              the <strong>additive identity</strong> for vector addition.
+            </div>
+          </div>
+
+          <div class="short-q-card">
+            <p class="q-text">Q8. Verify the associative law of vector addition for \(\vec{A}=2\hat{i}-\hat{j}+3\hat{k}\), \(\vec{B}=\hat{i}+4\hat{j}-\hat{k}\) and \(\vec{C}=-3\hat{i}+\hat{j}+2\hat{k}\).</p>
+            <button class="reveal-btn">Show Answer</button>
+            <div class="answer-box">
+              <strong>Answer:</strong>
+              <strong>L.H.S:</strong> \(\vec{B}+\vec{C}=(1-3)\hat{i}+(4+1)\hat{j}+(-1+2)\hat{k}=-2\hat{i}+5\hat{j}+\hat{k}\),
+              so \(\vec{A}+\left(\vec{B}+\vec{C}\right)=(2-2)\hat{i}+(-1+5)\hat{j}+(3+1)\hat{k}=4\hat{j}+4\hat{k}\).
+              <strong>R.H.S:</strong> \(\vec{A}+\vec{B}=(2+1)\hat{i}+(-1+4)\hat{j}+(3-1)\hat{k}=3\hat{i}+3\hat{j}+2\hat{k}\),
+              so \(\left(\vec{A}+\vec{B}\right)+\vec{C}=(3-3)\hat{i}+(3+1)\hat{j}+(2+2)\hat{k}=4\hat{j}+4\hat{k}\).
+              Since L.H.S = R.H.S = \(4\hat{j}+4\hat{k}\), the associative law is <strong>verified</strong>.
+            </div>
+          </div>
+
+          <div class="short-q-card">
+            <p class="q-text">Q9. Let \(\vec{a}=[2,\,-1,\,4]\), \(m=3\) and \(n=-2\). Verify that \((m+n)\vec{a}=m\vec{a}+n\vec{a}\).</p>
+            <button class="reveal-btn">Show Answer</button>
+            <div class="answer-box">
+              <strong>Answer:</strong>
+              <strong>L.H.S:</strong> \((m+n)\vec{a}=\left(3+(-2)\right)[2,\,-1,\,4]=1\cdot[2,\,-1,\,4]=[2,\,-1,\,4]\).
+              <strong>R.H.S:</strong> \(m\vec{a}=3[2,\,-1,\,4]=[6,\,-3,\,12]\) and
+              \(n\vec{a}=-2[2,\,-1,\,4]=[-4,\,2,\,-8]\), so
+              \(m\vec{a}+n\vec{a}=[6-4,\;-3+2,\;12-8]=[2,\,-1,\,4]\).
+              Since L.H.S = R.H.S = \([2,\,-1,\,4]\), the distributive law
+              \((m+n)\vec{a}=m\vec{a}+n\vec{a}\) is <strong>verified</strong>.
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SUMMARY -->
+      <section class="lesson-section">
+        <h2>📝 Summary</h2>
+        <div class="summary-box">
+          <h3>7 Key Points from This Lesson</h3>
+          <ol>
+            <li><strong>Commutative law for vector addition</strong> —
+            \(\vec{A}+\vec{B}=\vec{B}+\vec{A}\). Proved from parallelogram OPQR (Fig 3.25) by applying the
+            triangle law in \(\triangle OPQ\) and \(\triangle OQR\): one diagonal, read two ways.</li>
+            <li><strong>Associative law for vector addition</strong> —
+            \(\vec{A}+\left(\vec{B}+\vec{C}\right)=\left(\vec{A}+\vec{B}\right)+\vec{C}\). Proved from
+            Fig 3.26 by applying the triangle law in \(\triangle OPR\) and \(\triangle OQR\): one base
+            \(\overrightarrow{OR}\), two groupings.</li>
+            <li><strong>\(\vec{0}\) is the additive identity</strong> —
+            \(\vec{0}+\vec{v}=\vec{v}+\vec{0}=\vec{v}\) for every \(\vec{v}\). It is a <em>vector</em> of
+            zero magnitude, \(0\hat{i}+0\hat{j}+0\hat{k}\), not the scalar \(0\).</li>
+            <li><strong>\(-\vec{A}\) is the additive inverse</strong> —
+            \(\vec{A}+\left(-\vec{A}\right)=\vec{0}\). The negative vector has the <strong>same
+            magnitude</strong> as \(\vec{A}\) and the opposite direction.</li>
+            <li><strong>Scalar multiplication is commutative and associative</strong> —
+            \(m\!\left(\vec{a}\right)=\left(\vec{a}\right)m\) and
+            \(m\!\left(n\!\left(\vec{a}\right)\right)=(mn)\vec{a}\), both proved by writing
+            \(\vec{a}=[x,\,y,\,z]\) and using real-number arithmetic on each component.</li>
+            <li><strong>Two distributive laws</strong> —
+            \(m\!\left(\vec{a}+\vec{b}\right)=m\vec{a}+m\vec{b}\) spreads one scalar over a sum of
+            <em>vectors</em>; \((m+n)\vec{a}=m\vec{a}+n\vec{a}\) spreads one vector over a sum of
+            <em>scalars</em>. They are separate statements.</li>
+            <li><strong>Two proof techniques cover all eight properties</strong> — the two addition laws are
+            <strong>geometric</strong> (triangle law applied twice to one figure); the remaining six are
+            <strong>algebraic</strong> (component form, then ordinary arithmetic).</li>
+          </ol>
+        </div>
+      </section>
+
+      <nav class="lesson-nav" aria-label="Lesson navigation">
+        <a href="lesson-3.html" class="nav-btn">← Previous</a>
+        <a href="index.html" class="nav-btn">📋 Chapter Overview</a>
+        <a href="lesson-5.html" class="nav-btn primary">Next: Lesson 5 →</a>
+      </nav>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><p>Built with patience and curiosity · <strong>Usama</strong> · Class XI · Sindh Board · 2026</p></div>
+  </footer>
+
+  <script src="../../../js/main.js"></script>
+  <script src="../../../js/lessons.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (typeof renderMathInElement !== 'function') return;
+      renderMathInElement(document.body, {
+        delimiters: [
+          { left: '\\[', right: '\\]', display: true },
+          { left: '\\(', right: '\\)', display: false }
+        ],
+        throwOnError: false
+      });
+    });
+  </script>
+</body>
+</html>
