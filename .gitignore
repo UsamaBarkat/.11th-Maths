@@ -12,3 +12,7 @@ Thumbs.db
 *.swp
 *.swo
 *~
+
+# Textbook PDFs — too large for git
+Books/
+*.pdf
